@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Udaipur Hotelier Signup</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('img/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .signup-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(5px);
+        }
+
+        .signup-form {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 20px;
+            width: 100%;
+            max-width: 350px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333;
+            font-size: 24px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 14px;
+            color: #333;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="email"],
+        input[type="password"],
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            outline: none;
+            font-size: 16px;
+            background-color: #f9f9f9;
+            transition: border-color 0.3s;
+        }
+
+        input[type="email"]:focus,
+        input[type="password"]:focus,
+        input[type="text"]:focus {
+            border-color: #007bff;
+        }
+
+        .password-wrapper {
+            position: relative;
+        }
+
+        .eye-icon {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 18px;
+            color: #888;
+        }
+
+        .eye-icon:hover {
+            color: #333;
+        }
+
+        .signup-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            border: none;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .signup-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .signup-btn:active {
+            background-color: #004085;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .login-link a {
+            color: #007bff;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+
+        /* Loading Spinner Styles */
+        .loading-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .loading-spinner {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top: 4px solid #007bff;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @media (max-width: 480px) {
+            .signup-form {
+                padding: 20px;
+                max-width: 90%;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            input[type="email"],
+            input[type="password"],
+            input[type="text"],
+            .signup-btn {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="signup-container">
+        <div class="signup-form">
+            <h2>Sign Up</h2>
+            <form id="signup-form">
+                <div class="input-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                    <div id="name-error" class="error-message"></div>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    <div id="email-error" class="error-message"></div>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="password" name="password" required>
+                        <span id="toggle-password" class="eye-icon">&#128065;</span>
+                    </div>
+                    <div id="password-error" class="error-message"></div>
+                </div>
+
+                <div class="input-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                    <div id="confirm-password-error" class="error-message"></div>
+                </div>
+
+                <button type="submit" class="signup-btn">Sign Up</button>
+            </form>
+            <div class="login-link">
+                <p>Already have an account? <a href="Login.html">Login here</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <script type="module">
+        // Import Firebase modules
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js';
+        import { getAuth, createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.6.0/firebase-auth.js';
+
+        // Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyBdGShEAg6teoVgXVfsbzUJO1sIY3bZPH4",
+  authDomain: "udaipur-hotelier-4b582.firebaseapp.com",
+  projectId: "udaipur-hotelier-4b582",
+  storageBucket: "udaipur-hotelier-4b582.firebasestorage.app",
+  messagingSenderId: "843875126311",
+  appId: "1:843875126311:web:2c76e6e8b79d4223439202",
+  measurementId: "G-M93ZN7YSNB"
+};
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        // Event listener for the signup form
+        document.getElementById('signup-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Show the loading spinner
+            document.getElementById('loading-overlay').style.display = 'flex';
+
+            // Clear previous error messages
+            document.getElementById('name-error').textContent = '';
+            document.getElementById('email-error').textContent = '';
+            document.getElementById('password-error').textContent = '';
+            document.getElementById('confirm-password-error').textContent = '';
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+
+            let valid = true;
+
+            // Validate fields
+            if (password !== confirmPassword) {
+                document.getElementById('confirm-password-error').textContent = "Passwords do not match.";
+                valid = false;
+            }
+
+            // Check if the password is valid (not empty or too short)
+            if (password.length < 6) {
+                document.getElementById('password-error').textContent = "Password must be at least 6 characters.";
+                valid = false;
+            }
+
+            // Try to create a new user with the provided email and password
+            if (valid) {
+                createUserWithEmailAndPassword(auth, email, password)
+                    .then((userCredential) => {
+                        const user = userCredential.user;
+                        console.log("Account created successfully:", user);
+
+                        // Redirect to the restaurant management system after successful signup
+                        window.location.href = "LearnPage.html"; 
+                    })
+                    .catch((error) => {
+                        const errorCode = error.code;
+                        const errorMessage = error.message;
+
+                        console.log("Signup error:", errorCode, errorMessage);
+
+                        // Handle specific Firebase errors
+                        if (errorCode === 'auth/email-already-in-use') {
+                            document.getElementById('email-error').textContent = "This email address is already in use.";
+                        } else if (errorCode === 'auth/invalid-email') {
+                            document.getElementById('email-error').textContent = "The email address is not valid.";
+                        } else {
+                            document.getElementById('email-error').textContent = "Unexpected error occurred: " + errorMessage;
+                        }
+                    })
+                    .finally(() => {
+                        // Hide the loading spinner after signup process
+                        document.getElementById('loading-overlay').style.display = 'none';
+                    });
+            } else {
+                // Hide the loading spinner if validation fails
+                document.getElementById('loading-overlay').style.display = 'none';
+            }
+        });
+
+        // Toggle password visibility
+        document.getElementById('toggle-password').addEventListener('click', function () {
+            const passwordField = document.getElementById('password');
+            const confirmPasswordField = document.getElementById('confirm-password');
+            const type = passwordField.type === 'password' ? 'text' : 'password';
+            passwordField.type = type;
+            confirmPasswordField.type = type;
+        });
+    </script>
+</body>
+</html>

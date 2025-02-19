@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Housekeeping Quiz</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+	<link href="css/style.css" rel="stylesheet">
+    <link href="css/hkchecklist.css" rel="stylesheet">
+	<link href="css/tablecss.css" rel="stylesheet">
+    <style>
+	/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Quiz Container */
+.quiz-container {
+    max-width: 800px;
+    margin: 0 auto;
+	margin-top:10px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	line-height: 1.6;
+    padding: 20px;
+}
+
+/* Title */
+h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+/* Questions */
+.question {
+    margin-bottom: 20px;
+}
+
+.question p {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Options Layout */
+.options {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+label {
+    display: block;
+    background: #f4f4f4;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s, transform 0.2s;
+    flex: 1 1 calc(48% - 10px);
+    text-align: center;
+}
+
+label:hover {
+    background: #e0e0e0;
+    transform: scale(1.02);
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+/* Correct/Incorrect Styling */
+.correct {
+    background-color: #4caf50;
+    color: white;
+}
+
+.incorrect {
+    background-color: #f44336;
+    color: white;
+}
+
+/* Selected Option Styling */
+label.selected {
+    background-color: #d1e7ff;
+    color: #004085;
+    border: 1px solid #b8daff;
+    transform: scale(1.05);
+}
+
+/* Button */
+button {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #4caf50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Popup */
+.popup {
+    position: fixed;
+    bottom: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s;
+}
+
+.popup.show {
+    bottom: 50%;
+}
+
+.popup p {
+    font-size: 16px;
+    color: #444;
+    margin: 0;
+}
+
+	</style>
+</head>
+<body>
+<div class="container-xxl bg-white p-0">
+        <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+            <a href="LearnPage.html" class="navbar-brand d-flex align-items-center text-center py-0 px-4 px-lg-5">
+                <h4 class="m-0 text-primary">Udaipur Hotelier</h4>
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+           <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a href="LearnPage.html" class="nav-item nav-link">Home</a>
+				    <a href="about.html" class="nav-item nav-link">About</a>
+					<a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" id="userDropdown" class="nav-link dropdown-toggle d-flex align-items-center" data-bs-toggle="dropdown">
+                            <img id="profileImage" src="imge/profile.png" alt="Profile" class="rounded-circle" width="30" height="30" style="margin-right: 8px;">
+                            <span id="username">User</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <a href="Profile.html" class="dropdown-item">Profile</a>
+                            <a href="#" class="dropdown-item">Settings</a>
+                            <a href="#" class="dropdown-item" onclick="logout()">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    <div class="quiz-container">
+        <h1>Housekeeping Quiz</h1>
+        <div class="footer">
+        Total Questions: <span id="totalQuestions"></span>
+    </div>
+	<br>
+        <form id="quiz-form">
+            <div class="questions" id="questions">
+			
+			<!-- question 1 -->
+                <div class="question" data-question-id="1">
+                    <p>What is the primary role of the housekeeping department in a hotel?</p>
+                    <div class="options">
+                        <label>
+                            <input type="radio" name="q1" value="a"> Food preparation
+                        </label>
+                        <label>
+                            <input type="radio" name="q1" value="b"> Guest room cleanliness
+                        </label>
+                        <label>
+                            <input type="radio" name="q1" value="c"> Marketing
+                        </label>
+                        <label>
+                            <input type="radio" name="q1" value="d"> Accounting
+                        </label>
+                    </div>
+                </div>
+				<!-- question 2 -->
+                <div class="question" data-question-id="2">
+                    <p>Which of the following tasks is not part of housekeeping?</p>
+                    <div class="options">
+                        <label>
+                            <input type="radio" name="q2" value="a"> Cleaning public areas
+                        </label>
+                        <label>
+                            <input type="radio" name="q2" value="b"> Washing dishes
+                        </label>
+                        <label>
+                            <input type="radio" name="q2" value="c"> Laundry management
+                        </label>
+                        <label>
+                            <input type="radio" name="q2" value="d"> Room setup
+                        </label>
+                    </div>
+                </div>
+				<!-- question 3 -->
+                <div class="question" data-question-id="3">
+                    <p>What does "turning down a room" typically involve?</p>
+                    <div class="options">
+                        <label>
+                            <input type="radio" name="q3" value="a"> Refusing service
+                        </label>
+                        <label>
+                            <input type="radio" name="q3" value="b"> Preparing the bed for sleeping
+                        </label>
+                        <label>
+                            <input type="radio" name="q3" value="c"> Cleaning the room
+                        </label>
+                        <label>
+                            <input type="radio" name="q3" value="d"> Inspecting the room
+                        </label>
+                    </div>
+                </div>
+				<!-- question 4 -->
+                <div class="question" data-question-id="4">
+                    <p>Which cleaning agent is commonly used to clean glass surfaces?</p>
+                    <div class="options">
+                        <label>
+                            <input type="radio" name="q4" value="a"> Detergent
+                        </label>
+                        <label>
+                            <input type="radio" name="q4" value="b"> Ammonia-based cleaner
+                        </label>
+                        <label>
+                            <input type="radio" name="q4" value="c"> Bleach
+                        </label>
+                        <label>
+                            <input type="radio" name="q4" value="d"> Vinegar
+                        </label>
+                    </div>
+                </div>
+				<!-- question 5 -->
+				<div class="question" data-question-id="5">
+                    <p>Which tool is essential for vacuuming carpets?</p>
+                    <div class="options">
+                        <label>
+                            <input type="radio" name="q5" value="a"> Floor mop
+                        </label>
+                        <label>
+                            <input type="radio" name="q5" value="b"> Vacuum cleaner
+                        </label>
+                        <label>
+                            <input type="radio" name="q5" value="c"> Scrubbing brush
+                        </label>
+                        <label>
+                            <input type="radio" name="q5" value="d"> Steam cleaner
+                        </label>
+                    </div>
+                </div>
+				<!-- question 6 -->
+				<div class="question" data-question-id="6">
+                    <p>What does a housekeeping supervisor primarily do?</p>
+                    <div class="options">
+                        <label>
+                            <input type="radio" name="q6" value="a"> Manage guest reservations
+                        </label>
+                        <label>
+                            <input type="radio" name="q6" value="b"> Inspect cleaned rooms
+                        </label>
+                        <label>
+                            <input type="radio" name="q6" value="c"> Greet guests
+                        </label>
+                        <label>
+                            <input type="radio" name="q6" value="d"> Prepare meals
+                        </label>
+                    </div>
+                </div>
+				<!-- question 7 -->
+				<div class="question" data-question-id="7">
+                    <p>Which is not an important aspect of housekeeping safety?</p>
+                    <div class="options">
+                        <label>
+                            <input type="radio" name="q7" value="a"> Wearing gloves
+                        </label>
+                        <label>
+                            <input type="radio" name="q7" value="b"> Using faulty electrical equipment
+                        </label>
+                        <label>
+                            <input type="radio" name="q7" value="c"> Labeling cleaning chemicals
+                        </label>
+                        <label>
+                            <input type="radio" name="q7" value="d"> Wearing non-slip shoes
+                        </label>
+                    </div>
+                </div>
+				<!-- question 8 -->
+				<div class="question" data-question-id="8">
+                    <p>What is the standard temperature for washing linen in a hotel laundry?</p>
+                    <div class="options">
+                        <label>
+                            <input type="radio" name="q8" value="a"> 30°C
+                        </label>
+                        <label>
+                            <input type="radio" name="q8" value="b"> 60°C
+                        </label>
+                        <label>
+                            <input type="radio" name="q8" value="c"> 40°C
+                        </label>
+                        <label>
+                            <input type="radio" name="q8" value="d"> 90°C
+                        </label>
+                    </div>
+                </div>
+				<!-- question 9 -->
+				<div class="question" data-question-id="9">
+                    <p>Which of the following is an eco-friendly cleaning practice?</p>
+                    <div class="options">
+                        <label>
+                            <input type="radio" name="q9" value="a"> Using disposable cleaning tools
+                        </label>
+                        <label>
+                            <input type="radio" name="q9" value="b"> Minimizing water waste
+                        </label>
+                        <label>
+                            <input type="radio" name="q9" value="c"> Using chemical-based cleaners
+                        </label>
+                        <label>
+                            <input type="radio" name="q9" value="d"> Ignoring recycling
+                        </label>
+                    </div>
+                </div>
+			</div>
+
+            <div class="result">
+                <button type="button" onclick="submitQuiz()">Submit Quiz</button>
+            </div>
+			
+        </form>
+    </div>
+</div>
+    <div class="popup" id="popup">
+        <p id="popup-message"></p>
+    </div>
+<!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script type="module">
+        import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+    
+        const firebaseConfig = {
+            apiKey: "AIzaSyBdGShEAg6teoVgXVfsbzUJO1sIY3bZPH4",
+  authDomain: "udaipur-hotelier-4b582.firebaseapp.com",
+  projectId: "udaipur-hotelier-4b582",
+  storageBucket: "udaipur-hotelier-4b582.firebasestorage.app",
+  messagingSenderId: "843875126311",
+  appId: "1:843875126311:web:2c76e6e8b79d4223439202",
+  measurementId: "G-M93ZN7YSNB"
+        };
+        
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth();
+        
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                let email = user.email;
+                let username = email.substring(0, email.indexOf("@"));
+                document.getElementById("username").textContent = username;
+            } else {
+                window.location.href = "login.html";
+            }
+        });
+        
+        window.logout = function() {
+            signOut(auth).then(() => {
+                window.location.href = "login.html";
+            }).catch((error) => {
+                console.error("Logout Error: ", error);
+            });
+        }
+    </script>
+    <script>
+	let score = 0;
+    let totalQuestions = 9;
+const correctAnswers = {
+    q1: 'b',
+    q2: 'b',
+    q3: 'b',
+    q4: 'b',
+	q5: 'b',q6: 'b',q7: 'b',q8: 'b',q9: 'b',
+};
+// Display total questions at the bottom
+    document.getElementById('totalQuestions').innerText = totalQuestions;
+
+// Shuffle questions on page load
+document.addEventListener('DOMContentLoaded', () => {
+    const questionsContainer = document.getElementById('questions');
+    const questions = Array.from(questionsContainer.children);
+    questions.sort(() => Math.random() - 0.5);
+    questions.forEach(question => questionsContainer.appendChild(question));
+
+    // Add click event to options
+    const options = document.querySelectorAll('.options label');
+    options.forEach(option => {
+        option.addEventListener('click', function () {
+            const siblings = Array.from(this.parentNode.children);
+            siblings.forEach(sibling => sibling.classList.remove('selected'));
+            this.classList.add('selected');
+        });
+    });
+});
+
+function submitQuiz() {
+    const totalQuestions = Object.keys(correctAnswers).length;
+    let unanswered = 0;
+
+    // Check for unanswered questions
+    for (let i = 1; i <= totalQuestions; i++) {
+        const selected = document.querySelector(`input[name="q${i}"]:checked`);
+        if (!selected) {
+            unanswered++;
+            document.querySelector(`[data-question-id="${i}"]`).scrollIntoView({ behavior: 'smooth' });
+            alert(`Please answer Question ${i} before submitting.`);
+            return; // Stop validation and alert the user
+        }
+    }
+
+    // If all questions are answered
+    let correct = 0;
+    let incorrect = 0;
+
+    for (let i = 1; i <= totalQuestions; i++) {
+        const selected = document.querySelector(`input[name="q${i}"]:checked`);
+        if (selected) {
+            const parentLabel = selected.parentElement;
+            if (selected.value === correctAnswers[`q${i}`]) {
+                correct++;
+                parentLabel.classList.add('correct');
+            } else {
+                incorrect++;
+                parentLabel.classList.add('incorrect');
+                document.querySelector(`input[name="q${i}"][value="${correctAnswers[`q${i}`]}"]`).parentElement.classList.add('correct');
+            }
+        }
+    }
+
+    const percentage = (correct / totalQuestions) * 100;
+    let feedback = '';
+
+    if (percentage <= 30) feedback = 'You need to learn more.';
+    else if (percentage <= 50) feedback = 'You also need to learn more.';
+    else if (percentage <= 70) feedback = 'You are average.';
+    else if (percentage <= 90) feedback = 'You are above average.';
+    else feedback = 'Perfect! Congratulations!';
+
+    showPopup(feedback, totalQuestions, correct, incorrect);
+
+    setTimeout(() => {
+        document.getElementById('quiz-form').reset();
+        clearFeedback();
+    }, 10000);
+}
+
+function showPopup(message, totalQuestions, correct, incorrect) {
+    const popup = document.getElementById('popup');
+    const popupMessage = document.getElementById('popup-message');
+
+    // Update the popup with feedback and score details
+    popupMessage.innerHTML = `
+        <p>${message}</p>
+        <p>Total Questions: ${totalQuestions}</p>
+        <p>Correct Answers: ${correct}</p>
+        <p>Incorrect Answers: ${incorrect}</p>
+    `;
+    popup.classList.add('show');
+}
+
+function clearFeedback() {
+    const labels = document.querySelectorAll('label');
+    labels.forEach(label => {
+        label.classList.remove('correct', 'incorrect', 'selected');
+    });
+    document.getElementById('popup').classList.remove('show');
+}
+	</script>
+</body>
+</html>

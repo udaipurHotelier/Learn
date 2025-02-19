@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Udaipur Hotelier</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/salaryslipcss.css" rel="stylesheet">
+	
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar Start -->
+        <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+            <a href="index.html" class="navbar-brand d-flex align-items-center text-center py-0 px-4 px-lg-5">
+                <h4 class="m-0 text-primary">Udaipur Hotelier</h4>
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+           <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a href="index.html" class="nav-item nav-link ">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+					<a href="category.html" class="nav-item nav-link">Jobs</a>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+					<a href="Resume.html" class="nav-item nav-link active">Resume</a>
+					
+                </div>
+			</div>
+		</nav>
+        <!-- Navbar End -->
+		
+        <!-- Header End -->
+        <div class="container-xxl py-5 bg-dark page-header mb-5">
+            <div class="container my-5 pt-5 pb-4">
+                <h1 class="display-3 text-white mb-3 animated slideInDown">Salary Slip</h1>
+            </div>
+        </div>
+        <!-- Header End -->
+<div class="salarycontainer">
+        <div class="form-container">
+		    <div class="input-section">
+                <h2>Provide Details to get Salary Slip</h2>
+                
+                <div class="section-title">Employer Details</div>
+                <div class="form-group">
+                    <label>Upload Logo:</label>
+                    <input type="file" id="employerLogo" accept="image/*">
+                </div>
+                <div class="form-group">
+                    <label>Employer Name:</label>
+                    <input type="text" id="employerName" required>
+                </div>
+                <div class="form-group">
+                    <label>Employer Address:</label>
+                    <input type="text" id="employerAddress" required>
+                </div>
+
+                <div class="section-title">Employee Details</div>
+                <div class="form-group">
+                    <label>Employee Code:</label>
+                    <input type="text" id="empCode" required>
+                </div>
+                <div class="form-group">
+                    <label>Employee Name:</label>
+                    <input type="text" id="empName" required>
+                </div>
+                <div class="form-group">
+                    <label>Department:</label>
+                    <input type="text" id="department" required>
+                </div>
+                <div class="form-group">
+                    <label>Designation:</label>
+                    <input type="text" id="designation" required>
+                </div>
+                <div class="form-group">
+                    <label>UAN Number:</label>
+                    <input type="text" id="uanNumber" required pattern="\d{12}" title="UAN must be 12 digits">
+                </div>
+                <div class="form-group">
+                    <label>ESI Number:</label>
+                    <input type="text" id="esiNumber" required pattern="\d{10}" title="ESI number must be 10 digits">
+                </div>
+                <div class="form-group">
+                    <label>Date of Joining:</label>
+                    <input type="date" id="dateOfJoining" required>
+                </div>
+                <div class="form-group">
+                    <label>Pay Period:</label>
+                    <input type="month" id="payPeriod" required>
+                </div>
+                <div class="form-group">
+                    <label>Month Days:</label>
+                    <select id="monthDays" required>
+                        <option value="28">28</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Paid Days:</label>
+                    <input type="number" id="paidDays" required min="0" max="31">
+                </div>
+
+                <div class="section-title">Salary Details</div>
+                <div class="form-group">
+                    <label>Total Salary:</label>
+                    <input type="number" id="totalSalary" required>
+                </div>
+                <div class="form-group">
+                    <label>Applicable for Compliance:</label>
+                    <select id="applicableForCompliance">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+                <div class="section-title">Deductions</div>
+                <div class="form-group">
+                    <label>Salary Advance:</label>
+                    <input type="number" id="salAdv" required>
+                </div>
+                <div class="form-group">
+                    <label>Loans:</label>
+                    <input type="number" id="loans" required>
+                </div>
+
+                <button onclick="generatePDF()">Download Salary Slip</button>
+
+            </div>
+
+            <div class="preview-section">
+                <div id="salary-slip" class="salary-slip">
+                    <div class="employer-details">
+                        <img id="logoPreview" class="employer-logo" style="display: none;">
+                        <h2 id="employerNamePreview"></h2>
+                        <p id="employerAddressPreview"></p>
+                        <h3>MONTHLY SALARY SLIP, 2024</h3>
+                    </div>
+
+                    <div class="employee-details">
+                        <div class="detail-row">
+                            <span>Emp Code</span>
+                            <span id="empCodePreview"></span>
+                        </div>
+                        <div class="detail-row">
+                            <span>Employee Name</span>
+                            <span id="empNamePreview"></span>
+                        </div>
+                        <div class="detail-row">
+                            <span>Department</span>
+                            <span id="departmentPreview"></span>
+                        </div>
+                        <div class="detail-row">
+                            <span>Designation</span>
+                            <span id="designationPreview"></span>
+                        </div>
+                        <div class="detail-row">
+                            <span>UAN Number</span>
+                            <span id="uanNumberPreview"></span>
+                        </div>
+                        <div class="detail-row">
+                            <span>ESI Number</span>
+                            <span id="esiNumberPreview"></span>
+                        </div>
+                        <div class="detail-row">
+                            <span>Date of Joining</span>
+                            <span id="dateOfJoiningPreview"></span>
+                        </div>
+                        <div class="detail-row">
+                            <span>Pay Period</span>
+                            <span id="payPeriodPreview"></span>
+                        </div>
+                        <div class="detail-row">
+                            <span>Month Days</span>
+                            <span id="monthDaysPreview"></span>
+                        </div>
+                        <div class="detail-row">
+                            <span>Paid Days</span>
+                            <span id="paidDaysPreview"></span>
+                        </div>
+                    </div>
+
+                    <div class="earnings-deductions">
+                        <div>
+                            <h4>Earnings</h4>
+                            <div class="detail-row">
+                                <span>Basic</span>
+                                <span id="basicPreview">0</span>
+                            </div>
+                            <div class="detail-row">
+                                <span>HRA</span>
+                                <span id="hraPreview">0</span>
+                            </div>
+                            <div class="detail-row">
+                                <span>Washing Allow.</span>
+                                <span id="washingAllowPreview">0</span>
+                            </div>
+                            <div class="detail-row">
+                                <span><strong>Total Earnings</strong></span>
+                                <span id="totalEarningsPreview">0</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4>Deductions</h4>
+                            <div class="detail-row">
+                                <span>Sal Advance</span>
+                                <span id="salAdvPreview">0</span>
+                            </div>
+                            <div class="detail-row">
+                                <span>Loans</span>
+                                <span id="loansPreview">0</span>
+                            </div>
+                            <div class="detail-row" id="pfRow">
+                                <span>PF</span>
+                                <span id="pfPreview">0</span>
+                            </div>
+                            <div class="detail-row" id="esicRow">
+                                <span>ESIC</span>
+                                <span id="esicPreview">0</span>
+                            </div>
+                            <div class="detail-row">
+                                <span><strong>Total Deduction</strong></span>
+                                <span id="totalDeductionsPreview">0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="totals">
+                        <div class="detail-row">
+                            <span><strong>Gross Salary</strong></span>
+                            <span id="grossSalaryPreview">0</span>
+                        </div>
+                        <div class="detail-row">
+                            <span><strong>Net Salary</strong></span>
+                            <span id="netSalaryPreview">0</span>
+                        </div>
+                    </div>
+
+                    <div class="net-salary-words" id="netSalaryWords"></div>
+
+                    <div class="signatures">
+                        <div>
+                            <div class="signature-line">Employee Signature</div>
+                        </div>
+                        <div>
+                            <div class="signature-line">Authorised Signatory</div>
+                        </div>
+                    </div>
+					<br>
+					  <div class="watermark">Udaipur Hotelier</div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<!-- Footer Start -->
+        
+		<!-- Footer Start -->
+        <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="row g-5">
+					<div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Udaipur Hotelier</h5>
+                        <a class="btn btn-link text-white-50" href="about.html">About Us</a>
+                        <a class="btn btn-link text-white-50" href="contact.html">Contact Us</a>
+                        <a class="btn btn-link text-white-50" href="category.html">Jobs</a>
+						<a class="btn btn-link text-white-50" href="registration_form.html">Registration form</a>
+                    </div>
+					<div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Contact</h5>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Udaipur</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91- 9079268663</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>Udaipurhotelier@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">Udaipur Hotelier</a>, All Right Reserved.			
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+		<!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script src="js/salaryslipjs.js"></script>
+</body>
+
+</html>

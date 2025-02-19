@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Udaipur Hotelier</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+	<link href="css/style.css" rel="stylesheet">
+    <link href="css/hkchecklist.css" rel="stylesheet">
+	<link href="css/tablecss.css" rel="stylesheet">
+	
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+		<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+            <a href="LearnPage.html" class="navbar-brand d-flex align-items-center text-center py-0 px-4 px-lg-5">
+                <h4 class="m-0 text-primary">Udaipur Hotelier</h4>
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+           <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a href="LearnPage.html" onclick="showAdThenRedirect('LearnPage.html')" class="nav-item nav-link ">Home</a>
+				    <a href="about.html" class="nav-item nav-link">About</a>
+					<a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" id="userDropdown" class="nav-link dropdown-toggle d-flex align-items-center" data-bs-toggle="dropdown">
+                            <img id="profileImage" src="imge/profile.png" alt="Profile" class="rounded-circle" width="30" height="30" style="margin-right: 8px;">
+                            <span id="username">User</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <a href="Profile.html" class="dropdown-item">Profile</a>
+                            <a href="#" class="dropdown-item">Settings</a>
+                            <a href="#" class="dropdown-item" onclick="logout()">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+		<!-- Header End -->
+        <div class="container-xxl py-5 bg-dark page-header mb-5">
+            <div class="container my-5 pt-5 pb-4">
+                <h1 class="display-3 text-white mb-3 animated slideInDown">Knowledge</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb text-uppercase">
+                        <li class="breadcrumb-item"><a href="LearnPage.html">Home</a></li>
+                        <li class="breadcrumb-item text-white active" aria-current="page">Front office Knowledge</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <!-- Header End -->
+		
+		<div class="containeer">
+		<h2>Front office Knowledge</h2>
+		<form id="checklistForm">
+		<h6>Significance of The Front Office Department</h6>
+			<p><b>The front office department of the hotel has a special responsibility when it comes to creating the ideal guest experience. It is often seen as the hotel’s face. Performing smooth check-ins, handling queries in a prompt and helpful manner,
+			and responding speedily to resolve any problems will all go a long way to making a guest’s experience more enjoyable and positive. <br>
+			As you can see, your front office department plays a key role in creating a good impression. Hotel trends might change, but a hotel’s front office must always maintain smooth and friendly interactions with customers.	</b></p>
+			<p><b>The front office is the part of a company that deals directly with customers, and is often the first place customers interact with the business. Front office operations include customer service, marketing, sales, and advisory roles.
+			<br>the front office is the reception and sales area of the business for many firms. Front-office employees in the financial services industry are typically those experts who generate revenue for the company by providing direct client services such as wealth management.</b></p>
+        <!-- software Field -->
+        <br>
+		<div class="section">
+            <h6>Types of software</h6>
+			<div class="checkbox-group">
+			<label><input type="checkbox" name="software1"> Frontdesk Anywhere</label>
+			<label><input type="checkbox" name="software2"> Hoteliga</label>
+			<label><input type="checkbox" name="software3"> WebRezPro</label>
+			<label><input type="checkbox" name="software4"> Stayntouch</label>
+			<label><input type="checkbox" name="software5"> eZee Absolute</label>
+			<label><input type="checkbox" name="software6"> Hotelier</label>
+			</div>
+		</div>
+		<br>
+		<!-- new Way -->
+		<div class="section">
+            <h6>Types of Meal plans</h6>
+			<div class="checkbox-group">
+                <label><input type="checkbox" name="cleaning1" onclick="toggleParagraph(1)"> CP ( Continental Plan )</label>
+                <label><input type="checkbox" name="cleaning1" onclick="toggleParagraph(2)"> EP ( The European Plan )</label>
+                <label><input type="checkbox" name="cleaning1" onclick="toggleParagraph(3)"> AP ( American Plan )</label>
+                <label><input type="checkbox" name="cleaning1" onclick="toggleParagraph(4)"> MAP ( Media American Plan )</label>
+                <label><input type="checkbox" name="cleaning1" onclick="toggleParagraph(5)"> JP ( jungle plan )</label>
+            </div>
+			<div id="paragraphs">
+				<p id="para-1" class="paragraph">Continental Plan (CP), is where your room stay involves a daily breakfast at the hotel. The hotel can either affix its option of breakfast menu or provide in the dining area for a buffet breakfast. Also, whether the room service provides the breakfast or in a general dining area, depends from hotel to hotel. </p>
+				<p id="para-2" class="paragraph"> European Plan(EP), means that only the stay is included in the rates and that you will have to pay extra for using the hotel’s dining facilities.This can be called the “Room Only” Plan, in general terms.<br><b>European Plan: Room Rent only</b></p>
+				<p id="para-3" class="paragraph">American Plan (AP), is also known as Full Pension or Full Board meal Plan. It includes all three major meals, breakfast, lunch, and dinner for the length of your stay. Generally, the rates on this plan are higher but offer a good value for your money, and of course, added convenience.<br><b>American Meal Plan: Room Rent + Buffet Breakfast + Buffet Lunch + Buffet Dinner </b> </p>
+				<p id="para-4" class="paragraph">Modified American Plan(MAP), is also known as Half Board or Half Pension meal plan. It is a modified version of the American Plan and includes a room stay with breakfast and a choice between lunch and dinner.<br><b>Modified American Plan: Room Rent+ Buffet Breakfast+ (Buffet Lunch/Buffet Dinner)</b></p>
+				<p id="para-5" class="paragraph">The Jungle Plan (JP) at a hotel includes all meals (breakfast, lunch, and dinner) plus jungle safaris. Jungle safaris may include elephant safaris or jeep safaris, whichever is applicable.  </p>
+			</div>
+		</div>
+		<br>
+		<div class="section">
+            <h6>Sign in Hotel rooms</h6>
+			
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="cleaning1" onclick="signParagraph(1)"> OCCUPIED - GUEST IN ROOM</label>
+                <label><input type="checkbox" name="cleaning2" onclick="signParagraph(2)"> COMPLIMENTARY - FREE</label>
+                <label><input type="checkbox" name="cleaning3" onclick="signParagraph(3)"> DND - DO NOT DISTURB</label>
+                <label><input type="checkbox" name="cleaning4" onclick="signParagraph(4)"> VACANT - THE ROOM IS READY </label>
+                <label><input type="checkbox" name="cleaning5" onclick="signParagraph(5)"> OOO - OUT OF ORDER </label>
+                <label><input type="checkbox" name="cleaning6" onclick="signParagraph(6)"> OOS - OUT OF SERVICE </label>
+                <label><input type="checkbox" name="cleaning7" onclick="signParagraph(7)"> DNCO - DID NOT CHECK OUT </label>
+                <label><input type="checkbox" name="cleaning8" onclick="signParagraph(8)"> CO - CHECK OUT </label>
+                <label><input type="checkbox" name="cleaning9" onclick="signParagraph(9)"> LCO - LATE CHECK OUT </label>
+                <label><input type="checkbox" name="cleaning10" onclick="signParagraph(10)"> ECI - EARLY CHECK IN </label>
+				<label><input type="checkbox" name="cleaning11" onclick="signParagraph(11)"> SLEEPER</label>
+				<label><input type="checkbox" name="cleaning11" onclick="signParagraph(12)"> VR</label>
+            </div>
+			<div id="paragraphs">
+				<p id="spara-1" class="paragraph">An occupied room in a hotel is a room that has been assigned to a guest who has checked in and is currently registered to the room. No one else can use the room until the current guest leaves.</p>
+				<p id="spara-2" class="paragraph">A complimentary room is a room or lodging that is provided to a guest at no cost or at a reduced price. The guest is not required to pay for any portion of the room's price.<br>Complimentary rooms can also include room upgrades, where a guest is moved to a better room than the one they booked. This may also include complimentary services or amenities associated with the upgraded room, such as restaurant access or luxury bathroom amenities.<br>Complimentary services are extra products or services that a hotel offers to create a unique experience for guests.</p>
+				<p id="spara-3" class="paragraph">DND stands for "Do Not Disturb" and is a feature or status that hotel guests can use to indicate they don't want to be disturbed. Guests can activate DND by: 
+				<br> 1. Hanging a sign: Guests can hang a DND sign on their door handle to tell staff not to enter or knock on the door. <br>
+				2. Using an electronic switch: Guests can use an electronic switch inside their room to activate DND.<br>
+				3. Using a smart control: Guests can use a smartphone, TV, or voice command to set DND status.<br>
+				4. When DND is active, hotel staff are instructed not to enter the room unless the guest requests it in an emergency.</p>
+				
+				<p id="spara-4" class="paragraph"> In a hotel, a room that is "vacant and ready" means that it has been cleaned and inspected and is ready for a new guest:
+				<br> 1. Vacant: The room is not assigned to anyone and the guest has checked out.<br>
+				2. Ready: The room is available for a new guest.</p>
+				
+				<p id="spara-5" class="paragraph"> The room cannot be occupied due to maintenance, refurbishing, or extensive cleaning. </p>
+				
+				<p id="spara-6" class="paragraph">OOS is a room status used in hotels to temporarily block a room for maintenance or other reasons.
+				<br> 1. Purpose - OOS is used to mark a room as unavailable for immediate assignment, such as for minor repairs or scheduled maintenance. It can also be used to block a floor or wing during low season or for cleaning.
+				<br>2. Availability - OOS rooms are still included in the hotel's inventory and can be sold if needed. They won't appear in lists of vacant rooms when searching for rooms to allocate. 
+				<br>3. Appearance - On a room rack, OOS rooms are usually indicated with a crossed out water drop icon.
+				<br>4. Effect on hotel metrics - OOS rooms don't affect a hotel's occupancy, ADR, or RevPar because they're still considered available to be sold. </p>
+				
+				<p id="spara-7" class="paragraph">DNCO is a hotel room status code that stands for "did not check out".It means that a guest left the hotel without notifying the front office, but they have made arrangements to pay their bill. <br> The hotel's management will have information about when and how the guest will settle their account. Checking out of a hotel is the process of settling any bills, returning room keys, and formally leaving the hotel.<br> It's a good opportunity to leave a lasting impression on the hotel. Even though it might be inconvenient, checking out can help resolve any discrepancies on your bill and allow the hotel to prepare the room for the next guest.</p>
+			
+				<p id="spara-8" class="paragraph">CO is a hotel acronym that stands for "Check Out". It indicates that a guest has left the hotel after settling their bill and returning their room key.
+				<br>Here are some things that happen during a hotel check-out:
+				<br> 1. Prepare the bill: The front desk prepares the final bill before the guest checks out.
+				<br> 2. Return the keys: The guest returns their room key to the front desk.
+				<br> 3. Refund deposits: If there was a key deposit or other security deposit, the front desk refunds it.
+				<br> 4. Ask for assistance: The front desk asks if the guest needs help with their luggage or transportation.
+				<br> 5. Collect feedback: The front desk asks for feedback about the guest's stay and encourages them to leave a review. </p>
+			
+				<p id="spara-9" class="paragraph">LCO stands for late check-out, which is a hotel arrangement that allows a guest to leave later than the normal check-out time. A guest can request a late check-out when booking their stay or by calling the front desk before checking out. The hotel will grant a late check-out if the room is not needed by another guest.
+				<br>If a late check-out is not possible, guests can:
+				<br> 1. Store their bags: Most hotels will store luggage for guests to pick up after check-out.
+				<br> 2. Keep their bags in the car: If the guest is renting a car, they can leave their luggage in the trunk.
+				<br> 3. Use a luggage locker: If the hotel doesn't store bags, guests can look for a luggage locker in the city.
+				</p>
+				<p id="spara-10" class="paragraph">Early Check-In (ECI) is a hotel feature that allows guests to check in before the standard check-in time. Hotels can set up ECI as an add-on item that guests can purchase. Here are some details about setting up ECI.</p>
+				<p id="spara-11" class="paragraph">GUEST SETTED THE ROOM AMOUNT AND LEFT THE HOTEL , FRONT OFFICE HAS FAILED TO UPDATE THE ROOM STATUS.</p>
+				<p id="spara-12" class="paragraph">VR : Vacant & Ready(Clean/ Available) - room is ready to be occupied.</p>
+			</div>
+		</div>
+		<br>
+		<div class="section">
+            <h6>Other</h6>
+            <div class="checkbox-group">
+				<label><input type="checkbox" name="other1" onclick="otherParagraph(1)"> AI ( all inclusive )</label>
+                <label><input type="checkbox" name="other2" onclick="otherParagraph(2)"> W/DRINK ( welcome drink )</label>
+                <label><input type="checkbox" name="other3" onclick="otherParagraph(3)"> STD ( standard )</label>
+                <label><input type="checkbox" name="other4" onclick="otherParagraph(4)"> DLX ( deluxe )</label>
+                <label><input type="checkbox" name="other5" onclick="otherParagraph(5)"> LUX ( luxury )</label>
+                <label><input type="checkbox" name="other6" onclick="otherParagraph(6)"> SA  ( service apartment )</label>
+				<label><input type="checkbox" name="other7" onclick="otherParagraph(7)"> Stay over </label>
+                <label><input type="checkbox" name="other8" onclick="otherParagraph(8)"> On-change </label>
+                <label><input type="checkbox" name="other9" onclick="otherParagraph(9)"> On-queue </label>
+                <label><input type="checkbox" name="other10" onclick="otherParagraph(10)"> Skipper </label>
+			</div>
+			<div id="paragraphs">
+			<p id="opara-1" class="paragraph">All-inclusive is used to indicate that a price, especially the price of a holiday, includes all the charges and all the services offered.</p>
+			<p id="opara-2" class="paragraph">Types F Welcome Drink<br>1. Crushes <br> 2. Mojitos <br> 3.Smoothies <br> 4. Fresh Fruit Juice <br> 5.Cold Coffee <br> 6. Iced Tea <br> 7. Buttermilk <br> 8. Tea </p>
+			<p id="opara-3" class="paragraph">STD can stand for standard room, which is a basic, affordable room type offered by hotels. Standard rooms are designed to provide essential services and comfort and typically include one or two beds.</p>
+			<p id="opara-4" class="paragraph">A deluxe room is a more luxurious hotel room than a standard room, with larger size, better views, and more amenities. <br>1. Deluxe rooms are usually larger than standard rooms. <br>
+			2. Deluxe rooms often have better views, such as city, water, mountain, or bay views. <br>3. Deluxe rooms may include a balcony, patio, private terrace, bathtub, shower, or whirlpool tub.<br>
+			4. Deluxe rooms may have more luxurious bathroom fixtures. <br> 5. Deluxe rooms may have enhanced decor. </p>
+			<p id="opara-5" class="paragraph">A luxury room in a hotel is a room with high-end amenities, a prime location, and views that offer a sense of opulence and an unforgettable experience: <br>1. Luxury rooms are usually in a prime location.
+			<br> 2. Luxury rooms have high-end amenities, such as spa-like bathrooms, state-of-the-art technology, and personalized services. <br> 3. Luxury rooms have high-quality furnishings with expensive touches, such as elegant furniture and luxurious bedding.
+			<br> 4.Luxury rooms are quiet and have fresh air, with original art on the walls and windows that open. <br> 5. Luxury rooms have robes and slippers, adequate storage, and a good-size flat-screen TV.</p>
+			<p id="opara-6" class="paragraph">A service apartment is a type of lodging that combines the features of a hotel and a private residence, offering hotel-like amenities and services in a more spacious and private setting. They are also known as serviced residences or aparthotels.</p>
+			<p id="opara-7" class="paragraph"><b>The guest is staying at least one more night</b></p>
+			<p id="opara-8" class="paragraph"><b>The room is not yet ready for another guest, but the previous guest has left</b></p>
+			<p id="opara-9" class="paragraph">The room is not ready, but the guest has already arrived</p>
+			<p id="opara-10" class="paragraph">The guest has left without settling their account</p>
+			<br>
+			</div>
+		</div>
+		<div class="section">
+			<h6>Table: Key Requirements of a Front Office Employee</h6>
+			<table>
+			<tr>
+				<th>Key Requirements</th>
+				<th>Description</th>
+				<th>Examples of Tasks and Responsibilities</th>
+			</tr>
+			<tr>
+				<td>Customer Service</td>
+				<td>Provide excellent service, welcome guests, address inquiries and resolve issues professionally.</td>
+				<td> – Greet guests warmly upon arrival.
+				<br> – Assist with check-in and check-out.
+				<br> – Respond to guest requests and resolve complaints.</td>
+			</tr>
+			<tr>
+				<td>Efficient Operations</td>
+				<td>Manage reception duties, check-in/out, administrative tasks, and multitask for a seamless guest experience.</td>
+				<td> – Handle reservations and room assignments.
+				<br> – Maintain accurate guest records.
+				<br> – Process payments and invoices efficiently.</td>
+			</tr>
+			<tr>
+				<td>Effective Communication</td>
+				<td>Possess strong communication skills to interact with guests and colleagues and promote hotel services.</td>
+				<td> – Communicate clearly and courteously with guests.
+				<br> – Collaborate with housekeeping for room readiness.
+				<br> – Promote amenities, upselling when appropriate.</td>
+			</tr>
+		</table>
+			</div>
+		</form>
+			<h6>Learn</h6>
+        <div class="section signature-container">
+			<div>
+             <button type="button" class="btn btn-outline-success and-all-other-classes"> 
+				<a href="fo_skills.html" style="color:inherit">Front Office skills</a>
+				</button>
+               
+            </div>
+            <div>
+			<button type="button" class="btn btn-outline-success and-all-other-classes"> 
+				<a href="fo_advacne.html" style="color:inherit">Front Office Advacne</a>
+				</button>
+            </div>
+			<div>
+                <button type="button" class="btn btn-outline-success and-all-other-classes"> 
+				<a href="fo_checklist_emp.html" style="color:inherit">Front Office Checklist</a>
+				</button>
+            </div>
+        </div>
+	</div>
+</div>
+
+ <!-- Footer Start -->
+       <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="row g-5">
+					<div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Udaipur Hotelier</h5>
+                        <a class="btn btn-link text-white-50" href="index.html">Home</a>
+                        <a class="btn btn-link text-white-50" href="contact.html">Contact</a>
+                    </div>
+					<div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Contact</h5>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Udaipur</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3" href="404.html"></i>Udaipurhotelier@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">Udaipur Hotelier</a>, All Right Reserved.			
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+		<!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script type="module">
+        import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+    
+        const firebaseConfig = {
+            apiKey: "AIzaSyBdGShEAg6teoVgXVfsbzUJO1sIY3bZPH4",
+  authDomain: "udaipur-hotelier-4b582.firebaseapp.com",
+  projectId: "udaipur-hotelier-4b582",
+  storageBucket: "udaipur-hotelier-4b582.firebasestorage.app",
+  messagingSenderId: "843875126311",
+  appId: "1:843875126311:web:2c76e6e8b79d4223439202",
+  measurementId: "G-M93ZN7YSNB"
+        };
+        
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth();
+        
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                let email = user.email;
+                let username = email.substring(0, email.indexOf("@"));
+                document.getElementById("username").textContent = username;
+            } else {
+                window.location.href = "login.html";
+            }
+        });
+        
+        window.logout = function() {
+            signOut(auth).then(() => {
+                window.location.href = "login.html";
+            }).catch((error) => {
+                console.error("Logout Error: ", error);
+            });
+        }
+    </script>
+	<script>
+	function toggleParagraph(index) {
+      const paragraph = document.getElementById(`para-${index}`);
+      const checkbox = event.target;
+
+      if (checkbox.checked) {
+        paragraph.style.display = 'block';
+      } else {
+        paragraph.style.display = 'none';
+      }
+    }
+	// sign in hotel
+	function signParagraph(index) {
+      const paragraph = document.getElementById(`spara-${index}`);
+      const checkbox = event.target;
+
+      if (checkbox.checked) {
+        paragraph.style.display = 'block';
+      } else {
+        paragraph.style.display = 'none';
+      }
+    }
+	
+	//other section
+	function otherParagraph(index) {
+      const paragraph = document.getElementById(`opara-${index}`);
+      const checkbox = event.target;
+
+      if (checkbox.checked) {
+        paragraph.style.display = 'block';
+      } else {
+        paragraph.style.display = 'none';
+      }
+    }
+
+    function downloadPDF() {
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF();
+        
+        // Capture data from the form
+        const formData = new FormData(document.getElementById('checklistForm'));
+
+        // Add date
+        const date = formData.get('date');
+        doc.text(`Date: ${date}`, 10, 10);
+
+        // Sections data
+        const sections = ['Cleaning Tasks', 'Maintenance Tasks', 'Safety Checks', 'Inventory Checks'];
+        let yPosition = 20;
+
+        sections.forEach((section, index) => {
+            doc.text(`${section}:`, 10, yPosition);
+            yPosition += 10;
+            
+            const checkboxes = formData.getAll(`${section.toLowerCase().replace(/ /g, '')}[]`);
+            checkboxes.forEach((checkbox, i) => {
+                doc.text(`${i+1}. ${checkbox}`, 10, yPosition);
+                yPosition += 5;
+            });
+        });
+
+        // Extra Notes
+        const extraNotes = formData.get('extraNotes');
+        if (extraNotes) {
+            doc.text(`Extra Notes: ${extraNotes}`, 10, yPosition);
+            yPosition += 10;
+        }
+
+        // Signatures
+        const employeeSignature = formData.get('employeeSignature');
+        const supervisorSignature = formData.get('supervisorSignature');
+        doc.text(`Employee Signature: ${employeeSignature}`, 10, yPosition);
+        yPosition += 10;
+        doc.text(`Supervisor Signature: ${supervisorSignature}`, 10, yPosition);
+
+        // Save PDF
+        doc.save('housekeeping_checklist.pdf');
+    }
+</script>
+</body>
+
+</html>

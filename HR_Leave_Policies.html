@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave Policy</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+	<style>
+section {
+    width: 95%;
+    max-width: auto;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+h2 {
+    color: #8692f7;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #8692f7;
+    color: white;
+}
+
+button {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #8692f7;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #6775e7;
+}
+
+	</style>
+</head>
+<body>
+    <div class="container-xxl bg-white p-0">
+       <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+            <a href="LearnPage.html" class="navbar-brand d-flex align-items-center text-center py-0 px-4 px-lg-5">
+                <h4 class="m-0 text-primary">Udaipur Hotelier</h4>
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+           <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a href="LearnPage.html" class="nav-item nav-link">Home</a>
+				    <a href="about.html" class="nav-item nav-link">About</a>
+					<a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" id="userDropdown" class="nav-link dropdown-toggle d-flex align-items-center" data-bs-toggle="dropdown">
+                            <img id="profileImage" src="imge/profile.png" alt="Profile" class="rounded-circle" width="30" height="30" style="margin-right: 8px;">
+                            <span id="username">User</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <a href="Profile.html" class="dropdown-item">Profile</a>
+                            <a href="#" class="dropdown-item">Settings</a>
+                            <a href="#" class="dropdown-item" onclick="logout()">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    
+    <section id="leave-policy">
+        <h2>Leave Policy Details</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Leave Type</th>
+                    <th>Description</th>
+                    <th>No. of Leaves</th>
+                    <th>Salary Deducted</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Paid Leave</td>
+                    <td>Employees are entitled to a set number of paid leaves annually.</td>
+                    <td>10-20 days</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td>Sick Leave</td>
+                    <td>Employees can avail sick leave with a valid medical certificate.</td>
+                    <td>5-12 days</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td>Casual Leave</td>
+                    <td>Casual leave can be taken for personal reasons with prior approval.</td>
+                    <td>6-10 days</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td>Unpaid Leave</td>
+                    <td>Unpaid leave can be taken if all paid leaves are exhausted.</td>
+                    <td>As needed</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>Maternity Leave</td>
+                    <td>Female employees are entitled to maternity leave up to 26 weeks.</td>
+                    <td>26 weeks</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td>Paternity Leave</td>
+                    <td>Male employees may get paternity leave based on company policy.</td>
+                    <td>5-15 days</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td>Compensatory Leave</td>
+                    <td>Employees working on holidays may get compensatory leave.</td>
+                    <td>As per policy</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td>Bereavement Leave</td>
+                    <td>Leave granted in case of loss of an immediate family member.</td>
+                    <td>3-5 days</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td>Study Leave</td>
+                    <td>Employees pursuing further education can apply for leave.</td>
+                    <td>Varies</td>
+                    <td>Depends on Policy</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    
+   <section style="display: flex; justify-content: space-between; gap: 20px;">
+    <div style="flex: 1;">
+        <h2>Rules for Granting Leaves</h2>
+        <ul>
+            <li>Leave requests must be submitted in advance unless it's an emergency.</li>
+            <li>All leaves must be approved by the reporting manager.</li>
+            <li>Sick leave requires a valid medical certificate if exceeding two days.</li>
+            <li>Unused leave may be carried forward as per company policy.</li>
+            <li>Unauthorized absence may result in disciplinary action.</li>
+        </ul>
+    </div>
+	    <div style="flex: 1;">
+        <h2>Encashment Rules</h2>
+        <ul>
+            <li>Employees may encash unused paid leave as per company policy.</li>
+            <li>Encashment is usually applicable at the end of the financial year.</li>
+            <li>Encashment is calculated based on basic salary and tenure.</li>
+            <li>Sick leave and casual leave are generally not encashable.</li>
+        </ul>
+    </div>
+</section>
+  
+    <section id="how-to-apply">
+        <h2>How to Apply for Leave</h2>
+        <p>To apply for leave, employees should:</p>
+        <ul>
+            <li>Submit a leave request via the company's HR portal or email.</li>
+            <li>Provide necessary documents (e.g., medical certificate for sick leave).</li>
+            <li>Get approval from the manager before taking leave.</li>
+            <li>Ensure timely submission to avoid work disruption.</li>
+        </ul>
+    </section>
+  </div>  
+    <!-- Footer Start -->
+		<div class="container-fluid bg-dark text-white-50 footer pt-1 mt-1 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-4">
+                <div class="row g-4">
+					<div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Udaipur Hotelier</h5>
+                        <a class="btn btn-link text-white-50" href="about.html">About Us</a>
+                        <a class="btn btn-link text-white-50" href="contact.html">Contact Us</a>
+                    </div>
+					<div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Useful</h5>
+                        <a class="btn btn-link text-white-50" href="useful_pages.html">Salaryslip</a>
+                        <a class="btn btn-link text-white-50" href="useful_pages.html">Room Costing</a>
+					</div>
+					<div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Contact</h5>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Udaipur</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91- 9079268663</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>Udaipurhotelier@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">Udaipur Hotelier</a>, All Right Reserved.			
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+	
+	
+	
+	
+	
+    <script src="script.js"></script>
+	<script>
+	document.addEventListener("DOMContentLoaded", function () {
+    // Smooth scrolling for navigation
+    document.querySelectorAll("nav ul li a").forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href").substring(1);
+            document.getElementById(targetId).scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        });
+    });
+
+    // Download Leave Policy as a text file
+    document.getElementById("downloadBtn").addEventListener("click", function () {
+        const policyText = generatePolicyText();
+        const blob = new Blob([policyText], { type: "text/plain" });
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(blob);
+        link.download = "Leave_Policy.txt";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    });
+
+    // Function to generate Leave Policy content in text format
+    function generatePolicyText() {
+        return `Leave Policy Details:
+        
+1. Paid Leave - Employees are entitled to a set number of paid leaves annually. (10-20 days) - No Salary Deduction
+2. Sick Leave - Can be availed with a valid medical certificate. (5-12 days) - No Salary Deduction
+3. Casual Leave - Can be taken for personal reasons with prior approval. (6-10 days) - No Salary Deduction
+4. Unpaid Leave - Taken if all paid leaves are exhausted. (As needed) - Salary Deduction Applies
+5. Maternity Leave - Female employees get up to 26 weeks leave. (26 weeks) - No Salary Deduction
+6. Paternity Leave - Male employees may get 5-15 days. (5-15 days) - No Salary Deduction
+7. Compensatory Leave - Given for working on holidays. (As per policy) - No Salary Deduction
+8. Bereavement Leave - In case of a family member’s death. (3-5 days) - No Salary Deduction
+9. Study Leave - For further education. (Varies) - Depends on Policy
+
+Encashment Rules:
+- Employees may encash unused paid leave as per company policy.
+- Encashment is usually applicable at the end of the financial year.
+- Encashment is calculated based on basic salary and tenure.
+- Sick leave and casual leave are generally not encashable.
+
+Rules for Granting Leaves:
+- Leave requests must be submitted in advance unless it's an emergency.
+- All leaves must be approved by the reporting manager.
+- Sick leave requires a valid medical certificate if exceeding two days.
+- Unused leave may be carried forward as per company policy.
+- Unauthorized absence may result in disciplinary action.
+
+How to Apply for Leave:
+- Submit a leave request via the HR portal or email.
+- Provide necessary documents (e.g., medical certificate for sick leave).
+- Get manager approval before taking leave.
+- Ensure timely submission to avoid work disruption.
+
+Thank you!`;
+    }
+});
+
+	
+	</script>
+</body>
+</html>

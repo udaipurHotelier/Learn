@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Udaipur Hotelier</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+	<link href="css/style.css" rel="stylesheet">
+    <link href="css/hkchecklist.css" rel="stylesheet">
+	<style>
+	.online-counter {
+      font-size: 18px;
+      color: #00B074;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 10vh; 
+    }
+	</style>
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+            <a href="LearnPage.html" class="navbar-brand d-flex align-items-center text-center py-0 px-4 px-lg-5">
+                <h4 class="m-0 text-primary">Udaipur Hotelier</h4>
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+           <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a href="LearnPage.html" class="nav-item nav-link">Home</a>
+				    <a href="about.html" class="nav-item nav-link">About</a>
+					<a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" id="userDropdown" class="nav-link dropdown-toggle d-flex align-items-center" data-bs-toggle="dropdown">
+                            <img id="profileImage" src="imge/profile.png" alt="Profile" class="rounded-circle" width="30" height="30" style="margin-right: 8px;">
+                            <span id="username">User</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <a href="Profile.html" class="dropdown-item">Profile</a>
+                            <a href="#" class="dropdown-item">Settings</a>
+                            <a href="#" class="dropdown-item" onclick="logout()">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar End -->
+
+
+        <!-- Header End -->
+        <div class="container-xxl py-5 bg-dark page-header mb-5">
+            <div class="container my-5 pt-5 pb-4">
+                <h1 class="display-3 text-white mb-3 animated slideInDown">House Keeping Checklist</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb text-uppercase">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item text-white active" aria-current="page">Room Inspection Checklist</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <!-- Header End -->
+
+		<div class="containeer">
+    <h2>Housekeeping Room Inspection</h2>
+    <form id="checklistForm">
+
+        <!-- Date Field -->
+		<div class="section">
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<label for="pin">Room No:</label>
+		<input type="text" id="roomno" name="roomno" maxlength="4" size="5">
+		<br><br>
+		</div> 
+        <!-- Section 1 -->
+        <div class="section">
+            <h6>Enterance / Door Way</h6>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="cleaning1"> Exterior door/Frame </label>
+                <label><input type="checkbox" name="cleaning2"> Lock Operation</label>
+                <label><input type="checkbox" name="cleaning3"> Room # Polished</label>
+                <label><input type="checkbox" name="cleaning4"> Entry light switch </label>
+                <label><input type="checkbox" name="cleaning5"> Closet door mirrors </label>
+                <label><input type="checkbox" name="cleaning6"> Entry light </label>
+                <label><input type="checkbox" name="cleaning7"> Cloth Hangers ( 8 Nos.)</label>
+                <label><input type="checkbox" name="cleaning8"> Luggage Rack</label>
+                <label><input type="checkbox" name="cleaning9"> Electronic Safe</label>
+                <label><input type="checkbox" name="cleaning10"> Safe Instruction Card</label>
+                <label><input type="checkbox" name="cleaning11"> Closet Door Tracks</label>
+                <label><input type="checkbox" name="cleaning12"> Emergency  Exit Plan</label>
+                <label><input type="checkbox" name="cleaning13"> Peep - Hole</label>
+                <label><input type="checkbox" name="cleaning14"> DND- Card  ( 1 Nos.)</label>
+                <label><input type="checkbox" name="cleaning15"> Make My Room - Card  ( 1 Nos.)</label>
+                <label><input type="checkbox" name="cleaning16"> Laundry - Card ( 1 Nos.)</label>
+                <label><input type="checkbox" name="cleaning17"> Closet Light</label>
+                <label><input type="checkbox" name="cleaning18"> Wardrobe Door</label>
+                <label><input type="checkbox" name="cleaning19"> Extra Blanket  ( 1 Nos.)</label>
+                <label><input type="checkbox" name="cleaning20"> Extra Pillows  ( 2 Nos.)</label>
+                <label><input type="checkbox" name="cleaning21"> Shoe Shine  ( 1 Nos.)</label>
+                <label><input type="checkbox" name="cleaning22"> Laundry Bags  ( 1 Nos.)</label>
+                <label><input type="checkbox" name="cleaning23"> Lights Switches</label>
+                <label><input type="checkbox" name="cleaning24"> A/C Operation</label>
+            </div>
+        </div>
+
+        <!-- Section 2 -->
+        <div class="section">
+            <h6>GUEST ROOM</h6>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="maintenance1"> Desk</label>
+                <label><input type="checkbox" name="maintenance2"> Chair</label>
+                <label><input type="checkbox" name="maintenance3"> Trash Can</label>
+                <label><input type="checkbox" name="maintenance4"> Hotel Rules</label>
+                <label><input type="checkbox" name="maintenance5"> Breakfast  Knob Card</label>
+                <label><input type="checkbox" name="maintenance6"> Sewing Kit  ( 1 Nos.)</label>
+                <label><input type="checkbox" name="maintenance7"> Bath Rob</label>
+                <label><input type="checkbox" name="maintenance8"> Mirrors</label>
+                <label><input type="checkbox" name="maintenance9"> Sheer Curtain clean</label>
+                <label><input type="checkbox" name="maintenance10"> Drapes open properly</label>
+                <label><input type="checkbox" name="maintenance11"> Window Cleaning</label>
+                <label><input type="checkbox" name="maintenance12"> Sofa cleaned</label>
+                <label><input type="checkbox" name="maintenance13"> Beds Propery Made</label>
+                <label><input type="checkbox" name="maintenance14"> Under table clean</label>
+                <label><input type="checkbox" name="maintenance15"> Floor Lamp dusted</label>
+                <label><input type="checkbox" name="maintenance16"> Bed Side table Clean</label>
+                <label><input type="checkbox" name="maintenance17"> Lamp shade</label>
+                <label><input type="checkbox" name="maintenance18"> Message pad ( 1 Nos.)</label>
+                <label><input type="checkbox" name="maintenance19"> Pen ( 1 Nos.)</label>
+                <label><input type="checkbox" name="maintenance20"> TV - Channel set correctly</label>
+                <label><input type="checkbox" name="maintenance21"> Carpets Vaccummed</label>
+                <label><input type="checkbox" name="maintenance22"> Thermos flask (1 Nos.)</label>
+                <label><input type="checkbox" name="maintenance23"> Bottle Opener</label>
+                <label><input type="checkbox" name="maintenance24"> Desk Lamp</label>
+                <label><input type="checkbox" name="maintenance25"> Aminity Folder  ( 1 Nos.)</label>
+                <label><input type="checkbox" name="maintenance26"> Room Service Menu</label>
+                <label><input type="checkbox" name="maintenance27"> Hotel Directory</label>
+                <label><input type="checkbox" name="maintenance28"> Writing Material</label>
+                <label><input type="checkbox" name="maintenance29"> All Pourpose Kit  ( 1 Nos.)</label>
+                <label><input type="checkbox" name="maintenance30"> Tissue Box</label>
+                <label><input type="checkbox" name="maintenance31"> Heavy Curtain clean</label>
+                <label><input type="checkbox" name="maintenance32"> Window operation</label>
+                <label><input type="checkbox" name="maintenance33"> Picture & Frame lights Dusted</label>
+                <label><input type="checkbox" name="maintenance34"> Night Stand Surface clean</label>
+                <label><input type="checkbox" name="maintenance35"> Table Cleaned</label>
+                <label><input type="checkbox" name="maintenance36"> Trash behind furniture</label>
+                <label><input type="checkbox" name="maintenance37"> Under bed clean</label>
+                <label><input type="checkbox" name="maintenance38"> Picture & Frame Dusted</label>
+                <label><input type="checkbox" name="maintenance39"> Bed Side lamp</label>
+                <label><input type="checkbox" name="maintenance40"> Telephone Disinfected & Working</label>
+                <label><input type="checkbox" name="maintenance41"> Service directory</label>
+                <label><input type="checkbox" name="maintenance42"> TV Remote - Working</label>
+                <label><input type="checkbox" name="maintenance43"> Bed Side Radio set at proper time</label>
+                <label><input type="checkbox" name="maintenance44"> Mini Bar - All aminities placed</label>
+                <label><input type="checkbox" name="maintenance45"> High Ball glasses  ( 2 Nos.)</label>
+            </div>
+        </div>
+
+		<!-- Section 3 -->
+        <div class="section">
+            <h6>GUEST BATHROOM</h6>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="inventory1"> Toilet Door Cleaned</label>
+                <label><input type="checkbox" name="inventory2"> Face Towel</label>
+                <label><input type="checkbox" name="inventory3"> Washbasin and counter</label>
+                <label><input type="checkbox" name="inventory4"> Mirror Screw caps</label>
+                <label><input type="checkbox" name="inventory5"> Soap & Soap dish</label>
+                <label><input type="checkbox" name="inventory6"> Hair Dryer</label>
+                <label><input type="checkbox" name="inventory7"> Vanity Ledges Clean</label>
+                <label><input type="checkbox" name="inventory8"> Gargle Glasses</label>
+                <label><input type="checkbox" name="inventory9"> Toilet Tumblers</label>
+                <label><input type="checkbox" name="inventory10"> Pipes under sink</label>
+                <label><input type="checkbox" name="inventory11"> Sanitary disposal Bag</label>
+                <label><input type="checkbox" name="inventory12"> WC</label>
+                <label><input type="checkbox" name="inventory13"> Flush</label>
+                <label><input type="checkbox" name="inventory14"> Bath tub / Bath tub Stopper</label>
+                <label><input type="checkbox" name="inventory15"> Bath Tub - No Hair</label>
+                <label><input type="checkbox" name="inventory16"> Shower Head</label>
+                <label><input type="checkbox" name="inventory17"> Tap & Shower Operation</label>
+                <label><input type="checkbox" name="inventory18"> Bath Bucket</label>
+                <label><input type="checkbox" name="inventory19"> Bathroom Floor</label>
+                <label><input type="checkbox" name="inventory20"> Telephone working & Clean</label>
+                <label><input type="checkbox" name="inventory21"> Toilet door latch working</label>
+                <label><input type="checkbox" name="inventory22"> Robe Hook</label>
+                <label><input type="checkbox" name="inventory23"> Mirror</label>
+                <label><input type="checkbox" name="inventory24"> Tissue Box</label>
+                <label><input type="checkbox" name="inventory25"> Lights Switches </label>
+                <label><input type="checkbox" name="inventory26"> Sink Stopper Clean</label>
+                <label><input type="checkbox" name="inventory27"> Aminity Placement </label>
+                <label><input type="checkbox" name="inventory28"> Ashtray</label>
+                <label><input type="checkbox" name="inventory29"> Shower cap</label>
+                <label><input type="checkbox" name="inventory30"> Waste basket clean</label>
+                <label><input type="checkbox" name="inventory31"> Toilet Porcelain</label>
+                <label><input type="checkbox" name="inventory32"> WC Band</label>
+                <label><input type="checkbox" name="inventory33"> Toilet Roll - With Extra roll</label>
+                <label><input type="checkbox" name="inventory34"> BathTub Fitting ( Nuts, Bolts etc.)</label>
+                <label><input type="checkbox" name="inventory35"> Bath Tub Drain</label>
+                <label><input type="checkbox" name="inventory36"> Soap Dish</label>
+                <label><input type="checkbox" name="inventory37"> Shower Curtain</label>
+                <label><input type="checkbox" name="inventory38"> Bath Cup</label>
+                <label><input type="checkbox" name="inventory39"> Bathroom Wall tiles</label>
+                <label><input type="checkbox" name="inventory40"> Vanity Area lights</label>
+                <label><input type="checkbox" name="inventory41"> Hand Towel</label>
+                <label><input type="checkbox" name="inventory42"> Bath Towel</label>
+                <label><input type="checkbox" name="inventory43"> Bath Mat</label>
+            </div>
+			<!-- Section 3 -->
+        <div class="section">
+            <h6>TCM</h6>
+			<p>TCM Full Form in Hotel is Tea, Coffee, Milk. Almost in all the hotels, when you book a room, you get TCM services for free. They have kept all three packs, like green tea sachets, regular tea packs, coffee, and milk powder. its is also know as Hospitality Tray.</p>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="tcm1">Tea Bag</label>
+                <label><input type="checkbox" name="tcm2">Coffee Sachet</label>
+                <label><input type="checkbox" name="tcm3">Milk Powder</label>
+                <label><input type="checkbox" name="tcm4">Sugar Sachet</label>
+                <label><input type="checkbox" name="tcm5">Stiller</label>
+                <label><input type="checkbox" name="tcm6">Peper Couster</label>
+			</div>
+		</div>	
+			 <div class="section">
+            <h6>Mini Bar Supplies</h6>
+				<div class="checkbox-group">
+                <label><input type="checkbox" name="minibar1">soft drinks</label>
+                <label><input type="checkbox" name="minibar2">alcoholic drinks</label>
+                <label><input type="checkbox" name="minibar3">soda</label>
+                <label><input type="checkbox" name="minibar4">ice cubes</label>
+                <label><input type="checkbox" name="minibar5">salted peanuts</label>
+                <label><input type="checkbox" name="minibar6">chips</label>
+			</div>
+		</div>	
+		<div class="section">
+            <h6>Vanity Tray</h6>
+				<div class="checkbox-group">
+                <label><input type="checkbox" name="vtray1">shower gel</label>
+                <label><input type="checkbox" name="vtray2">shampoo</label>
+                <label><input type="checkbox" name="vtray3">conditioner</label>
+                <label><input type="checkbox" name="vtray4">moisturizer</label>
+                <label><input type="checkbox" name="vtray5">foot cream</label>
+                <label><input type="checkbox" name="vtray6">ear buds</label>
+                <label><input type="checkbox" name="vtray7">manicure kit</label>
+                <label><input type="checkbox" name="vtray8">tooth brushes</label>
+                <label><input type="checkbox" name="vtray9">mouthwash</label>
+			</div>
+		</div>
+		<!-- on Demand List -->
+		<div class="section">
+            <h6>Items Provided on Request</h6>
+				<div class="checkbox-group">
+                <label><input type="checkbox" name="onrequest1">Alarm clock</label>
+                <label><input type="checkbox" name="onrequest2">Comb</label>
+                <label><input type="checkbox" name="onrequest3">Crib or Cradle</label>
+                <label><input type="checkbox" name="onrequest4">Extra blankets</label>
+                <label><input type="checkbox" name="onrequest5">Extra bed</label>
+                <label><input type="checkbox" name="onrequest6">Iron</label>
+                <label><input type="checkbox" name="onrequest7">Pillow</label>
+                <label><input type="checkbox" name="onrequest8">Sewing kit</label>
+                <label><input type="checkbox" name="onrequest9">First aid medical kit</label>
+            </div>
+			<p><b> A crib is a small bed with high sides for a baby, while a cradle is a bed for a baby that is usually on rockers. Cribs are more common in the United States, while in British English, a crib is called a cot.</b></p>
+		</div>
+	 </div>
+
+        <!-- Extra Notes -->
+        <div class="section">
+            <label for="extraNotes">Extra Notes:</label>
+            <textarea id="extraNotes" name="extraNotes"></textarea>
+        </div>
+	</form>
+</div>
+
+				
+       
+
+
+       <!-- Footer Start -->
+       	<div class="container-fluid bg-dark text-white-50 footer pt-1 mt-1 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-4">
+                <div class="row g-4">
+					<div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Udaipur Hotelier</h5>
+                        <a class="btn btn-link text-white-50" href="about.html">About Us</a>
+                        <a class="btn btn-link text-white-50" href="contact.html">Contact Us</a>
+                    </div>
+					<div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Contact</h5>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91- 9079268663</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>Udaipurhotelier@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">Udaipur Hotelier</a>, All Right Reserved.			
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script type="module">
+        import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+    
+        const firebaseConfig = {
+            apiKey: "AIzaSyBdGShEAg6teoVgXVfsbzUJO1sIY3bZPH4",
+  authDomain: "udaipur-hotelier-4b582.firebaseapp.com",
+  projectId: "udaipur-hotelier-4b582",
+  storageBucket: "udaipur-hotelier-4b582.firebasestorage.app",
+  messagingSenderId: "843875126311",
+  appId: "1:843875126311:web:2c76e6e8b79d4223439202",
+  measurementId: "G-M93ZN7YSNB"
+        };
+        
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth();
+        
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                let email = user.email;
+                let username = email.substring(0, email.indexOf("@"));
+                document.getElementById("username").textContent = username;
+            } else {
+                window.location.href = "login.html";
+            }
+        });
+        
+        window.logout = function() {
+            signOut(auth).then(() => {
+                window.location.href = "login.html";
+            }).catch((error) => {
+                console.error("Logout Error: ", error);
+            });
+        }
+    </script>
+</body>
+
+</html>

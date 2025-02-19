@@ -1,0 +1,60 @@
+		.containeer {
+            max-width: 1000px;
+            margin: 0 auto;
+            border: 2px solid #ddd;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+	
+        .section {
+            margin-bottom: 20px;
+        }
+		.section textarea , input{
+			background-color:#D3D3D3;
+			
+		}
+        .section h3 {
+            margin-bottom: 10px;
+        }
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        .checkbox-group input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            margin-top: 10px;
+        }
+        .signature-container {
+            display: flex;
+            justify-content: space-between;
+			
+        }
+        .signature-container input {
+            width: 48%;
+            padding: 5px;
+			background-color:#D3D3D3;
+        }
+        .download-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .download-btn:hover {
+            background-color: #45a049;
+        }

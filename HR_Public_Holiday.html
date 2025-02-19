@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Public Holidays Calendar (India) 2025 - 2030</title>
+		<meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5350616111923263"
+     crossorigin="anonymous"></script>
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+	<style>
+	.loading-dots::after {
+  content: ".";
+  animation: dots 1.5s steps(3, end) infinite;
+}
+
+@keyframes dots {
+  0% {
+    content: ".";
+  }
+  33% {
+    content: "..";
+  }
+  66% {
+    content: "...";
+  }
+  100% {
+    content: ".";
+  }
+}
+/* Popup Styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 1000;
+    text-align: center;
+}
+
+.popup-content {
+    font-family: Arial, sans-serif;
+}
+
+.popup button {
+    background: #8692f7;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+/* Popup Overlay */
+.popup-overlay {
+      display: none; /* Ensure it is hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    backdrop-filter: blur(4px); /* Blur effect */
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    animation: fadeIn 0.3s forwards;
+}
+
+/* Popup Box */
+.popup-box {
+    background: white;
+    padding: 20px;
+    width: 320px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(0.9);
+    animation: scaleUp 0.3s forwards;
+}
+
+/* Popup Heading */
+.popup-box h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Theme Buttons */
+.theme-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+
+.theme-buttons button {
+    background: #8692f7;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.theme-buttons button:hover {
+    background: #6a7ae6;
+}
+
+/* Close Button */
+.close-btn {
+    background: #ff5757;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.close-btn:hover {
+    background: #e14b4b;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleUp {
+    to {
+        transform: scale(1);
+    }
+}
+
+/* Dark Mode Styling */
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-mode .popup-box {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+.dark-mode .theme-buttons button {
+    background: #6a7ae6;
+}
+/* Light Mode */
+.light-mode {
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Ensure Navbar, Popup & Buttons Change */
+.dark-mode .popup-box,
+.dark-mode .navbar {
+    background-color: #1e1e1e !important;
+    color: #ffffff !important;
+}
+
+.dark-mode .popup-box button {
+    background: #6a7ae6 !important;
+}
+
+.dark-mode a {
+    color: #8692f7 !important;
+}
+
+.light-mode a {
+    color: #333 !important;
+}
+
+	</style>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f9; margin: 0; padding: 0; color: #333; }
+        header { background-color: #007bff; color: white; text-align: center; padding: 1rem 0; }
+        main { padding: 20px; }
+        .card { background: white; padding: 15px; margin: 10px 0; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); }
+        #today-info { display: flex; flex-wrap: wrap; gap: 10px; }
+        #today-info .card { flex: 1; min-width: 150px; }
+        #year-buttons button { margin: 5px; padding: 10px 15px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        #year-buttons button:hover { background-color: #0056b3; }
+        #calendar { margin-top: 20px; }
+        .month { margin-bottom: 10px; }
+        .month-name { font-size: 1em; font-weight: bold; margin-bottom: 5px; }
+        .calendar-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; }
+        .calendar-day { background-color: #fff; border: 1px solid #ddd; text-align: center; padding: 5px; position: relative; font-size: 12px; }
+        .holiday-day { background-color: #ffeb3b; cursor: pointer; }
+        .holiday-tooltip { display: none; position: absolute; top: -25px; left: 50%; transform: translateX(-50%); background-color: #333; color: white; padding: 3px; border-radius: 4px; white-space: nowrap; font-size: 10px; z-index: 10; }
+        .calendar-day:hover .holiday-tooltip { display: block; }
+        .calendar-day img { display: block; margin: 2px auto 0; width: 20px; height: 20px; }
+        #holiday-image { margin-left: 10px; width: 80px; height: 80px; display: none; }	
+    </style>
+</head>
+<body>
+<div class="container-xxl bg-white p-0">
+		<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+            <a href="LearnPage.html" class="navbar-brand d-flex align-items-center text-center py-0 px-4 px-lg-5">
+                <h4 class="m-0 text-primary">Udaipur Hotelier</h4>
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+           <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a href="LearnPage.html" onclick="showAdThenRedirect('LearnPage.html')" class="nav-item nav-link ">Home</a>
+				    <a href="about.html" class="nav-item nav-link">About</a>
+					<a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" id="userDropdown" class="nav-link dropdown-toggle d-flex align-items-center" data-bs-toggle="dropdown">
+                            <img id="profileImage" src="imge/profile.png" alt="Profile" class="rounded-circle" width="30" height="30" style="margin-right: 8px;">
+                            <span id="username">User</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <a href="Profile.html" class="dropdown-item">Profile</a>
+                            <a href="#" class="dropdown-item" onclick="showSettingsPopup()">Settings</a>
+                            <a href="#" class="dropdown-item" onclick="logout()">Logout</a>
+                        </div>
+						<div id="settingsPopup" class="popup-overlay">
+    <div class="popup-box">
+        <h3><i class="fas fa-cog"></i> Settings</h3>
+        <p>Select Theme:</p>
+        <div class="theme-buttons">
+            <button onclick="setTheme('light')">☀️ Light Mode</button>
+            <button onclick="setTheme('dark')">🌙 Dark Mode</button>
+        </div>
+        <button class="close-btn" onclick="closeSettingsPopup()">Close</button>
+    </div>
+</div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    
+    <main>
+        <section id="today-info">
+            <div class="card"><h2>Today's Date</h2><p id="current-date"></p></div>
+            <div class="card"><h2>Today's Day</h2><p id="current-day"></p></div>
+            <div class="card"><h2>Upcoming Holiday</h2><p id="next-holiday"></p><img id="holiday-image" src="" alt="Holiday Image"></div>
+        </section>
+        <section>
+            <h2>Select Year</h2>
+            <div id="year-buttons"></div>
+            <div id="calendar"></div>
+        </section>
+    </main>
+			<!-- Footer Start -->
+        <div class="container-fluid bg-dark text-white-50 footer pt-1 mt-1 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-4">
+                <div class="row g-4">
+					<div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Udaipur Hotelier</h5>
+                        <a class="btn btn-link text-white-50" href="about.html">About Us</a>
+                        <a class="btn btn-link text-white-50" href="contact.html">Contact Us</a>
+                    </div>
+					<div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Contact</h5>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91- 9079268663</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>Udaipurhotelier@gmail.com</p>
+                    </div>
+					<div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">useful</h5>
+                        <a class="btn btn-link text-white-50" href="HR_Public_Holiday.html">Public Holidays</a>
+                        <a class="btn btn-link text-white-50" href="useful_pages.html">Joining letter</a>
+                    </div>
+					
+                </div>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">Udaipur Hotelier</a>, All Right Reserved.			
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+    <script type="module">
+        import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+    
+        const firebaseConfig = {
+            apiKey: "AIzaSyBdGShEAg6teoVgXVfsbzUJO1sIY3bZPH4",
+  authDomain: "udaipur-hotelier-4b582.firebaseapp.com",
+  projectId: "udaipur-hotelier-4b582",
+  storageBucket: "udaipur-hotelier-4b582.firebasestorage.app",
+  messagingSenderId: "843875126311",
+  appId: "1:843875126311:web:2c76e6e8b79d4223439202",
+  measurementId: "G-M93ZN7YSNB"
+        };
+        
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth();
+        
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                let email = user.email;
+                let username = email.substring(0, email.indexOf("@"));
+                document.getElementById("username").textContent = username;
+            } else {
+                window.location.href = "login.html";
+            }
+        });
+        
+        window.logout = function() {
+            signOut(auth).then(() => {
+                window.location.href = "login.html";
+            }).catch((error) => {
+                console.error("Logout Error: ", error);
+            });
+        }
+    </script>
+    <script>
+        const holidays = {
+            2025: {
+				'2025-01-01': { name: 'New Year\'s Day' , image:'holidays/newyear.png'},
+				'2025-01-14': { name: 'Makar Sankranti / Pongal' , image:'' },
+                '2025-01-26': { name: 'Republic Day', image: 'holidays/republic_day.png' },
+				'2025-02-02': { name: 'Vasant panchami' , image:''},
+				'2025-02-19': { name: 'Chhatrapati Shivaji Maharaj Jayanti' , image:'holidays/shivaji.png'},
+                '2025-02-26': { name: 'Mahashivratri', image: 'holidays/mahashivratri.png' },
+				'2025-03-08': { name: 'International Womens Day' , Image:''},
+                '2025-03-13': { name: 'Holi', image: 'holidays/holi.png' },
+				'2025-03-20': { name: 'Parsi New Year'},
+				'2025-03-23': { name: 'Shaheed Diwas'},
+				'2025-03-29': { name: 'Good Friday' },
+				'2025-04-01': { name: 'Bank Holiday'},
+				'2025-04-06': { name: 'Rama Navami'},
+				'2025-04-10': { name: 'Mahavir Swami Jayanti'},
+				'2025-04-14': { name: 'Ambedkar Jayanti' },
+				'2025-04-14': { name: 'Baisakhi' },
+				'2025-04-20': { name: 'Easter'},
+				'2025-04-22': { name: 'Earth Day'},
+				'2025-05-01': { name: 'Labor Day' },
+				'2025-03-31': { name: 'Eid al-Fitr' },
+				'2025-06-07': { name: 'Eid al-Adha' },
+				'2025-08-05': { name: 'Muharram' },
+				'2025-08-15': { name: 'Independence Day' },
+				'2025-08-19': { name: 'Raksha Bandhan' },
+				'2025-08-25': { name: 'Janmashtami' },
+				'2025-10-02': { name: 'Gandhi Jayanti' },
+				'2025-10-20': { name: 'Dussehra' },
+                '2025-10-29': { name: 'Diwali', image: 'holidays/diwali.png' },
+				'2025-11-01': { name: 'Bhai Dooj' },
+				'2025-11-07': { name: 'Chhath Puja' },
+                '2025-12-25': { name: 'Christmas Day', image: 'holidays/christmas.png' }
+            },
+            2026: {}, 2027: {}, 2028: {}, 2029: {}, 2030: {}
+        };
+
+        function updateTodayInfo() {
+            const now = new Date();
+            document.getElementById('current-date').textContent = now.toDateString();
+            document.getElementById('current-day').textContent = now.toLocaleDateString('en-IN', { weekday: 'long' });
+
+            const todayStr = now.toISOString().split('T')[0];
+            let nextHoliday = null;
+
+            for (let year = now.getFullYear(); year <= 2030; year++) {
+                for (const date in holidays[year]) {
+                    if (date >= todayStr) {
+                        nextHoliday = holidays[year][date];
+                        break;
+                    }
+                }
+                if (nextHoliday) break;
+            }
+
+            if (nextHoliday) {
+                document.getElementById('next-holiday').textContent = nextHoliday.name;
+                const holidayImage = document.getElementById('holiday-image');
+                holidayImage.src = nextHoliday.image;
+                holidayImage.style.display = 'block';
+            }
+        }
+
+        function createYearButtons() {
+            const container = document.getElementById('year-buttons');
+            for (let year = 2025; year <= 2025; year++) {
+                const button = document.createElement('button');
+                button.textContent = year;
+                button.onclick = () => displayCalendar(year);
+                container.appendChild(button);
+            }
+        }
+
+        function displayCalendar(year) {
+            const calendar = document.getElementById('calendar');
+            calendar.innerHTML = '';
+
+            for (let month = 0; month < 12; month++) {
+                const monthDiv = document.createElement('div');
+                monthDiv.innerHTML = `<div class='month-name'>${new Date(year, month).toLocaleString('en', { month: 'long' })}</div>`;
+                const grid = document.createElement('div');
+                grid.classList.add('calendar-grid');
+
+                const daysInMonth = new Date(year, month + 1, 0).getDate();
+                for (let day = 1; day <= daysInMonth; day++) {
+                    const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+                    const cell = document.createElement('div');
+                    cell.classList.add('calendar-day');
+                    cell.textContent = day;
+
+                    if (holidays[year][dateStr]) {
+                        cell.classList.add('holiday-day');
+                        const tooltip = document.createElement('div');
+                        tooltip.classList.add('holiday-tooltip');
+                        tooltip.textContent = holidays[year][dateStr].name;
+                        cell.appendChild(tooltip);
+                    }
+                    grid.appendChild(cell);
+                }
+                monthDiv.appendChild(grid);
+                calendar.appendChild(monthDiv);
+            }
+        }
+
+        window.onload = function () {
+            updateTodayInfo();
+            createYearButtons();
+        };
+    </script>
+</body>
+</html>

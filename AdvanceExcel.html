@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Udaipur Hotelier</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+	<link href="css/style.css" rel="stylesheet">
+    <link href="css/hkchecklist.css" rel="stylesheet">
+	<link href="css/foskillscss.css" rel="stylesheet">
+	<style>
+	* {
+  user-select: none;
+}
+	.recommended-tag {
+    display: inline-block;
+    background-color: #28a745;
+    color: white;
+    font-size: 0.75em;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-left: 8px;
+}
+</style>
+	
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+		<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+            <a href="LearnPage.html" class="navbar-brand d-flex align-items-center text-center py-0 px-4 px-lg-5">
+                <h4 class="m-0 text-primary">Udaipur Hotelier</h4>
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+           <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a href="LearnPage.html" onclick="showAdThenRedirect('LearnPage.html')" class="nav-item nav-link ">Home</a>
+				    <a href="about.html" class="nav-item nav-link">About</a>
+					<a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" id="userDropdown" class="nav-link dropdown-toggle d-flex align-items-center" data-bs-toggle="dropdown">
+                            <img id="profileImage" src="imge/profile.png" alt="Profile" class="rounded-circle" width="30" height="30" style="margin-right: 8px;">
+                            <span id="username">User</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <a href="Profile.html" class="dropdown-item">Profile</a>
+                            <a href="#" class="dropdown-item">Settings</a>
+                            <a href="#" class="dropdown-item" onclick="logout()">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+
+        <!-- Header End -->
+        <div class="containeer-xxl py-5 bg-dark page-header mb-5">
+            <div class="container my-5 pt-5 pb-4">
+                <h1 class="display-3 text-white mb-3 animated slideInDown">Advance Excel </h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb text-uppercase">
+                        <li class="breadcrumb-item"><a href="LearnPage.html">Home</a></li>
+                        <li class="breadcrumb-item text-white active" aria-current="page">Advance Excel</li>
+
+                    </ol>
+                </nav>
+            </div>
+		</div>
+		<!-- Header End -->
+		<div class="containeer">
+		<h2>Advanced Excel</h2>
+		
+	<div class= "section">
+		<h6>Data Handling & Cleaning</h6>
+		<div class="checkbox-group">
+			<label><input type="checkbox" name="Workbook1" onclick="WeddingParagraph(1)">Remove Duplicates</label>
+			<label><input type="checkbox" name="Workbook2" onclick="WeddingParagraph(2)">Data Validation</label>
+            <label><input type="checkbox" name="Workbook3" onclick="WeddingParagraph(3)">Conditional Formatting</label>
+            <label><input type="checkbox" name="Workbook4" onclick="WeddingParagraph(4)">Sort & Filter</label>
+            <label><input type="checkbox" name="Workbook5" onclick="WeddingParagraph(5)">Text to Columns</label>
+            <label><input type="checkbox" name="Workbook6" onclick="WeddingParagraph(6)">Flash Fill</label>
+		</div>
+	</div>
+			<div id="paragraphs">
+					<p id="wedpara-1" class="paragraph"><strong>Remove Duplicates :</strong> Go to Data → Remove Duplicates. Select columns, confirm.</p>
+					<p id="wedpara-2" class="paragraph"><strong>Data Validation:</strong>Go to Data → Data Validation. Set rules.</p>
+					<p id="wedpara-3" class="paragraph"><strong>Conditional Formatting:</strong>Go to Home → Conditional Formatting. Apply colors/icons.</p>
+					<p id="wedpara-4" class="paragraph"><strong>Sort & Filter:</strong>Go to Data → Sort & Filter. Arrange/filter data.</p>
+					<p id="wedpara-5" class="paragraph"><strong>Text to Columns:</strong>Go to Data → Text to Columns. Split data.</p>
+					<p id="wedpara-6" class="paragraph"><strong>Flash Fill:</strong>Go to Data → Flash Fill. Auto-fill patterns.</p>
+			</div>
+		<!-- secound -->
+		<div class= "section">
+		<h6>Pivot Tables & Charts</h6>
+		<div class="checkbox-group">
+			<label><input type="checkbox" name="Pivot1" onclick="PivotParagraph(1)">Pivot Tables</label>
+			<label><input type="checkbox" name="Pivot2" onclick="PivotParagraph(2)">Pivot Charts</label>
+            <label><input type="checkbox" name="Pivot3" onclick="PivotParagraph(3)">Slicers & Timelines </label>
+            <label><input type="checkbox" name="Pivot4" onclick="PivotParagraph(4)">Grouping Data</label>
+            
+		</div>
+	</div>
+			<div id="paragraphs">
+					<p id="Pivotpara-1" class="paragraph"><strong>Pivot Tables :</strong>Pivot Tables – Insert → PivotTable. Summarize data.</p>
+					<p id="Pivotpara-2" class="paragraph"><strong>Pivot Charts:</strong>Pivot Charts – Insert → PivotChart. Visualize PivotTables.</p>
+					<p id="Pivotpara-3" class="paragraph"><strong>Slicers & Timelines:</strong>Go to Home → Conditional Formatting. Apply colors/icons.</p>
+					<p id="Pivotpara-4" class="paragraph"><strong>Grouping Data:</strong>Go to Data → Sort & Filter. Arrange/filter data.</p>	
+			</div>
+			
+			<!-- third -->
+			<div class= "section">
+		<h6>Data Analysis & Business Intelligence</h6>
+		<div class="checkbox-group">
+			<label><input type="checkbox" name="Pivot1" onclick="DataParagraph(1)">Goal Seek</label>
+			<label><input type="checkbox" name="Pivot2" onclick="DataParagraph(2)">Scenario Manager</label>
+            <label><input type="checkbox" name="Pivot3" onclick="DataParagraph(3)">Data Tables</label>
+            <label><input type="checkbox" name="Pivot4" onclick="DataParagraph(4)">Solver</label>
+            
+		</div>
+	</div>
+			<div id="paragraphs">
+					<p id="Datapara-1" class="paragraph"><strong>Goal Seek:</strong>Goal Seek – Data → What-If Analysis → Goal Seek. Adjust inputs.</p>
+					<p id="Datapara-2" class="paragraph"><strong>Scenario Manager:</strong>Scenario Manager – Data → What-If Analysis → Scenario Manager. Compare cases.</p>
+					<p id="Datapara-3" class="paragraph"><strong>Data Tables:</strong>Data Tables – Data → What-If Analysis → Data Table. Analyze inputs.</p>
+					<p id="Datapara-4" class="paragraph"><strong>Solver :</strong>Solver – Data → Solver (enable Add-in). Optimize solutions.</p>	
+			</div>
+			<!-- Fourth -->
+			<div class= "section">
+		<h6>Charts & Visualization</h6>
+		<div class="checkbox-group">
+			<label><input type="checkbox" name="Chart1" onclick="ChartParagraph(1)">Charts </label>
+			<label><input type="checkbox" name="Chart2" onclick="ChartParagraph(2)">Dynamic Charts</label>
+            <label><input type="checkbox" name="Chart3" onclick="ChartParagraph(3)">Trendlines</label>
+            <label><input type="checkbox" name="Chart4" onclick="ChartParagraph(4)">Dual-Axis Charts</label>
+            
+		</div>
+	</div>
+			<div id="paragraphs">
+					<p id="Chartpara-1" class="paragraph"><strong>Charts:</strong>Charts – Insert → Charts. Choose Bar, Line, Pie, etc.</p>
+					<p id="Chartpara-2" class="paragraph"><strong>Dynamic Charts:</strong>Dynamic Charts – Use Named Ranges & Tables. Auto-update.</p>
+					<p id="Chartpara-3" class="paragraph"><strong>Trendlines:</strong>Trendlines – Chart Elements → Trendline. Predict trends.</p>
+					<p id="Chartpara-4" class="paragraph"><strong>Dual-Axis Charts:</strong>Dual-Axis Charts – Combo Chart option. Compare data.</p>	
+			</div>
+			
+			<!-- Fifth -->
+			<div class= "section">
+		<h6>Power Query & Power Pivot</h6>
+		<div class="checkbox-group">
+			<label><input type="checkbox" name="Chart1" onclick="PowerParagraph(1)">Power Query  </label>
+			<label><input type="checkbox" name="Chart2" onclick="PowerParagraph(2)">Merge & Append Queries</label>
+            <label><input type="checkbox" name="Chart3" onclick="PowerParagraph(3)">Power Pivot</label>
+            <label><input type="checkbox" name="Chart4" onclick="PowerParagraph(4)">Relationships </label>
+		</div>
+	</div>
+			<div id="paragraphs">
+					<p id="Powerpara-1" class="paragraph"><strong>Power Query : </strong>Power Query – Data → Get & Transform Data. Import, clean data.	</p>
+					<p id="Powerpara-2" class="paragraph"><strong>Merge & Append Queries : </strong>Merge & Append Queries – Power Query Editor. Combine data.</p>
+					<p id="Powerpara-3" class="paragraph"><strong>Power Pivot : </strong>Power Pivot – Power Pivot Tab (enable Add-in). Handle big data.</p>
+					<p id="Powerpara-4" class="paragraph"><strong>Relationships : </strong>Relationships – Power Pivot → Manage → Relationships. Connect datasets.</p>	
+			</div>
+			
+			<!-- Six -->
+		<div class= "section">
+			<h6>Macros & Automation</h6>
+			<div class="checkbox-group">
+				<label><input type="checkbox" name="Chart1" onclick="MacrosParagraph(1)">Record Macros</label>
+				<label><input type="checkbox" name="Chart2" onclick="MacrosParagraph(2)">Run Macros</label>
+				<label><input type="checkbox" name="Chart3" onclick="MacrosParagraph(3)">Edit Macros</label>
+				<label><input type="checkbox" name="Chart4" onclick="MacrosParagraph(4)">Assign Macros</label>
+			</div>
+		</div>
+			<div id="paragraphs">
+					<p id="Macrospara-1" class="paragraph"><strong>Record Macros : </strong>Record Macros – View → Macros → Record Macro. Automate tasks.</p>
+					<p id="Macrospara-2" class="paragraph"><strong>Run Macros : </strong>Run Macros – View → Macros → View Macros. Execute macros.</p>
+					<p id="Macrospara-3" class="paragraph"><strong>Edit Macros : </strong>Edit Macros (VBA) – Alt + F11. Modify code.</p>
+					<p id="Macrospara-4" class="paragraph"><strong>Assign Macros : </strong>Assign Macros – Right-click button → Assign Macro.</p>	
+			</div>
+						<!-- Seven -->
+		<div class= "section">
+			<h6>Security & Protection</h6>
+			<div class="checkbox-group">
+				<label><input type="checkbox" name="Chart1" onclick="MacrosParagraph(1)">Protect Sheets</label>
+				<label><input type="checkbox" name="Chart2" onclick="MacrosParagraph(2)">Hide Formulas</label>
+				<label><input type="checkbox" name="Chart3" onclick="MacrosParagraph(3)">Restrict Editing</label>
+			</div>
+		</div>
+			<div id="paragraphs">
+					<p id="Macrospara-1" class="paragraph"><strong>Protect Sheets : </strong>Protect Sheets – Review → Protect Sheet/Workbook. Restrict editing.</p>
+					<p id="Macrospara-2" class="paragraph"><strong>Hide Formulas: </strong>Hide Formulas – Format Cells → Protection. Secure data.</p>
+					<p id="Macrospara-3" class="paragraph"><strong>Restrict Editing : </strong>Restrict Editing – Review → Allow Edit Ranges. Control access.</p>
+			</div>
+	</form>
+	
+		<!-- Footer Start -->
+   </div> 
+</div>   
+<!-- Footer Start -->
+        <div class="container-fluid bg-dark text-white-50 footer pt-1 mt-1 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-4">
+                <div class="row g-4">
+					<div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Udaipur Hotelier</h5>
+                        <a class="btn btn-link text-white-50" href="about.html">About Us</a>
+                        <a class="btn btn-link text-white-50" href="contact.html">Contact Us</a>
+                        <a class="btn btn-link text-white-50" href="LearnPage.html">Learn</a>
+                    </div>
+					<div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Contact</h5>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Udaipur</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91- 9079268663</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>Udaipurhotelier@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">Udaipur Hotelier</a>, All Right Reserved.			
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    
+<script>
+document.addEventListener("contextmenu", function(e) {
+  e.preventDefault();
+});
+
+	function MacrosParagraph(index) {
+      const paragraph = document.getElementById(`Macrospara-${index}`);
+      const checkbox = event.target;
+
+      if (checkbox.checked) {
+        paragraph.style.display = 'block';
+      } else {
+        paragraph.style.display = 'none';
+      }
+    }
+	// welcome message
+	function WeddingParagraph(index) {
+      const paragraph = document.getElementById(`wedpara-${index}`);
+      const checkbox = event.target;
+
+      if (checkbox.checked) {
+        paragraph.style.display = 'block';
+      } else {
+        paragraph.style.display = 'none';
+      }
+    }
+	function PivotParagraph(index) {
+      const paragraph = document.getElementById(`Pivotpara-${index}`);
+      const checkbox = event.target;
+
+      if (checkbox.checked) {
+        paragraph.style.display = 'block';
+      } else {
+        paragraph.style.display = 'none';
+      }
+    }
+	// welcome message
+	function DataParagraph(index) {
+      const paragraph = document.getElementById(`Datapara-${index}`);
+      const checkbox = event.target;
+
+      if (checkbox.checked) {
+        paragraph.style.display = 'block';
+      } else {
+        paragraph.style.display = 'none';
+      }
+    }
+	// Conference message
+	function ChartParagraph(index) {
+      const paragraph = document.getElementById(`Chartpara-${index}`);
+      const checkbox = event.target;
+
+      if (checkbox.checked) {
+        paragraph.style.display = 'block';
+      } else {
+        paragraph.style.display = 'none';
+      }
+    }
+	// Conference message
+	function PowerParagraph(index) {
+      const paragraph = document.getElementById(`Powerpara-${index}`);
+      const checkbox = event.target;
+
+      if (checkbox.checked) {
+        paragraph.style.display = 'block';
+      } else {
+        paragraph.style.display = 'none';
+      }
+    }
+</script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script type="module">
+        import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+    
+        const firebaseConfig = {
+            apiKey: "AIzaSyBdGShEAg6teoVgXVfsbzUJO1sIY3bZPH4",
+  authDomain: "udaipur-hotelier-4b582.firebaseapp.com",
+  projectId: "udaipur-hotelier-4b582",
+  storageBucket: "udaipur-hotelier-4b582.firebasestorage.app",
+  messagingSenderId: "843875126311",
+  appId: "1:843875126311:web:2c76e6e8b79d4223439202",
+  measurementId: "G-M93ZN7YSNB"
+        };
+        
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth();
+        
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                let email = user.email;
+                let username = email.substring(0, email.indexOf("@"));
+                document.getElementById("username").textContent = username;
+            } else {
+                window.location.href = "login.html";
+            }
+        });
+        
+        window.logout = function() {
+            signOut(auth).then(() => {
+                window.location.href = "login.html";
+            }).catch((error) => {
+                console.error("Logout Error: ", error);
+            });
+        }
+    </script>
+</body>
+
+</html>

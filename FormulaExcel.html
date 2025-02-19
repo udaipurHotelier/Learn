@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Udaipur Hotelier</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+	<link href="css/style.css" rel="stylesheet">
+    <link href="css/hkchecklist.css" rel="stylesheet">
+	<link href="css/foskillscss.css" rel="stylesheet">
+	<style>
+	* {
+  user-select: none;
+}
+	.recommended-tag {
+    display: inline-block;
+    background-color: #28a745;
+    color: white;
+    font-size: 0.75em;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-left: 8px;
+}
+</style>
+	
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+		<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+            <a href="LearnPage.html" class="navbar-brand d-flex align-items-center text-center py-0 px-4 px-lg-5">
+                <h4 class="m-0 text-primary">Udaipur Hotelier</h4>
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+           <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a href="LearnPage.html" onclick="showAdThenRedirect('LearnPage.html')" class="nav-item nav-link ">Home</a>
+				    <a href="about.html" class="nav-item nav-link">About</a>
+					<a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" id="userDropdown" class="nav-link dropdown-toggle d-flex align-items-center" data-bs-toggle="dropdown">
+                            <img id="profileImage" src="imge/profile.png" alt="Profile" class="rounded-circle" width="30" height="30" style="margin-right: 8px;">
+                            <span id="username">User</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <a href="Profile.html" class="dropdown-item">Profile</a>
+                            <a href="#" class="dropdown-item">Settings</a>
+                            <a href="#" class="dropdown-item" onclick="logout()">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+        <!-- Header End -->
+        <div class="containeer-xxl py-5 bg-dark page-header mb-5">
+            <div class="container my-5 pt-5 pb-4">
+                <h1 class="display-3 text-white mb-3 animated slideInDown">Formula Excel </h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb text-uppercase">
+                        <li class="breadcrumb-item"><a href="LearnPage.html">Home</a></li>
+                        <li class="breadcrumb-item text-white active" aria-current="page">Formula Excel</li>
+
+                    </ol>
+                </nav>
+            </div>
+		</div>
+		<!-- Header End -->
+		<div class="containeer">
+		<h2>Formula Excel</h2>
+		
+    	<div class="section">
+            <h6>Basic Formulas</h6>
+			<p><b>There are many types of formulas in Excel, including:</b></p>
+			<div class="checkbox-group">
+                <label><input type="checkbox" name="cleaning1" onclick="toggleParagraph(1)">Arithmetic formulas:</label>
+                <label><input type="checkbox" name="cleaning1" onclick="toggleParagraph(2)">Statistical formulas:</label>
+                <label><input type="checkbox" name="cleaning1" onclick="toggleParagraph(3)">Lookup formulas:</label>
+                <label><input type="checkbox" name="cleaning1" onclick="toggleParagraph(4)">Information functions:</label>
+                <label><input type="checkbox" name="cleaning1" onclick="toggleParagraph(5)">Other formulas:</label>
+            </div>
+		</div>
+			<div id="paragraphs">
+			<p id="para-1" class="paragraph"><b> 1. Addition <br> 2. Subtraction<br> 3. Multiplication<br> 4.division </b></p>
+			<p id="para-2" class="paragraph"><b>1. Average <br> 2. Maximum <br> 3. Minimum <br> 4. Count functions </b></p>
+			<p id="para-3" class="paragraph"><b>1. VLOOKUP <br> 2. HLOOKUP <br>3. INDEX <br>4. INDEX-MATCH</b></p>
+			<p id="para-4" class="paragraph"><b>These include the TYPE function, which returns a numeric code representing the type of a given value</b></p>
+			<p id="para-5" class="paragraph"><b>These include the IF function, the concatenate function, the date formula, the trim formula, and the len function</b></p>
+			</div>
+		<!-- description formula -->
+		<div class="section">
+            <h6>Basic Formulas</h6>
+			<p><b>Excel Formulas and Functions with Examples:</b></p>
+				<ul>
+				<li><strong>Excel SUM Formula</strong></li>
+				<p>The SUM formula in Excel is one of the most fundamental formulas you can use in a spreadsheet, allowing you to calculate the sum (or total) of two or more values. To use the SUM formula, enter the values you want to add together in the following format: =SUM(value 1, value 2,…..).</p>
+				<li><strong>Excel SUBTRACTION Formula</strong></li>
+				<p>To use the subtraction formula in Excel, enter the cells you want to subtract in the format =SUM (A1, -B1). This will subtract a cell from the SUM formula by appending a negative sign before the cell is subtracted.</p>
+				<li><strong>Excel MULTIPLICATION Formula</strong></li>
+				<p>In Excel, enter the cells to be multiplied in the format =A3*B3 to perform the multiplication formula. An asterisk is used in this formula to multiply cell A3 by cell B3.<br>Example: If A3 was 300 and B3 was 225, =A1*B1 would return a value of 67500.</p>
+				<li><strong>Excel DIVISION Function</strong></li>
+				<p>Division in Excel is one of the most basic functions available. To do so, highlight an empty cell, enter an equals sign, “=,” and then the two (or more) values you want to divide, separated by a forward slash, “/.” The output should look like this: =A3/B3, as shown in the screenshot above. To use the division formula in Excel, enter the dividing cells in the format =A3/B3. This formula divides cell A3 by cell B3 with a forward slash, “/.”<br>Example: If A3 was 300 and B3 was 225, =A3/B3 would return a decimal value of 1.333333333.</p>
+				<li><strong>Excel AVERAGE Function</strong></li>
+				<p>The AVERAGE function finds an average or arithmetic mean of numbers. To find the average of the numbers, type = AVERAGE(A3, B3, C3….) and press ‘Enter’ it will produce the average of the numbers in the cell.<br>Example: If A3 was 300, B3 was 225, C3 was 180, D3 was 350, E3 is 400 then =AVERAGE(A3,B3,C3,D3,E3) will produce 291.</p>
+				<li><strong>Excel IF () Function</strong></li>
+				<p>In Excel, the IF formula is denoted as =IF(logical test, value if true, value if false). This lets you enter a text value into a cell “if” something else in your spreadsheet is true or false.<br>Example: You may need to know which values in column A are greater than three. Using the =IF formula, you can quickly have Excel auto-populate a “yes” for each cell with a value greater than 3 and a “no” for each cell with a value less than 3.</p>
+				<li><strong>Excel PERCENTAGE Formula</strong></li>
+				<p>To use the percentage formula in Excel, enter the cells you want to calculate the percentage for in the format =A1/B1. To convert the decimal value to a percentage, select the cell, click the Home tab, and then select “Percentage” from the numbers dropdown.<br>Excel doesn’t have a set “formula” for percentages, but it makes it simple to transform any cell’s value into a %, saving you the time and effort of having to compute and reenter the data.<br>On Excel’s Home tab, you can find the default setting for converting a cell’s value to a percentage. Select this tab, highlight the cell(s) you want to convert to a percentage, and then select Conditional Formatting from the dropdown menu (this menu button might say “General” at first). Then, from the list of options that appears, choose “Percentage.” This will convert the value of each highlighted cell into a percentage. You can find this functionality lower down.</p>
+				<li><strong>Excel MODULUS Function</strong></li>
+				<p>The MOD() function aims to return the remaining after dividing a given number by a divisor. For a better understanding, let’s look at the examples below.<br>Example: We have divided 20 by 3. The remainder is calculated using the function “=MOD(A2,3)”. The outcome is kept in B2. Alternatively, we can just type “=MOD(20,3)” and get the same result.</p>
+				<li><strong>Excel CONCATENATE Formula</strong></li>
+				<p>CONCATENATE is a useful formula that combines values from multiple cells into the same cell.<br>Example: =CONCATENATE(A3,B3) will combine Red and Apple to produce RedApple. </p>
+				<li><strong>Excel DATE Formula</strong></li>
+				<p>DATE is the Excel DATE formula =DATE(year, month, day). The values entered in the parenthesis, including values from other cells, will be converted to a date using this formula.<br>Example: If A2 was 2019, B2 was 8, and C1 was 15, =DATE(A1,B1,C1) would return 15-08-2019.</p>
+				<li><strong>Excel TRIM Formula</strong></li>
+				<p>The TRIM formula in Excel is denoted =TRIM(text). Any spaces placed before or after the text in the cell will be eliminated by this formula.<br>Example: If A2 includes the name “Virat Kohli” with unwanted spaces before the first name, =TRIM(A2) would return “Virat Kohli” with no spaces in a new cell.</p>
+				<li><strong> Excel LEN Function</strong></li>
+				<p>LEN is the function to count the number of characters in a specific cell when you want to know the number of characters in that cell. =LEN(text) is the formula for this. Please note that Excel’s LEN function counts every character, including spaces.<br>Example: =LEN(A2), returns the total length of the character in cell A2, including spaces.</p>
+				<li><strong>Excel CEILING Function</strong></li>
+				<p>In ceiling a number is rounded up to the nearest multiple of importance using the CEILING() function.<br>Example: The nearest highest multiple of 1 for 2.5 is 3.<br>Note: The #VALUE! error value is returned by CEILING if either input is not a number.</p>
+				<li><strong>Excel FLOOR Function</strong></li>
+				<p>The floor function reduces a number to the nearest multiple of importance, in contrast to the ceiling function.<br>Example: The nearest lowest multiple of 1 for 2.5 is 2.</p>
+				<li><strong>Excel REPLACE Function</strong></li>
+				<p>The REPLACE() function does exactly what its name implies, it replaces a portion of a text string with another text string.<br>The syntax is =REPLACE(old_text, start_num, num_chars, new_text).
+				<br> 1. Old_text: Text in which you want to replace some characters.
+				<br> 2. Start_num in this case refers to the index position from which you wish to begin replacing the characters. The amount of characters you want to replace is then indicated by num_chars.
+				<br> 3. New_text: The text that will replace characters in old_text.
+				<br> Example: =REPLACE(A3,3,2,”23″) Replaces the last two digits (22) of 2022 with 23 making it 2023.
+				</p>
+				<li><strong>Excel SUBSTITUTE Function</strong></li>
+				<p>In a text string, the SUBSTITUTE() function substitutes new text for old text.
+				<br> Syntax: SUBSTITUTE(text, old_text, new_text, [instance_num])
+				<br> Text: The text or the reference to a cell containing text for which you want to substitute characters.
+				<br> Old_text: The text you want to replace.
+				<br> New_text: The text you want to replace old_text with.
+				<br> [instance_num] refers to the index position of the present texts more than once.
+				<br> Example: =SUBSTITUTE(A2, “Student”, “Employee”) Substitutes Employee for Student (Employee Details) making it Employee Details.
+				</p>
+				<li><strong>Excel NOW() Function</strong></li>
+				<p>The NOW() function in Excel give the present date (today’s date), It retrieves the current system clock time.</p>
+				<li><strong>Excel TODAY() Function</strong></li>
+				<p>The TODAY() function in Excel provides the current system date.</p>
+				<li><strong>Excel DAY() Function</strong></li>
+				<p>The function DAY() is used to return the day of the month. The value will fall between 1 and 31. The first day of the month is 1 and the last day is 31.</p>
+				<li><strong>Excel MONTH() Function</strong></li>
+				<p>The month is returned by the MONTH() function as a number between 1 and 12, with 1 denoting January and 12 denoting December.</p>
+				<li><strong>Excel YEAR() Function</strong></li>
+				<p>The YEAR() function, as the name suggests, returns the year from a date value.</p>
+				<li><strong>Excel TIME() Function</strong></li>
+				<p>The Excel serial number with a time format is created by the TIME() function using the hours, minutes, and seconds provided as numbers.</p>
+				<li><strong>Excel DATEDIF Function</strong></li>
+				<p>The DATEDIF() function provides the difference between two dates in terms of years, months, or days.<br>Example: Using DATEDIF function to calculate the current age of a person based on two given dates, the date of birth and today’s date.</p>
+				<li><strong>Excel VLOOKUP Formula</strong></li>
+				<p>The VLOOKUP formula searches for the value in the leftmost column of the table array and returns the value from the same row from the specified columns.<br>
+				Formula: =VLOOKUP(lookup_value, table_array,col_index, range_lookup)
+				<br>Lookup_value: The value for which you are looking.
+				<br>Table_array: the range of the table, worksheet, or selected cell with multiple columns.
+				<br>col_index: The position of the column to extract the value.
+				<br>range_lookup: “TRUE” indicates the approximate match(default), and “FALSE” indicates the exact match.
+				</p>
+				<li><strong>Excel HLOOKUP Formula</strong></li>
+				<p>HLOOKUP(Horizontal lookup) is similar to the VLOOKUP formula. This function looks for a value in the top row of a table or array of benefits. It gives the value in the same column from a row you specify.
+				<br>Formula: =HLOOKUP(lookup_value, table, row_index, range_lookup)
+				<br>Lookup_value: This indicated the value for lookup.
+				<br>Table_array: the range of the table, worksheet, or selected cell with multiple columns.
+				<br>row_index: The position of the row to extract the value.
+				<br>range_lookup: “TRUE” indicates the approximate match(default), and “FALSE” indicates the exact match.
+				</p>
+				<li><strong>Excel POWER Function</strong></li>
+				<p>The POWER() function returns the result of a number raised to a certain power.<br>Formula: POWER(number, power)</p>
+				<li><strong>Excel INDEX-MATCH Function</strong></li>
+				<p>The INDEX-MATCH function can be used to return a value in a column to the left. This is the most popular function in Excel for performing more advanced lookups. INDEX-MATCH in Excel has several advantages over the VLOOKUP Function. The main advantage of using INDEX-MATCH is it only has to consider the lookup column and the return column.
+				<br>Formula: INDEX(reference, [row], [column])</p>
+				<li><strong>Excel Data Analysis Function</strong></li>
+				<p>What-If Analysis involves altering values to test various scenarios within Advanced Excel.<br>Multiple sets of values can be applied to one or more formulas in Advanced Excel to explore diverse outcomes.
+				<br>Solver is a valuable tool for What-If Analysis, functioning as an add-in program in Microsoft Excel. It helps identify optimal values for a formula within a designated cell, known as the objective cell. However, constraints or limits may apply to other formula cell values on a worksheet.
+				<br>Solver operates with decision variables, which are cell groups used in calculating formulas within objective and constraint cells. It adjusts the values of decision variable cells to adhere to constraints on constraint cells, assisting in determining the desired outcome for the objective cell.
+				</p>
+				<li><strong>Excel SUMIF() Function</strong></li>
+				<p>SUMIF Function adds all the values in a range of cells that meet a specified condition.<br>
+				Formula: = SUMIF(range,criteria,[sum_range]).<br>Example: = SUMIF(C6:C11,”>=20″)</p>
+				<li><strong>Excel AVERAGEIF() Function</strong></li>
+				<p>It Calculates the average value in a range of cells that meet the specified criteria.<br> Formula: =AVERAGEIF(range,criteria,[average_range]).<br>Example: =AVERAGEIF(C6:C11,”>=20″)</p>
+				<li><strong>Excel COUTNIF() Function</strong></li>
+				<p>The COUNTIF Function is used to count the total number of cells in the given range that satisfy the condition.<br>Formula: COUNTIF(range, criteria)</p>
+				<li><strong>Offset Function in Excel</strong></li>
+				<p>The OFFSET function retrieves a reference to a cell range located a defined number of rows and columns away from a given cell or range of cells.<br>Offset Function =OFFSET(reference, rows, cols, [height], [width])<br></p>
+				</ul>
+		</div>
+	</form>
+	
+		<!-- Footer Start -->
+   </div> 
+</div>   
+		<!-- Footer Start -->
+        <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="row g-5">
+					<div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Udaipur Hotelier</h5>
+                        <a class="btn btn-link text-white-50" href="index.html">Home</a>
+                        <a class="btn btn-link text-white-50" href="contact.html">Contact Us</a>
+                    </div>
+					<div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Contact</h5>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Udaipur</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>Udaipurhotelier@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">Udaipur Hotelier</a>, All Right Reserved.			
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+		<!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script type="module">
+        import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+    
+        const firebaseConfig = {
+            apiKey: "AIzaSyBdGShEAg6teoVgXVfsbzUJO1sIY3bZPH4",
+  authDomain: "udaipur-hotelier-4b582.firebaseapp.com",
+  projectId: "udaipur-hotelier-4b582",
+  storageBucket: "udaipur-hotelier-4b582.firebasestorage.app",
+  messagingSenderId: "843875126311",
+  appId: "1:843875126311:web:2c76e6e8b79d4223439202",
+  measurementId: "G-M93ZN7YSNB"
+        };
+        
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth();
+        
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                let email = user.email;
+                let username = email.substring(0, email.indexOf("@"));
+                document.getElementById("username").textContent = username;
+            } else {
+                window.location.href = "login.html";
+            }
+        });
+        
+        window.logout = function() {
+            signOut(auth).then(() => {
+                window.location.href = "login.html";
+            }).catch((error) => {
+                console.error("Logout Error: ", error);
+            });
+        }
+    </script>
+<script>
+document.addEventListener("contextmenu", function(e) {
+  e.preventDefault();
+});
+
+	function toggleParagraph(index) {
+      const paragraph = document.getElementById(`para-${index}`);
+      const checkbox = event.target;
+
+      if (checkbox.checked) {
+        paragraph.style.display = 'block';
+      } else {
+        paragraph.style.display = 'none';
+      }
+    }
+	// welcome message
+	function WeddingParagraph(index) {
+      const paragraph = document.getElementById(`wedpara-${index}`);
+      const checkbox = event.target;
+
+      if (checkbox.checked) {
+        paragraph.style.display = 'block';
+      } else {
+        paragraph.style.display = 'none';
+      }
+    }
+	function welParagraph(index) {
+      const paragraph = document.getElementById(`welpara-${index}`);
+      const checkbox = event.target;
+
+      if (checkbox.checked) {
+        paragraph.style.display = 'block';
+      } else {
+        paragraph.style.display = 'none';
+      }
+    }
+	// welcome message
+	function weltempParagraph(index) {
+      const paragraph = document.getElementById(`weltepara-${index}`);
+      const checkbox = event.target;
+
+      if (checkbox.checked) {
+        paragraph.style.display = 'block';
+      } else {
+        paragraph.style.display = 'none';
+      }
+    }
+	// Conference message
+	function confParagraph(index) {
+      const paragraph = document.getElementById(`confpara-${index}`);
+      const checkbox = event.target;
+
+      if (checkbox.checked) {
+        paragraph.style.display = 'block';
+      } else {
+        paragraph.style.display = 'none';
+      }
+    }
+	// Conference message
+	function excelParagraph(index) {
+      const paragraph = document.getElementById(`excelpara-${index}`);
+      const checkbox = event.target;
+
+      if (checkbox.checked) {
+        paragraph.style.display = 'block';
+      } else {
+        paragraph.style.display = 'none';
+      }
+    }
+</script>
+</body>
+
+</html>

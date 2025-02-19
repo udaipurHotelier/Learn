@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Udaipur Hotelier Profile</title>
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/learnpagecss.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+
+        header {
+            background-color: #333;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-section img {
+            width: 50px;
+            margin-right: 10px;
+        }
+
+        .company-name {
+            color: #ffb000;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .user-info {
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        .user-logo {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            border: 2px solid #ffb000;
+            margin-right: 10px;
+        }
+
+        .username {
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .user-options {
+            display: none;
+            position: absolute;
+            top: 50px;
+            right: 0;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            width: 150px;
+            text-align: left;
+        }
+
+        .user-option {
+            padding: 12px;
+            display: block;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .user-option:hover {
+            background-color: #ffb000;
+            color: white;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid #ffb000;
+            margin-bottom: 10px;
+        }
+
+        .profile-header h2 {
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .profile-header p {
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-xxl bg-white p-0">
+		<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+            <a href="LearnPage.html" class="navbar-brand d-flex align-items-center text-center py-0 px-4 px-lg-5">
+                <h4 class="m-0 text-primary">Udaipur Hotelier</h4>
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+           <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a href="LearnPage.html" onclick="showAdThenRedirect('LearnPage.html')" class="nav-item nav-link ">Home</a>
+				    <a href="about.html" class="nav-item nav-link">About</a>
+					<a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" id="userDropdown" class="nav-link dropdown-toggle d-flex align-items-center" data-bs-toggle="dropdown">
+                            <img id="profileImage" src="imge/profile.png" alt="Profile" class="rounded-circle" width="30" height="30" style="margin-right: 8px;">
+                            <span id="username">User</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <a href="Profile.html" class="dropdown-item">Profile</a>
+                            <a href="#" class="dropdown-item">Settings</a>
+                            <a href="#" class="dropdown-item" onclick="logout()">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+        <div class="container">
+            <img src="imge/profile.png" alt="Profile Picture" class="profile-image">
+            <div class="profile-header">
+                <span id="username" aria-readonly="true">User</span>
+                <p id="profile-email">help@udaipurhotelier.com</p>
+            </div>
+            <form id="profileForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" class="form-control" placeholder="Enter phone number" required>
+                </div>
+                <button type="button" class="btn btn-primary mt-3" onclick="saveProfile()">Save</button>
+
+    <script type="module">
+        import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
+    import { getDatabase, ref, set, get } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js";
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+    
+        const firebaseConfig = {
+            apiKey: "AIzaSyBdGShEAg6teoVgXVfsbzUJO1sIY3bZPH4",
+  authDomain: "udaipur-hotelier-4b582.firebaseapp.com",
+  projectId: "udaipur-hotelier-4b582",
+  storageBucket: "udaipur-hotelier-4b582.firebasestorage.app",
+  messagingSenderId: "843875126311",
+  appId: "1:843875126311:web:2c76e6e8b79d4223439202",
+  measurementId: "G-M93ZN7YSNB"
+        };
+        
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth();
+        const db = getDatabase();
+
+        function saveProfile() {
+        const user = auth.currentUser;
+        if (!user) return;
+
+        const name = document.getElementById('name').value.trim();
+        const dob = document.getElementById('dob').value.trim();
+        const phone = document.getElementById('phone').value.trim();
+
+        if (!name || !dob || !phone) {
+            alert("All fields are required and cannot be left blank.");
+            return;
+        }
+
+        const userData = {
+            name: name,
+            dob: dob,
+            phone: phone
+        };
+
+        set(ref(db, 'users/' + user.uid), userData).then(() => {
+            alert("Profile updated successfully!");
+        }).catch(error => console.error("Error saving data: ", error));
+    }
+
+
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+            document.getElementById("username").textContent = user.displayName || "User";
+            document.getElementById("profile-email").textContent = user.email;
+
+            const userRef = ref(db, 'users/' + user.uid);
+            get(userRef).then(snapshot => {
+                if (snapshot.exists()) {
+                    const data = snapshot.val();
+                    document.getElementById('name').value = data.name || '';
+                    document.getElementById('dob').value = data.dob || '';
+                    document.getElementById('phone').value = data.phone || '';
+                }
+            });
+        } else {
+            window.location.href = 'login.html';
+        }
+    });
+        
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                let email = user.email;
+                let username = email.substring(0, email.indexOf("@"));
+                document.getElementById("username").textContent = username;
+            } else {
+                window.location.href = "login.html";
+            }
+        });
+        
+        window.logout = function() {
+            signOut(auth).then(() => {
+                window.location.href = "login.html";
+            }).catch((error) => {
+                console.error("Logout Error: ", error);
+            });
+        }
+    </script>
+    <script>
+        function toggleDropdown() {
+            var options = document.getElementById("user-options");
+            options.style.display = options.style.display === "block" ? "none" : "block";
+        }
+    </script>
+</body>
+</html>

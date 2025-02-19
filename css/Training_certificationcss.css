@@ -1,0 +1,106 @@
+.main-container {
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center; /* Centers the containers horizontally */
+    align-items: flex-start; /* Aligns items at the top */
+    min-height: 100vh; /* Full viewport height */
+    padding: 20px;
+    background-color: #eaeaea; /* Optional background for the container */
+    box-sizing: border-box;
+    gap: 20px; /* Adds space between the containers */
+}
+
+
+.form-container, .preview-container {
+    width: 48%; /* Ensures both containers take equal width and leaves a small gap */
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    border: 3px solid black;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+.form-container {
+    background-color: #f0f0f0; /* Light grey background for the form */
+}
+
+.preview-container {
+    background-color: #f0f0f0; /* White background for the preview */
+}
+
+h1, h2 ,h3{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Adds consistent spacing between form elements */
+}
+
+label, input, select {
+    margin-bottom: 10px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #fff;
+}
+
+#certificate {
+    border: 2px solid black;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#companyLogo {
+    max-width: 200px;
+    max-height: 100px;
+    display: block;
+    margin: 0 auto;
+}
+
+#downloadBtn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#downloadBtn:hover {
+    background-color: #45a049;
+}
+
+.signature-space {
+    margin-top: 60px;
+    text-align: right;
+}
+
+.signature-line {
+    border-top: 1px solid #000;
+    width: 200px;
+    margin-left: auto;
+}
+
+#printedDate {
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 20px;
+}

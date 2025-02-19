@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Udaipur Hotelier</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+	<link href="css/style.css" rel="stylesheet">
+    <link href="css/hkchecklist.css" rel="stylesheet">
+	<link href="css/foskillscss.css" rel="stylesheet">
+	<style>
+	* {
+  user-select: none;
+}
+
+	.recommended-tag {
+    display: inline-block;
+    background-color: #28a745;
+    color: white;
+    font-size: 0.75em;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-left: 8px;
+}
+</style>
+	
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+		<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+            <a href="LearnPage.html" class="navbar-brand d-flex align-items-center text-center py-0 px-4 px-lg-5">
+                <h4 class="m-0 text-primary">Udaipur Hotelier</h4>
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+           <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a href="LearnPage.html" onclick="showAdThenRedirect('LearnPage.html')" class="nav-item nav-link ">Home</a>
+				    <a href="about.html" class="nav-item nav-link">About</a>
+					<a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" id="userDropdown" class="nav-link dropdown-toggle d-flex align-items-center" data-bs-toggle="dropdown">
+                            <img id="profileImage" src="imge/profile.png" alt="Profile" class="rounded-circle" width="30" height="30" style="margin-right: 8px;">
+                            <span id="username">User</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <a href="Profile.html" class="dropdown-item">Profile</a>
+                            <a href="#" class="dropdown-item">Settings</a>
+                            <a href="#" class="dropdown-item" onclick="logout()">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Header End -->
+        <div class="containeer-xxl py-5 bg-dark page-header mb-5">
+            <div class="container my-5 pt-5 pb-4">
+                <h1 class="display-3 text-white mb-3 animated slideInDown">Basic Excel </h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb text-uppercase">
+                        <li class="breadcrumb-item"><a href="LearnPage.html">Home</a></li>
+                    	<li class="breadcrumb-item text-white active" aria-current="page">Basic Excel</li>
+
+                    </ol>
+                </nav>
+            </div>
+		</div>
+		<!-- Header End -->
+		<div class="containeer">
+		<h2>Basic Excel</h2>
+		<div class="section signature-container">
+		 <button type="button" class="btn btn-outline-success and-all-other-classes"> 
+				<a href="https://www.microsoft.com/en-in/microsoft-365/excel" style="color:inherit">Download Excel</a>
+				</button>
+		</div>
+		<div class="section">
+			<p><b>Microsoft Excel is a powerful spreadsheet software used for data organization, analysis, and visualization. It is part of the Microsoft Office suite.</b></p>
+			</div>
+		<div class="section">
+			<h6>Types Of Software</h6>
+			<div class="checkbox-group">
+			<label><input type="checkbox" name="Software" checked disabled>Microsoft Excel 2007 <span class="recommended-tag">Recommended</span></label>
+			<label><input type="checkbox" name="Software" checked disabled>Microsoft Excel 2016</label>
+			<label><input type="checkbox" name="Software" checked disabled>Microsoft Excel 2019</label>
+			<label><input type="checkbox" name="Software" checked disabled>Microsoft Excel 2021</label>
+			<label><input type="checkbox" name="Software" checked disabled>Microsoft Excel 365<span class="recommended-tag">Recommended</span></label>
+		</div>
+	</div>
+		<div class= "section">
+		<h6>Getting Started with Excel</h6>
+		<div class="checkbox-group">
+			<label><input type="checkbox" name="Workbook1" onclick="WeddingParagraph(1)">Workbook and Worksheets</label>
+			<label><input type="checkbox" name="Workbook2" onclick="WeddingParagraph(2)">Interface Overview</label>
+		</div>
+			</div>
+		<div id="paragraphs">
+					<p id="wedpara-1" class="paragraph"><strong>Workbook:</strong> A file in Excel, which can contain multiple worksheets.<br><strong>Worksheet:</strong> A single sheet inside the workbook, composed of rows and columns.</p>
+					<p id="wedpara-2" class="paragraph"><strong>Ribbon:</strong> The toolbar at the top of Excel containing tabs like Home, Insert, Page Layout, etc. <br> <strong>Formula Bar:</strong> Displays the content or formula of the selected cell. <br><strong>Cells:</strong> Intersection of rows (numbers) and columns (letters), identified by their address (e.g., A1, B2).</p>
+					</div>
+		
+		<div class="section">
+			<h6>Basic Operations</h6>
+			<ol>
+				<li>Entering Data:</li>
+					<ol><li>Click on a cell and start typing to input data.</li>
+					<li>Press Enter to confirm.</li>
+					</ol>
+				<li>Editing Data: </li>
+				<ol><li>Double-click a cell to edit.</li> <li>Use Backspace or Delete to remove content.</li></ol>
+				<li>Saving a Workbook:</li>
+				<ol><li>Go to File > Save As to save your file with a name.</li></ol>
+			</ol>
+		</div>	
+		<!--feature -->
+		<div class="section">
+			<h6>Basic Excel Features</h6>
+			<ol>
+				<li>Formatting Cells:</li>
+					<ol>
+                    <small>Use the Home tab for formatting:</small>
+                    <li>Font: Change style, size, color.</li>
+                    <li>Alignment: Align text left, right, center.</li>
+                    <li>Number: Set cell type (General, Currency, Percentage, etc.).
+                    </li>
+					</ol>
+					<li>Basic Formulas and Functions:</li>
+					<ol>
+					<li>Start a formula with <b>=</b></li>
+					<li>Example: <b>= A1 + B1</b> adds values in A1 and B1.</li>
+					<small>Common Functions:</small>
+					<li><b>SUM:</b> Adds numbers (=SUM(A1:A5)).</li>
+					<li><b>AVERAGE:</b> Finds the average (=AVERAGE(A1:A5)).</li>
+					<li><b>MIN/MAX:</b> Finds minimum/maximum value.</li>
+					<li><b>COUNT:</b> Counts numeric entries.</li>
+					</ol>
+					<li>AutoFill:</li>
+					<ol>
+					<li>Drag the bottom-right corner of a cell to fill adjacent cells with a sequence or formula.</li>
+					</ol>
+				</ol>
+			</div>
+
+		<!--Data Organization -->
+		<div class="section">
+			<h6>Data Organization</h6>
+			<ol>
+				<li>Sorting:</li>
+					<ul>
+                    <li>Select data and go to Data > Sort to arrange it in ascending or descending order.</li>
+					</ul>
+				<li>Filtering:</li>
+					<ul>
+					<li>Use Data > Filter to view specific rows based on criteria.</li>
+					</ul>
+				<li>Creating Tables:</li>	
+				<ul>
+					<li>Select data and go to Insert > Table to organize it into a table format.</li>
+					</ul>
+			</ol>
+		</div>	
+		<!--Charts and Graphs -->
+		<div class="section">
+			<h6>Charts and Graphs</h6>
+			<ol>
+				<li>Insert a Chart:</li>
+					<ul>
+                    <li>Select data, go to Insert > Charts, and choose a chart type (e.g., Bar, Line, Pie).</li>
+					</ul>
+				<li>Customize Charts:</li>
+					<ul>
+					<li>Use the Chart Tools ribbon to edit titles, legends, and styles.</li>
+					</ul>
+			</ol>
+		</div>
+		<!--Charts and Graphs -->
+		<div class="section">
+			<h6>Keyboard Shortcuts</h6>
+			<ol>
+				<li>Basic Navigation:</li>
+					<ol>
+                    <li>Arrow Keys: Move between cells.</li>
+                    <li>Ctrl + Arrow Key: Jump to the edge of data.</li>
+                    <li>Ctrl + Home: Go to the start of the sheet.</li>
+					</ol>
+				<li>Editing:</li>
+					<ol>
+					<li>Ctrl + Z : Undo.</li>
+					<li>Ctrl + C : Copy</li>
+					<li>Ctrl + X : Cut</li>
+					<li>Ctrl + V : Paste</li>
+					</ol>
+				<li>Formatting:</li>
+					<ol>
+					<li>Ctrl + B : Bold</li>
+					<li>Ctrl + I : Italics</li>
+					<li>Ctrl + U : Underline</li>
+					</ol>
+				<li>Saving:</li>
+					<ol>
+					<li>Ctrl + S: Save workbook.</li>
+					</ol>
+			</ol>
+		</div>					
+	</form>
+	
+		<!-- Footer Start -->
+   </div> 
+</div>   
+		<!-- Footer Start -->
+        <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="row g-5">
+					<div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Udaipur Hotelier</h5>
+                        <a class="btn btn-link text-white-50" href="index.html">Home</a>
+                        <a class="btn btn-link text-white-50" href="contact.html">Contact Us</a>
+                    </div>
+					<div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Contact</h5>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Udaipur</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>Udaipurhotelier@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">Udaipur Hotelier</a>, All Right Reserved.			
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+		<!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+	<script type="module">
+        import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+    
+        const firebaseConfig = {
+            apiKey: "AIzaSyBdGShEAg6teoVgXVfsbzUJO1sIY3bZPH4",
+  authDomain: "udaipur-hotelier-4b582.firebaseapp.com",
+  projectId: "udaipur-hotelier-4b582",
+  storageBucket: "udaipur-hotelier-4b582.firebasestorage.app",
+  messagingSenderId: "843875126311",
+  appId: "1:843875126311:web:2c76e6e8b79d4223439202",
+  measurementId: "G-M93ZN7YSNB"
+        };
+        
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth();
+        
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                let email = user.email;
+                let username = email.substring(0, email.indexOf("@"));
+                document.getElementById("username").textContent = username;
+            } else {
+                window.location.href = "login.html";
+            }
+        });
+        
+        window.logout = function() {
+            signOut(auth).then(() => {
+                window.location.href = "login.html";
+            }).catch((error) => {
+                console.error("Logout Error: ", error);
+            });
+        }
+    </script>
+<script>
+document.addEventListener("contextmenu", function(e) {
+  e.preventDefault();
+});
+
+	function toggleParagraph(index) {
+      const paragraph = document.getElementById(`para-${index}`);
+      const checkbox = event.target;
+
+      if (checkbox.checked) {
+        paragraph.style.display = 'block';
+      } else {
+        paragraph.style.display = 'none';
+      }
+    }
+	// welcome message
+	function WeddingParagraph(index) {
+      const paragraph = document.getElementById(`wedpara-${index}`);
+      const checkbox = event.target;
+
+      if (checkbox.checked) {
+        paragraph.style.display = 'block';
+      } else {
+        paragraph.style.display = 'none';
+      }
+    }
+	function welParagraph(index) {
+      const paragraph = document.getElementById(`welpara-${index}`);
+      const checkbox = event.target;
+
+      if (checkbox.checked) {
+        paragraph.style.display = 'block';
+      } else {
+        paragraph.style.display = 'none';
+      }
+    }
+	// welcome message
+	function weltempParagraph(index) {
+      const paragraph = document.getElementById(`weltepara-${index}`);
+      const checkbox = event.target;
+
+      if (checkbox.checked) {
+        paragraph.style.display = 'block';
+      } else {
+        paragraph.style.display = 'none';
+      }
+    }
+	// Conference message
+	function confParagraph(index) {
+      const paragraph = document.getElementById(`confpara-${index}`);
+      const checkbox = event.target;
+
+      if (checkbox.checked) {
+        paragraph.style.display = 'block';
+      } else {
+        paragraph.style.display = 'none';
+      }
+    }
+	// Conference message
+	function excelParagraph(index) {
+      const paragraph = document.getElementById(`excelpara-${index}`);
+      const checkbox = event.target;
+
+      if (checkbox.checked) {
+        paragraph.style.display = 'block';
+      } else {
+        paragraph.style.display = 'none';
+      }
+    }
+</script>
+</body>
+
+</html>

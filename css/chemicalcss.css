@@ -1,0 +1,57 @@
+    
+	.online-counter {
+      font-size: 18px;
+      color: #00B074;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 10vh; 
+    }
+	
+        .Chemical_container {
+              max-width: 1000px;
+            margin: 0 auto;
+        }
+          h1 {
+            text-align: center;
+            color: #333;
+        }
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .button.selected {
+            background-color: #28A745;
+        }
+        .details {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+        .details.active {
+            display: block;
+        }
+        .details h2 {
+            color: #333;
+            margin-top: 0;
+        }
+        .details p {
+            margin: 5px 0;
+            line-height: 1.6;
+        }

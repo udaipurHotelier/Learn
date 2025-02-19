@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Udaipur Hotelier Quiz</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0px;
+            background: url('img/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+
+        }
+
+        #terms-popup {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        #terms-popup div {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 8px;
+            width: 80%;
+            max-width: 400px;
+        }
+
+        h1, h2 {
+            font-family: 'Georgia', serif;
+        }
+
+        #quiz-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 30px auto;
+            display: none;
+        }
+
+        .question-block {
+            margin: 20px 0;
+        }
+
+        .question-block h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .option {
+            cursor: pointer;
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .option:hover {
+            background-color: #e0e0e0;
+        }
+
+        .popup {
+            display: block;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border: 2px solid #ccc;
+            z-index: 9999;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .popup button {
+            padding: 15px 30px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .popup button:hover {
+            background-color: #45a049;
+        }
+
+        #time-limit {
+            font-size: 20px;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #ff6f61;
+        }
+
+        #current-date-time {
+            text-align: center;
+            font-size: 14px;
+            color: #333;
+            margin-top: 10px;
+        }
+
+        #quiz-stats {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        #quiz-stats span {
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="terms-popup">
+        <div>
+            <h2>Terms and Conditions</h2>
+            <p>Please read the terms and conditions carefully.</p>
+            <button id="ok-btn">OK</button>
+            <button id="cancel-btn">Cancel</button>
+        </div>
+    </div>
+
+    <div id="quiz-container">
+        <h1>Udaipur Hotelier Quiz</h1>
+        <p id="time-limit">90 seconds remaining</p>
+        <div id="questions-container"></div>
+
+        <div>
+    <p id="quiz-stats" style="font-size: 16px; font-weight: bold;">
+        Total Questions: <span id="total-question-no">0</span> |
+        Correct Answers: <span id="total-right">0</span> |
+        Wrong Answers: <span id="total-wrong">0</span> |
+        Remaining Questions: <span id="remaining-questions">0</span>
+    </p>
+    <p id="current-date-time" style="text-align: center; font-size: 14px; color: #333;"></p>
+</div>
+    </div>
+
+    <script>
+        let currentQuestionIndex = 0;
+        let correctAnswers = 0;
+        let wrongAnswers = 0;
+        let timer = 90;  // 90 seconds = 1.5 minutes
+        let interval;
+        let timeTaken = 0;
+        let quizFinished = false;
+
+        const questions = [
+            {
+                question: "What is the default file extension for Excel 2016?",
+                options: [".txt", ".docx", ".xlsx", ".pptx"],
+                correctAnswer: ".xlsx"
+            },
+            {
+                question: "Which of the following functions is used to calculate the sum of a range of cells?",
+                options: ["AVERAGE()", "SUM()", "COUNT()", "MAX()"],
+                correctAnswer: "SUM()"
+            },
+            // Add the rest of your questions...
+        ];
+
+        document.getElementById("ok-btn").addEventListener("click", () => {
+            document.getElementById("terms-popup").style.display = "none";
+            startQuiz();
+        });
+
+        document.getElementById("cancel-btn").addEventListener("click", () => {
+            window.location.href = "basicexcelpage.html";
+        });
+
+        function startQuiz() {
+            document.getElementById("quiz-container").style.display = "block";
+            loadQuestion();
+            startTimer();
+        }
+
+        function loadQuestion() {
+            const question = questions[currentQuestionIndex];
+            const questionBlock = document.createElement("div");
+            questionBlock.classList.add("question-block");
+
+            const questionText = document.createElement("h3");
+            questionText.innerText = question.question;
+            questionBlock.appendChild(questionText);
+
+            question.options.forEach((option, index) => {
+                const optionDiv = document.createElement("div");
+                optionDiv.classList.add("option");
+                optionDiv.innerText = option;
+                optionDiv.onclick = () => checkAnswer(option, question.correctAnswer, optionDiv);
+                questionBlock.appendChild(optionDiv);
+            });
+
+            document.getElementById("questions-container").appendChild(questionBlock);
+            updateQuizStats();
+        }
+
+        function checkAnswer(selectedAnswer, correctAnswer, optionDiv) {
+            if (quizFinished) return;
+
+            if (selectedAnswer === correctAnswer) {
+                optionDiv.style.backgroundColor = "green";
+                correctAnswers++;
+            } else {
+                optionDiv.style.backgroundColor = "red";
+                optionDiv.parentNode.querySelectorAll(".option").forEach(option => {
+                    if (option.innerText === correctAnswer) {
+                        option.style.backgroundColor = "green";
+                    }
+                });
+                wrongAnswers++;
+            }
+
+            currentQuestionIndex++;
+            if (currentQuestionIndex < questions.length) {
+                setTimeout(() => {
+                    document.getElementById("questions-container").innerHTML = "";
+                    loadQuestion();
+                }, 1000);
+            } else {
+                endQuiz();
+            }
+        }
+
+        function startTimer() {
+            interval = setInterval(() => {
+                if (timer > 0) {
+                    timer--;
+                    document.getElementById("time-limit").innerText = `${timer} seconds remaining`;
+                } else {
+                    endQuiz();
+                }
+            }, 1000);
+        }
+
+function endQuiz() {
+    quizFinished = true;
+    clearInterval(interval);
+    document.getElementById("time-limit").innerText = "Time's up!";
+
+    // Hide or dismiss any previously displayed popups
+    const existingPopups = document.querySelectorAll('.popup');
+    existingPopups.forEach(popup => {
+        popup.style.display = 'none'; // Hide any existing popups
+    });
+
+    // Show the result popup after a short delay
+    setTimeout(() => {
+        showResultPopup();
+    }, 500);  // Show result popup after 0.5 seconds
+}
+
+function showResultPopup() {
+    const totalQuestions = questions.length;
+    const correctPercentage = (correctAnswers / totalQuestions) * 100;
+    let rank = '';
+    let message = '';
+
+    // Determine rank and message based on the correct percentage
+    if (correctPercentage === 100) {
+        rank = 'Rank 1 (Topper)';
+        message = 'Congratulations! You are the topper!';
+    } else if (correctPercentage >= 80) {
+        rank = 'Rank 2';
+        message = 'Great job! You are in Rank 2.';
+    } else if (correctPercentage >= 60) {
+        rank = 'Rank 3';
+        message = 'Good job! You are in Rank 3.';
+    } else if (correctPercentage >= 50) {
+        rank = 'Rank 4';
+        message = 'You did well. You are in Rank 4.';
+    } else if (correctPercentage >= 40) {
+        rank = 'Rank 5';
+        message = 'You can improve. You are in Rank 5.';
+    } else if (correctPercentage >= 30) {
+        rank = 'Rank 6';
+        message = 'You need to study more. You are in Rank 6.';
+    } else {
+        rank = 'Need to study hard';
+        message = 'You need to study hard. Please try again.';
+    }
+
+    // Create and display the result popup
+    const resultPopup = document.createElement("div");
+    resultPopup.classList.add("popup");
+    resultPopup.innerHTML = `
+        <h2>Quiz Finished!</h2>
+        <p>Total Questions: ${totalQuestions}</p>
+        <p>Correct Answers: ${correctAnswers}</p>
+        <p>Wrong Answers: ${wrongAnswers}</p>
+        <p>Remaining Questions: ${questions.length - (currentQuestionIndex + 1)}</p>
+        <p><strong>Rank: ${rank}</strong></p>
+        <p><strong>${message}</strong></p>
+        <button id="save-btn">Save Results</button>
+    `;
+    document.body.appendChild(resultPopup);
+
+    // Button to save results as PDF
+    document.getElementById("save-btn").addEventListener("click", () => {
+        saveResultsAsPDF();
+    });
+
+    // After a brief delay, show the rank popup
+    setTimeout(() => {
+        showRankPopup(rank, message);
+    }, 2500); // Show rank popup after 1.5 seconds
+
+    // Redirect user after showing rank popup
+    setTimeout(() => {
+        if (correctPercentage < 30) {
+            window.location.href = "basicexcel.html"; // Redirect after 1 second for below 30% score
+        } else {
+            window.location.href = "basicexcel.html"; // Redirect after 1 second for others with message
+        }
+    }, 7000); // Redirect after 3 seconds to allow time for rank popup to be seen
+}
+
+function showRankPopup(rank, message) {
+    // Hide any existing popups before displaying the new one
+    const existingPopups = document.querySelectorAll('.popup');
+    existingPopups.forEach(popup => {
+        popup.style.display = 'none'; // Hide any existing popups
+    });
+
+    // Create and display the rank popup
+    const rankPopup = document.createElement("div");
+    rankPopup.classList.add("popup");
+    rankPopup.innerHTML = `
+        <h2>Your Rank</h2>
+        <p>Rank: ${rank}</p>
+        <p>${message}</p>
+        <button id="ok-btn">OK</button>
+    `;
+    document.body.appendChild(rankPopup);
+
+    // Close the rank popup when OK button is clicked
+    document.getElementById("ok-btn").addEventListener("click", () => {
+        rankPopup.style.display = "none";
+    });
+}
+
+
+        function saveResultsAsPDF() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            // Header: Website Name
+            doc.setFontSize(24);
+            doc.setTextColor(0, 102, 204); // Blue color
+            doc.text('Udaipur Hotelier Quiz', 105, 20, null, null, 'center'); // Centered title
+
+            // Quiz Results
+            doc.setFontSize(16);
+            doc.setTextColor(0, 0, 0); // Black color
+            doc.text(`Total Questions: ${questions.length}`, 20, 30);
+            doc.text(`Questions Attempted: ${currentQuestionIndex}`, 20, 40);
+            doc.text(`Correct Answers: ${correctAnswers}`, 20, 50);
+            doc.text(`Your Score: ${correctAnswers} / ${questions.length}`, 20, 60);
+
+            // Watermark
+            doc.setTextColor(150);  // Light gray color for watermark
+            doc.setFontSize(40);
+            doc.text('Udaipur Hotelier', 105, 200, null, null, 'center');
+            doc.setFontSize(16);
+
+            // Save the PDF
+            doc.save('quiz_results.pdf');
+        }
+		
+    function updateQuizStats() {
+    document.getElementById("total-question-no").innerText = currentQuestionIndex + 1;
+    document.getElementById("total-right").innerText = correctAnswers;
+    document.getElementById("total-wrong").innerText = wrongAnswers;
+    document.getElementById("remaining-questions").innerText = questions.length - (currentQuestionIndex + 1);
+
+    // Update current date and time in 12-hour format with AM/PM
+    const currentDateTime = new Date().toLocaleString('en-US', {
+        hour: 'numeric',
+        minute: 'numeric',
+        second: 'numeric',
+        hour12: true, // 12-hour clock
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric'
+    });
+    document.getElementById("current-date-time").innerText = `Current Date and Time: ${currentDateTime}`;
+}
+
+    </script>
+</body>
+</html>

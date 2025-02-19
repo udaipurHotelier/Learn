@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Udaipur Hotelier - Login</title>
+  <link href="css/Logincss.css" rel="stylesheet">
+  <style>
+    .remember-forgot {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    .remember-forgot label, .remember-forgot a {
+      color: white;
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="form-wrapper sign-in">
+    <form action="" id="loginForm">
+      <h2>Employer</h2>
+      <div class="input-group">
+        <input type="email" id="email" required>
+        <label for="email">Email</label>
+      </div>
+      <div class="input-group">
+        <input type="password" id="password" required>
+        <label for="password">Password</label>
+      </div>
+      <div class="remember-forgot">
+        <label><input type="checkbox" id="rememberMe"> Remember Me</label>
+        <a href="forgot-password.html">Forgot Password?</a>
+      </div>
+      <div class="button-container">
+        <button type="submit">Login</button>
+        <button type="button" onclick="location.href='Login.html'">User Login</button>
+      </div>
+      <div class="signUp-link">
+        <p>Don't Have an Account..? <a href="#" class="signUpBtn-link">Request For Account</a></p>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const usernameField = document.getElementById("username");
+    const rememberMeCheckbox = document.getElementById("rememberMe");
+    
+    if (localStorage.getItem("rememberedUsername")) {
+      usernameField.value = localStorage.getItem("rememberedUsername");
+      rememberMeCheckbox.checked = true;
+    }
+    
+    document.getElementById("loginForm").addEventListener("submit", function (event) {
+      if (rememberMeCheckbox.checked) {
+        localStorage.setItem("rememberedUsername", usernameField.value);
+      } else {
+        localStorage.removeItem("rememberedUsername");
+      }
+    });
+  });
+</script>
+</body>
+</html>

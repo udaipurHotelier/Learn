@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Udaipur Hotelier</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+	<link href="css/style.css" rel="stylesheet">
+    <link href="css/hkchecklist.css" rel="stylesheet">
+	<link href="css/tablecss.css" rel="stylesheet">
+	
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+            <a href="LearnPage.html" class="navbar-brand d-flex align-items-center text-center py-0 px-4 px-lg-5">
+                <h4 class="m-0 text-primary">Udaipur Hotelier</h4>
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+           <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a href="LearnPage.html" class="nav-item nav-link">Home</a>
+				    <a href="about.html" class="nav-item nav-link">About</a>
+					<a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" id="userDropdown" class="nav-link dropdown-toggle d-flex align-items-center" data-bs-toggle="dropdown">
+                            <img id="profileImage" src="imge/profile.png" alt="Profile" class="rounded-circle" width="30" height="30" style="margin-right: 8px;">
+                            <span id="username">User</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <a href="Profile.html" class="dropdown-item">Profile</a>
+                            <a href="#" class="dropdown-item">Settings</a>
+                            <a href="#" class="dropdown-item" onclick="logout()">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Header End -->
+        <div class="container-xxl py-5 bg-dark page-header mb-5">
+            <div class="container my-5 pt-5 pb-4">
+                <h1 class="display-3 text-white mb-3 animated slideInDown">Accounts Knowledge</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb text-uppercase">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item text-white active" aria-current="page">Accounts Knowledge</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <!-- Header End -->
+
+		<div class="containeer">
+    <h2>Accounts Knowledge</h2>
+    <form id="checklistForm">
+		<!-- software Field -->
+        <br><div class="section">
+            <h6>Types of Accounts software</h6>
+			<div class="checkbox-group">
+			<label><input type="checkbox" name="software1" checked="checked"> Tally</label>
+			<label><input type="checkbox" name="software2" checked="checked"> Wave</label>
+			<label><input type="checkbox" name="software3" checked="checked"> Sage</label>
+			<label><input type="checkbox" name="software4" checked="checked"> Quickbooks</label>
+			<label><input type="checkbox" name="software5" checked="checked"> Netsuite</label>
+			<label><input type="checkbox" name="software6" checked="checked"> Xero</label>
+		</div><br>
+<!-- new Way -->
+			<div class="section">
+            <h6>Basic Accounting Terms</h6>
+			<div class="checkbox-group">
+                <label><input type="checkbox" name="cleaning1" onclick="toggleParagraph(1)"> Assets</label>
+                <label><input type="checkbox" name="cleaning1" onclick="toggleParagraph(2)"> Liabilities</label>
+                <label><input type="checkbox" name="cleaning1" onclick="toggleParagraph(3)"> Equity</label>
+                <label><input type="checkbox" name="cleaning1" onclick="toggleParagraph(4)"> Revenue</label>
+                <label><input type="checkbox" name="cleaning1" onclick="toggleParagraph(5)"> Expenses</label>
+                <label><input type="checkbox" name="cleaning1" onclick="toggleParagraph(6)"> Profit and Loss</label>
+                <label><input type="checkbox" name="cleaning1" onclick="toggleParagraph(7)"> Bank Reconciliation</label>
+                <label><input type="checkbox" name="cleaning1" onclick="toggleParagraph(8)"> General Ledger</label>
+                <label><input type="checkbox" name="cleaning1" onclick="toggleParagraph(9)"> Income Statement</label>
+				
+            </div>
+			<div id="paragraphs">
+				<p id="para-1" class="paragraph">Assets: Resources owned by a business that are expected to bring future economic benefits (e.g., cash, buildings, equipment).</p>
+				<p id="para-2" class="paragraph">Liabilities: Obligations or debts that a business owes to others (e.g., loans, accounts payable).</p>
+				<p id="para-3" class="paragraph">Equity: The owner's claim on the assets of the business after liabilities are paid off. It's also called "Owner's Equity" or "Shareholders' Equity".</p>
+				<p id="para-4" class="paragraph">Revenue: The income generated from normal business activities (e.g., sales, service income).</p>
+				<p id="para-5" class="paragraph">Expenses: The costs incurred in the process of earning revenue (e.g., salaries, rent, utilities).</p>
+				<p id="para-6" class="paragraph">Profit and Loss: The difference between revenue and expenses. A business makes a profit if revenue exceeds expenses, and incurs a loss if expenses exceed revenue.</p>
+				<p id="para-7" class="paragraph">This is a process in which accountants match accounting record balances for a cash amount correlating to a bank statement to appropriate the changes to the accounting records.</p>
+				<p id="para-8" class="paragraph">This is an account that contains all ledger accounts, which are accounts used by organizations to record transactions. General Ledgers, or GLs, record all transactions during one accounting period. Asset, equity, or liability accounts may exist in a general ledger. Each recorded transaction or sub-account is a journal entry in a general ledger.</p>
+				<p id="para-9" class="paragraph">A business-generated financial document highlighting the revenue a company gains in an accounting period regarding the expenses used during the same period. Income and balance sheets and cash flow statements are among the three business-issued financial statements.</p>
+			</div><br>
+			<div class="section">
+			<h6>Basic Accounting Equation</h6>
+			<p>The fundamental accounting equation is: <br> <b>Assets = Liabilities + Equity</b> <br> This equation shows that everything a company owns (assets) is either financed by borrowing (liabilities) or by the owners (equity).</p>
+			</div>
+		<div class="section">
+            <h6> Types of Accounts</h6>
+			<div class="checkbox-group">
+                <label><input type="checkbox" name="cleaning1" onclick="signParagraph(1)"> Assets</label>
+                <label><input type="checkbox" name="cleaning2" onclick="signParagraph(2)"> Liabilities</label>
+                <label><input type="checkbox" name="cleaning3" onclick="signParagraph(3)"> Equity</label>
+                <label><input type="checkbox" name="cleaning4" onclick="signParagraph(4)"> Revenue </label>
+                <label><input type="checkbox" name="cleaning5" onclick="signParagraph(5)"> Expenses </label>
+                
+			</div>
+			<div id="paragraphs">
+				<p id="spara-1" class="paragraph">Current Assets: Cash or assets expected to be converted into cash within a year (e.g., cash, accounts receivable, inventory).
+				<br> Non-Current Assets: Assets that are not expected to be converted into cash within a year (e.g., property, plant, equipment).</p>
+				<p id="spara-2" class="paragraph">Current Liabilities: Obligations due within one year (e.g., accounts payable, short-term loans). <br> Non-Current Liabilities: Obligations due after one year (e.g., long-term debt, bonds payable).</p>
+				<p id="spara-3" class="paragraph">Equity: Owner’s interest in the company, such as capital contributions or retained earnings.</p>
+				<p id="spara-4" class="paragraph">Revenue: Money received for goods or services provided.</p>
+				<p id="spara-5" class="paragraph">Expenses: Costs associated with the operation of the business. </p>
+			</div>
+				<! -- Accounting Principles  -->
+				<div class="section">
+				<h6>Accounting Principles</h6>
+				<small>Some key accounting principles include:</small>
+				<ol>
+					<li>Accrual Principle: Revenues and expenses are recognized when they are incurred, not when cash is received or paid.</li>
+					<li>Consistency Principle: Once an accounting method is chosen, it should be used consistently from period to period.</li>
+					<li>Going Concern Principle: Assumes that a business will continue to operate indefinitely.</li>
+					<li>Matching Principle: Expenses should be recorded in the period in which the related revenue is earned.</li>
+				</ol>
+				</div>
+				
+				<!-- Double-Entry Bookkeeping -->
+				<div class="section">
+				<h6>Double-Entry Bookkeeping</h6>
+				<small>This system ensures that the accounting equation (Assets = Liabilities + Equity) remains balanced. Every transaction affects at least two accounts—one debit and one credit.</small>
+				<ol>
+				<li>Debit (Dr): Increases assets or expenses, and decreases liabilities or equity.</li>
+				<li>Credit (Cr): Increases liabilities or equity, and decreases assets or expenses.</li>
+				</ol>
+				<ol>
+				<h6>For example, if a business buys inventory for cash, the transaction would be:</h6>
+				<li>Debit Inventory (increase in asset)</li>
+				<li>Credit Cash (decrease in asset)</li></ol>
+				</div>
+				
+			<div class="section">
+            <h6>The Financial Statements</h6>
+            <div class="checkbox-group">
+				<label><input type="checkbox" name="other1" onclick="otherParagraph(1)">Balance Sheet</label>
+                <label><input type="checkbox" name="other2" onclick="otherParagraph(2)"> Income Statement (P&L)</label>
+                <label><input type="checkbox" name="other3" onclick="otherParagraph(3)"> Cash Flow Statement</label>
+                <label><input type="checkbox" name="other4" onclick="otherParagraph(4)"> Statement of Changes in Equity</label>
+            </div>
+			</div>
+			<div id="paragraphs">
+			<p id="opara-1" class="paragraph">Balance Sheet: Shows the financial position of a company at a specific point in time. It provides a snapshot of assets, liabilities, and equity.<br> <b>Formula: Assets = Liabilities + Equity</b></p>
+			<p id="opara-2" class="paragraph">Income Statement (Profit and Loss Statement): Shows the company’s performance over a period of time. It details the company’s revenues, expenses, and profits or losses. <br><b>Formula: Revenue - Expenses = Profit (or Loss) </b></p>
+			<p id="opara-3" class="paragraph">Cash Flow Statement: Reports the cash inflows and outflows during a period, categorized into operating, investing, and financing activities. <br><b>It helps understand how changes in balance sheet accounts and income affect cash and cash equivalents.</b></p>
+			<p id="opara-4" class="paragraph">Statement of Changes in Equity: Shows the movement in equity over a period, detailing items such as retained earnings, stock issued, and dividends paid.</p>
+			</div>
+			
+			<div class="section">
+            <h6>Journal Entries and Ledger</h6>
+            <ol>
+			<li>Journal: A chronological record of all transactions. Each entry typically includes the date, accounts affected, amounts, and a brief description. <br>
+			<small>Example of a journal entry:</small><br><b>Date: 01/01/2024</b> <br><b>Account: Cash (Dr), Sales Revenue (Cr)</b> <br> <b>Amount: $500</b></li><br>
+			<li>Ledger: A record of all accounts and their balances. All journal entries are posted into the respective ledger accounts for easier tracking of balances.</li>
+			</ol>
+			</div>
+			
+			<div class="section">
+			<h6> Trial Balance</h6>
+			<p>A trial balance is a report that lists the balances of all general ledger accounts. It ensures that the sum of debits equals the sum of credits, which helps to verify the accuracy of the ledger entries.</p>
+			</div>
+			
+			<div class="section">
+			<h6>Depreciation</h6>
+			<p>Depreciation is the process of allocating the cost of a tangible fixed asset over its useful life. This is done to match the cost of the asset with the revenue it generates over time.</p>
+			<ol>
+			<li>Straight-line depreciation is the most common method, where an equal amount of depreciation is charged each year.</li>
+			</ol>
+			</div>
+			
+			<div class="section">
+			<h6>Common Accounting Software</h6>
+			<ol>
+			<li>Tally ERP 9: Widely used in India for small and medium-sized businesses.</li>
+			<li>QuickBooks: Popular globally, especially among small businesses.</li>
+			<li>Xero: Known for its user-friendly interface and cloud-based services.</li>
+			<li>SAP: Used by large corporations for comprehensive enterprise resource planning (ERP).</li>
+			</ol>
+			</div>
+			
+			<div class="section">
+			<h6>Taxation</h6>
+			<p>A basic understanding of tax concepts is also important:</p>
+			<ol>
+			<li>GST (Goods and Services Tax): A value-added tax levied on the sale of goods and services in countries like India.</li>
+			<li>Income Tax: Tax levied on individual or corporate income.</li>
+			<li>Tax Returns: Periodic filings that report the taxable income and the tax payable by an individual or company.</li>
+			</ol>
+			</div>
+			
+			<div class="section">
+			<h6>Career Path in Accounting</h6>
+			<p>As a fresher, you may begin as an Account Assistant, Accounts Executive, or Junior Accountant. Over time, with experience and further qualifications (like CPA, CMA, or ACCA), you can move to roles such as</p>
+			<ol>
+			<li>Senior Accountant</li>
+			<li>Accounting Manager</li>
+			<li>Financial Analyst</li>
+			<li>Tax Consultant</li>
+			<li>Auditor</li>
+			</ol>
+			</div>
+		</div>
+		</div>   
+	</div>
+	
+	
+	</form>
+</div>
+</div>
+ <!-- Footer Start -->
+        	<div class="container-fluid bg-dark text-white-50 footer pt-1 mt-1 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-4">
+                <div class="row g-4">
+					<div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Udaipur Hotelier</h5>
+                        <a class="btn btn-link text-white-50" href="about.html">About Us</a>
+                        <a class="btn btn-link text-white-50" href="contact.html">Contact Us</a>
+                    </div>
+					<div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Contact</h5>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91- 9079268663</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>Udaipurhotelier@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">Udaipur Hotelier</a>, All Right Reserved.			
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+	<script type="module">
+        import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+    
+        const firebaseConfig = {
+            apiKey: "AIzaSyBdGShEAg6teoVgXVfsbzUJO1sIY3bZPH4",
+  authDomain: "udaipur-hotelier-4b582.firebaseapp.com",
+  projectId: "udaipur-hotelier-4b582",
+  storageBucket: "udaipur-hotelier-4b582.firebasestorage.app",
+  messagingSenderId: "843875126311",
+  appId: "1:843875126311:web:2c76e6e8b79d4223439202",
+  measurementId: "G-M93ZN7YSNB"
+        };
+        
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth();
+        
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                let email = user.email;
+                let username = email.substring(0, email.indexOf("@"));
+                document.getElementById("username").textContent = username;
+            } else {
+                window.location.href = "login.html";
+            }
+        });
+        
+        window.logout = function() {
+            signOut(auth).then(() => {
+                window.location.href = "login.html";
+            }).catch((error) => {
+                console.error("Logout Error: ", error);
+            });
+        }
+    </script>
+	<script>
+	function toggleParagraph(index) {
+      const paragraph = document.getElementById(`para-${index}`);
+      const checkbox = event.target;
+
+      if (checkbox.checked) {
+        paragraph.style.display = 'block';
+      } else {
+        paragraph.style.display = 'none';
+      }
+    }
+	// sign in hotel
+	function signParagraph(index) {
+      const paragraph = document.getElementById(`spara-${index}`);
+      const checkbox = event.target;
+
+      if (checkbox.checked) {
+        paragraph.style.display = 'block';
+      } else {
+        paragraph.style.display = 'none';
+      }
+    }
+	
+	//other section
+	function otherParagraph(index) {
+      const paragraph = document.getElementById(`opara-${index}`);
+      const checkbox = event.target;
+
+      if (checkbox.checked) {
+        paragraph.style.display = 'block';
+      } else {
+        paragraph.style.display = 'none';
+      }
+    }
+
+    function downloadPDF() {
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF();
+        
+        // Capture data from the form
+        const formData = new FormData(document.getElementById('checklistForm'));
+
+        // Add date
+        const date = formData.get('date');
+        doc.text(`Date: ${date}`, 10, 10);
+
+        // Sections data
+        const sections = ['Cleaning Tasks', 'Maintenance Tasks', 'Safety Checks', 'Inventory Checks'];
+        let yPosition = 20;
+
+        sections.forEach((section, index) => {
+            doc.text(`${section}:`, 10, yPosition);
+            yPosition += 10;
+            
+            const checkboxes = formData.getAll(`${section.toLowerCase().replace(/ /g, '')}[]`);
+            checkboxes.forEach((checkbox, i) => {
+                doc.text(`${i+1}. ${checkbox}`, 10, yPosition);
+                yPosition += 5;
+            });
+        });
+
+        // Extra Notes
+        const extraNotes = formData.get('extraNotes');
+        if (extraNotes) {
+            doc.text(`Extra Notes: ${extraNotes}`, 10, yPosition);
+            yPosition += 10;
+        }
+
+        // Signatures
+        const employeeSignature = formData.get('employeeSignature');
+        const supervisorSignature = formData.get('supervisorSignature');
+        doc.text(`Employee Signature: ${employeeSignature}`, 10, yPosition);
+        yPosition += 10;
+        doc.text(`Supervisor Signature: ${supervisorSignature}`, 10, yPosition);
+
+        // Save PDF
+        doc.save('housekeeping_checklist.pdf');
+    }
+</script>
+</body>
+
+</html>

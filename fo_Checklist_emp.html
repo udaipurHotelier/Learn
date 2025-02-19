@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Udaipur Hotelier</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+	<link href="css/style.css" rel="stylesheet">
+    <link href="css/hkchecklist.css" rel="stylesheet">
+	<style>
+	.online-counter {
+      font-size: 18px;
+      color: #00B074;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 10vh; 
+    }
+	</style>
+</head>
+
+<body>
+    <div class="containeer-xxl bg-white p-0">
+       <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+            <a href="LearnPage.html" class="navbar-brand d-flex align-items-center text-center py-0 px-4 px-lg-5">
+                <h4 class="m-0 text-primary">Udaipur Hotelier</h4>
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+           <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a href="LearnPage.html" class="nav-item nav-link">Home</a>
+				    <a href="about.html" class="nav-item nav-link active">About</a>
+					<a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" id="userDropdown" class="nav-link dropdown-toggle d-flex align-items-center" data-bs-toggle="dropdown">
+                            <img id="profileImage" src="imge/profile.png" alt="Profile" class="rounded-circle" width="30" height="30" style="margin-right: 8px;">
+                            <span id="username">User</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <a href="Profile.html" class="dropdown-item">Profile</a>
+                            <a href="#" class="dropdown-item">Settings</a>
+                            <a href="#" class="dropdown-item" onclick="logout()">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar End -->
+        <!-- Header End -->
+        <div class="containeer-xxl py-5 bg-dark page-header mb-5">
+            <div class="container my-5 pt-5 pb-4">
+                <h1 class="display-3 text-white mb-3 animated slideInDown">Front office Checklist</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb text-uppercase">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item text-white active" aria-current="page">FO Checklist</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <!-- Header End -->
+
+		<div class="containeer">
+		<h2>Front office Checklist</h2>
+		<form id="checklistForm">
+
+        <!-- Section 1 -->
+        <div class="section">
+            <h6>Morning Shift</h6>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="cleaning1"> Take HandOver From Night Shift </label>
+                <label><input type="checkbox" name="cleaning2"> Take Cash HandOver & Count</label>
+                <label><input type="checkbox" name="cleaning3"> Check Log Book </label>
+                <label><input type="checkbox" name="cleaning4"> Check Handover</label>
+                <label><input type="checkbox" name="cleaning5"> wake-Up call reminder</label>
+                <label><input type="checkbox" name="cleaning6"> Check Diffusuer Oil & turn On</label>
+                <label><input type="checkbox" name="cleaning7"> Newspapar to be send</label>
+                <label><input type="checkbox" name="cleaning8"> Check No Show Room & Charges</label>
+                <label><input type="checkbox" name="cleaning9"> Check Pickup & Drop</label>
+                <label><input type="checkbox" name="cleaning10"> Inform to FNB & Hk for VIP room</label>
+                <label><input type="checkbox" name="cleaning11"> All Reg Cards to be checked and filled</label>
+                <label><input type="checkbox" name="cleaning12"> Inform F&B if Welcome Drinks required.</label>
+				<label><input type="checkbox" name="cleaning13"> Inform F&B about No. of Breakfast.</label>
+                <label><input type="checkbox" name="cleaning14"> Inform F&B about No. of Lunch</label>
+                <label><input type="checkbox" name="cleaning15"> Inform F&B about No. of Dinner</label>
+                <label><input type="checkbox" name="cleaning16"> check Daily bills for any pendencies</label>
+                <label><input type="checkbox" name="cleaning17"> check Early Arrivals</label>
+                <label><input type="checkbox" name="cleaning18"> Check Stock of all FO Equipment</label>
+                <label><input type="checkbox" name="cleaning19"> Co-ordinate with HK for Late C/out</label>
+				<label><input type="checkbox" name="cleaning20"> Check Mail and Reply All mail</label>
+				 <label><input type="checkbox" name="cleaning21"> All Check out Room Done</label>
+				 <label><input type="checkbox" name="cleaning22"> Check All Trasaction & Posting</label>
+				 <label><input type="checkbox" name="cleaning23"> Check all Hotel Keys</label>
+				 <label><input type="checkbox" name="cleaning24"> Cash, Report HandOver to Accounts</label>
+				 <label><input type="checkbox" name="cleaning25"> Keep Front Office Items in Proper Order</label>
+				 <label><input type="checkbox" name="cleaning26"> Check Alll Checkout Bills Signed BY FOM</label>
+				 <label><input type="checkbox" name="cleaning27"> Trasfer IMP msg to Next Shift</label>
+				 <label><input type="checkbox" name="cleaning28"> Complete HandOver to Afternoon Shift</label>
+				 <label><input type="checkbox" name="cleaning29"> Check all Voucher to Authority Sign</label>
+				 <label><input type="checkbox" name="cleaning30"> Keep Fresh Water at Lobby for Guest</label>
+				 <label><input type="checkbox" name="cleaning31"> C Form Check out Entry</label>
+				 <label><input type="checkbox" name="cleaning32"> CUG Mobile / Card machine Charge</label>
+				 <label><input type="checkbox" name="cleaning33"> CUG Mobile / Card machine Working</label>
+				 <label><input type="checkbox" name="cleaning34"> Key card machine check</label>
+			 </div>
+			 
+			   <h6>Afternoon Shift</h6>
+				<div class="checkbox-group">
+					<label><input type="checkbox" name="cleaning1"> Room Blocking & Pickup R Arrivals</label>
+					<label><input type="checkbox" name="cleaning2"> Inform Next day Arrivals to Dep.</label>  
+					<label><input type="checkbox" name="cleaning3"> Depature for Next day Confirmed</label>
+					<label><input type="checkbox" name="cleaning4"> Guest Managment of All Arrivals</label>
+					<label><input type="checkbox" name="cleaning5"> VIP / Importent Message</label>
+					<label><input type="checkbox" name="cleaning6"> Key Tally</label>
+					<label><input type="checkbox" name="cleaning7"> Market Segment / bus/ billing ins</label>
+					<label><input type="checkbox" name="cleaning8"> W/UP call Given by Guest</label>
+					<label><input type="checkbox" name="cleaning9"> Check Nect day Early Morning Arrivals</label>
+					<label><input type="checkbox" name="cleaning10"> Check mail & Reply all</label>
+					<label><input type="checkbox" name="cleaning11"> Followup for Special Instruction</label>
+					<label><input type="checkbox" name="cleaning12"> Check all FO Stationery</label>
+					<label><input type="checkbox" name="cleaning13"> Check all Checkout Room Done</label>
+					<label><input type="checkbox" name="cleaning14"> Check & Update C form</label>
+					<label><input type="checkbox" name="cleaning15"> Cash HandOver to Night Shift</label>
+					<label><input type="checkbox" name="cleaning16"> CUG Mobile / Card machine Charge</label>
+					<label><input type="checkbox" name="cleaning17"> CUG Mobile / Card machine Working.</label>
+					<label><input type="checkbox" name="cleaning18"> Key card machine check</label>
+					<label><input type="checkbox" name="cleaning19"> Check all "C" form are submitted in time</label>
+					<label><input type="checkbox" name="cleaning20"> Inform to FNB & Hk for VIP room</label>
+					<label><input type="checkbox" name="cleaning21"> Inform Extra Bed detail to HouseKeeper</label>
+					<label><input type="checkbox" name="cleaning22"> Switch ON the light which are require</label>
+					<label><input type="checkbox" name="cleaning23"> Informing HK for Room Cleaning</label>
+					<label><input type="checkbox" name="cleaning24"> Count All Cash and Give Handover</label>
+					<label><input type="checkbox" name="cleaning25"> Share All feedback to Duty Manager</label>
+			</div>	
+			
+			<h6>Night Shift</h6>
+				<div class="checkbox-group">
+					<label><input type="checkbox" name="cleaning1"> Room Blocking & Pickup R Arrivals</label>
+					<label><input type="checkbox" name="cleaning2"> Inform Next day Arrivals to Dep.</label>  
+					<label><input type="checkbox" name="cleaning3"> Depature for Next day Confirmed</label>
+					<label><input type="checkbox" name="cleaning4"> Guest Managment of All Arrivals</label>
+					<label><input type="checkbox" name="cleaning5"> VIP / Importent Message</label>
+					<label><input type="checkbox" name="cleaning6"> Key Tally</label>
+					<label><input type="checkbox" name="cleaning7"> Market Segment / bus/ billing ins</label>
+					<label><input type="checkbox" name="cleaning8"> W/UP call Given by Guest</label>
+					<label><input type="checkbox" name="cleaning9"> Check Nect day Early Morning Arrivals</label>
+					<label><input type="checkbox" name="cleaning10"> Check mail & Reply all</label>
+					<label><input type="checkbox" name="cleaning11"> Followup for Special Instruction</label>
+					<label><input type="checkbox" name="cleaning12"> Check all FO Stationery</label>
+					<label><input type="checkbox" name="cleaning13"> Check all Checkout Room Done</label>
+					<label><input type="checkbox" name="cleaning14"> Check & Update C form</label>
+					<label><input type="checkbox" name="cleaning15"> Cash HandOver to Night Shift</label>
+					<label><input type="checkbox" name="cleaning16"> CUG Mobile / Card machine Charge</label>
+					<label><input type="checkbox" name="cleaning17"> CUG Mobile / Card machine Working.</label>
+					<label><input type="checkbox" name="cleaning18"> Key card machine check</label>
+					<label><input type="checkbox" name="cleaning19"> Check all "C" form are submitted in time</label>
+					<label><input type="checkbox" name="cleaning20"> Inform to FNB & Hk for VIP room</label>
+					<label><input type="checkbox" name="cleaning21"> Inform Extra Bed detail to HouseKeeper</label>
+					<label><input type="checkbox" name="cleaning22"> Switch ON the light which are require</label>
+					<label><input type="checkbox" name="cleaning23"> Informing HK for Room Cleaning</label>
+					<label><input type="checkbox" name="cleaning24"> Count All Cash and Give Handover</label>
+					<label><input type="checkbox" name="cleaning25"> Share All feedback to Duty Manager</label>
+					<label><input type="checkbox" name="cleaning26"> Check Tariff of all Rooms</label>
+					<label><input type="checkbox" name="cleaning27"> Tariff Posted</label>
+					<label><input type="checkbox" name="cleaning28"> Take batch close at 11.45 PM</label>
+					<label><input type="checkbox" name="cleaning29"> Sent Extra bed Report to FOM</label>
+					<label><input type="checkbox" name="cleaning30"> Shedule wake Up calls</label>
+					<label><input type="checkbox" name="cleaning31"> Check Incomplete Message</label>
+					<label><input type="checkbox" name="cleaning32"> Guest profile ( Registration Card)</label>
+					<label><input type="checkbox" name="cleaning33"> Fill Guest Bills</label>
+					<label><input type="checkbox" name="cleaning34"> Cashier Check And Closing</label>
+					<label><input type="checkbox" name="cleaning35"> Turn Off all lights</label>
+					<label><input type="checkbox" name="cleaning36"> Prepare HandOver</label>
+			</div>	
+		</div>
+    </form>
+</div>
+
+	<div class="container-fluid bg-dark text-white-50 footer pt-1 mt-1 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-4">
+                <div class="row g-4">
+					<div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Udaipur Hotelier</h5>
+                        <a class="btn btn-link text-white-50" href="about.html">About Us</a>
+                        <a class="btn btn-link text-white-50" href="contact.html">Contact Us</a>
+                    </div>
+					<div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Contact</h5>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91- 9079268663</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>Udaipurhotelier@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">Udaipur Hotelier</a>, All Right Reserved.			
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+	
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+	<script type="module">
+        import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+    
+        const firebaseConfig = {
+            apiKey: "AIzaSyBdGShEAg6teoVgXVfsbzUJO1sIY3bZPH4",
+  authDomain: "udaipur-hotelier-4b582.firebaseapp.com",
+  projectId: "udaipur-hotelier-4b582",
+  storageBucket: "udaipur-hotelier-4b582.firebasestorage.app",
+  messagingSenderId: "843875126311",
+  appId: "1:843875126311:web:2c76e6e8b79d4223439202",
+  measurementId: "G-M93ZN7YSNB"
+        };
+        
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth();
+        
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                let email = user.email;
+                let username = email.substring(0, email.indexOf("@"));
+                document.getElementById("username").textContent = username;
+            } else {
+                window.location.href = "login.html";
+            }
+        });
+        
+        window.logout = function() {
+            signOut(auth).then(() => {
+                window.location.href = "login.html";
+            }).catch((error) => {
+                console.error("Logout Error: ", error);
+            });
+        }
+    </script>
+<script>
+    function downloadPDF() {
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF();
+        
+        // Capture data from the form
+        const formData = new FormData(document.getElementById('checklistForm'));
+
+        // Add date
+        const date = formData.get('date');
+        doc.text(`Date: ${date}`, 10, 10);
+
+        // Sections data
+        const sections = ['Cleaning Tasks', 'Maintenance Tasks', 'Safety Checks', 'Inventory Checks'];
+        let yPosition = 20;
+
+        sections.forEach((section, index) => {
+            doc.text(`${section}:`, 10, yPosition);
+            yPosition += 10;
+            
+            const checkboxes = formData.getAll(`${section.toLowerCase().replace(/ /g, '')}[]`);
+            checkboxes.forEach((checkbox, i) => {
+                doc.text(`${i+1}. ${checkbox}`, 10, yPosition);
+                yPosition += 5;
+            });
+        });
+
+        // Extra Notes
+        const extraNotes = formData.get('extraNotes');
+        if (extraNotes) {
+            doc.text(`Extra Notes: ${extraNotes}`, 10, yPosition);
+            yPosition += 10;
+        }
+
+        // Signatures
+        const employeeSignature = formData.get('employeeSignature');
+        const supervisorSignature = formData.get('supervisorSignature');
+        doc.text(`Employee Signature: ${employeeSignature}`, 10, yPosition);
+        yPosition += 10;
+        doc.text(`Supervisor Signature: ${supervisorSignature}`, 10, yPosition);
+
+        // Save PDF
+        doc.save('housekeeping_checklist.pdf');
+    }
+</script>
+</body>
+
+</html>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Udaipur Hotelier</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+	<link href="css/style.css" rel="stylesheet">
+    <link href="css/hkchecklist.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+       <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+            <a href="LearnPage.html" class="navbar-brand d-flex align-items-center text-center py-0 px-4 px-lg-5">
+                <h4 class="m-0 text-primary">Udaipur Hotelier</h4>
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+           <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a href="LearnPage.html" class="nav-item nav-link">Home</a>
+				    <a href="about.html" class="nav-item nav-link">About</a>
+					<a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" id="userDropdown" class="nav-link dropdown-toggle d-flex align-items-center" data-bs-toggle="dropdown">
+                            <img id="profileImage" src="imge/profile.png" alt="Profile" class="rounded-circle" width="30" height="30" style="margin-right: 8px;">
+                            <span id="username">User</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <a href="Profile.html" class="dropdown-item">Profile</a>
+                            <a href="#" class="dropdown-item">Settings</a>
+                            <a href="#" class="dropdown-item" onclick="logout()">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Header End -->
+        <div class="container-xxl py-5 bg-dark page-header mb-5">
+            <div class="container my-5 pt-5 pb-4">
+                <h1 class="display-3 text-white mb-3 animated slideInDown">House Keeping Checklist</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb text-uppercase">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item text-white active" aria-current="page">Cleaning Checklist</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <!-- Header End -->
+
+		<div class="containeer">
+    <h2>Housekeeping Checklist</h2>
+    <form id="checklistForm">
+
+        <!-- Date Field -->
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required><br><br>
+
+        <!-- Section 1 -->
+        <div class="section">
+            <h6>Cleaning Tasks</h6>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="cleaning1"> Sweep the floor</label>
+                <label><input type="checkbox" name="cleaning2"> Mop the floor</label>
+                <label><input type="checkbox" name="cleaning3"> Dust surfaces</label>
+                <label><input type="checkbox" name="cleaning4"> Clean windows</label>
+                <label><input type="checkbox" name="cleaning5"> Empty trash</label>
+                <label><input type="checkbox" name="cleaning6"> Sanitize restrooms</label>
+                <label><input type="checkbox" name="cleaning7"> Clean kitchen</label>
+                <label><input type="checkbox" name="cleaning8"> Vacuum carpets</label>
+                <label><input type="checkbox" name="cleaning9"> Wipe down counters</label>
+            </div>
+        </div>
+
+        <!-- Section 2 -->
+        <div class="section">
+            <h6>Maintenance Tasks</h6>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="maintenance1"> Check lights</label>
+                <label><input type="checkbox" name="maintenance2"> Replace bulbs</label>
+                <label><input type="checkbox" name="maintenance3"> Check air conditioning</label>
+                <label><input type="checkbox" name="maintenance4"> Inspect plumbing</label>
+                <label><input type="checkbox" name="maintenance5"> Clean vents</label>
+                <label><input type="checkbox" name="maintenance6"> Test fire alarms</label>
+                <label><input type="checkbox" name="maintenance7"> Inspect doors</label>
+                <label><input type="checkbox" name="maintenance8"> Test elevators</label>
+                <label><input type="checkbox" name="maintenance9"> Check security system</label>
+            </div>
+        </div>
+
+        <!-- Section 3 -->
+        <div class="section">
+            <h6>Safety Checks</h6>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="safety1"> Fire extinguisher check</label>
+                <label><input type="checkbox" name="safety2"> First aid kit check</label>
+                <label><input type="checkbox" name="safety3"> Emergency exit check</label>
+                <label><input type="checkbox" name="safety4"> Hazardous materials check</label>
+                <label><input type="checkbox" name="safety5"> Spill clean-up supplies</label>
+                <label><input type="checkbox" name="safety6"> Slip hazards check</label>
+                <label><input type="checkbox" name="safety7"> Electrical safety check</label>
+                <label><input type="checkbox" name="safety8"> Lift safety check</label>
+                <label><input type="checkbox" name="safety9"> Test alarm systems</label>
+            </div>
+        </div>
+
+        <!-- Section 4 -->
+        <div class="section">
+            <h6>Inventory Checks</h6>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="inventory1"> Check cleaning supplies</label>
+                <label><input type="checkbox" name="inventory2"> Check toiletries</label>
+                <label><input type="checkbox" name="inventory3"> Check office supplies</label>
+                <label><input type="checkbox" name="inventory4"> Check food supplies</label>
+                <label><input type="checkbox" name="inventory5"> Check hygiene products</label>
+                <label><input type="checkbox" name="inventory6"> Check paper products</label>
+                <label><input type="checkbox" name="inventory7"> Check laundry supplies</label>
+                <label><input type="checkbox" name="inventory8"> Check safety equipment</label>
+                <label><input type="checkbox" name="inventory9"> Check maintenance supplies</label>
+            </div>
+        </div>
+		
+		<!-- Section 5 -->
+        <div class="section">
+            <h6>Main Living Area</h6>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="inventory1"> Clean the microwave</label>
+                <label><input type="checkbox" name="inventory2"> Clean mirrors and glass</label>
+                <label><input type="checkbox" name="inventory3"> Vacuum the room</label>
+                <label><input type="checkbox" name="inventory4"> Clean the coffee maker</label>
+                <label><input type="checkbox" name="inventory5"> Deodorize the room</label>
+                <label><input type="checkbox" name="inventory6"> Remove trash from trash cans</label>
+                <label><input type="checkbox" name="inventory7"> Dust all appliances</label>
+                <label><input type="checkbox" name="inventory8"> Wipe down the telephone</label>
+                <label><input type="checkbox" name="inventory9"> closet is stocked with hangers</label>
+            </div>
+        </div>
+		
+		<!-- Section 6 -->
+        <div class="section">
+            <h6>Make the Bed</h6>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="inventory1"> Lay down a fresh fitted sheet</label>
+                <label><input type="checkbox" name="inventory2"> Lay down a clean flat sheet</label>
+                <label><input type="checkbox" name="inventory3"> Strip the bed of all linens</label>
+                <label><input type="checkbox" name="inventory4"> clean pillowcases on pillows</label>
+                <label><input type="checkbox" name="inventory5"> Cover bed with a clean duvet</label>
+                <label><input type="checkbox" name="inventory6"> Bed Frame good condition</label>
+                <label><input type="checkbox" name="inventory7"> Headboard good condition</label>
+                <label><input type="checkbox" name="inventory8"> Bedding clean and free of stains</label>
+                <label><input type="checkbox" name="inventory9"> under the bed for any waste.</label>
+            </div>
+        </div>
+		<!-- Section 7 -->
+        <div class="section">
+            <h6>Clean the Bathroom</h6>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="inventory1"> Clean the vanity top and sink</label>
+                <label><input type="checkbox" name="inventory2"> Remove any used towels</label>
+                <label><input type="checkbox" name="inventory3"> Clean floor tiles and grout</label>
+                <label><input type="checkbox" name="inventory4"> Scrub and disinfect the toilet bowl</label>
+                <label><input type="checkbox" name="inventory5"> Remove any stray hairs from bathroom</label>
+                <label><input type="checkbox" name="inventory6"> sanitize the toilet seat, lid, and handle</label>
+                <label><input type="checkbox" name="inventory7"> Clean mirrors</label>
+                <label><input type="checkbox" name="inventory8"> Bedding clean and free of stains</label>
+                <label><input type="checkbox" name="inventory9"> Deodorize the bathroom</label>
+            </div>
+        </div>
+		
+		<!-- Section 8 -->
+        <div class="section">
+            <h6>Replace All Amenities</h6>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="inventory1"> coffee cups</label>
+                <label><input type="checkbox" name="inventory2"> Tissues</label>
+                <label><input type="checkbox" name="inventory3"> Toilet paper</label>
+                <label><input type="checkbox" name="inventory4"> Tea bags</label>
+                <label><input type="checkbox" name="inventory5"> Coffees and filters</label>
+                <label><input type="checkbox" name="inventory6"> Shampoo and conditioner</label>
+                <label><input type="checkbox" name="inventory7"> Dry cleaning bags</label>
+                <label><input type="checkbox" name="inventory8"> Clean towels, washcloths, bath mats</label>
+                <label><input type="checkbox" name="inventory9"> Hotel information pamphlets, booklets</label>
+                <label><input type="checkbox" name="inventory10"> Stationary and pen</label>
+                <label><input type="checkbox" name="inventory11"> Ice buckets and liners</label>
+                <label><input type="checkbox" name="inventory12"> Sugar, creamer, and stirrers</label>
+                <label><input type="checkbox" name="inventory13"> Drinking cups</label>
+                <label><input type="checkbox" name="inventory14"> Soaps and lotion</label>
+            </div>
+        </div>
+		
+		<!-- Section 9 -->
+        <div class="section">
+            <h6>Others</h6>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="inventory1"> heating, ventilation & AC is Working</label>
+                <label><input type="checkbox" name="inventory2"> Entry door lock functional</label>
+                <label><input type="checkbox" name="inventory3"> Entry door good condition</label>
+                <label><input type="checkbox" name="inventory4"> Entry door frame clean</label>
+                <label><input type="checkbox" name="inventory5"> DND Sign in good condition</label>
+                <label><input type="checkbox" name="inventory6"> Telephone works</label>
+                <label><input type="checkbox" name="inventory7"> TV , AC remote works</label>
+                <label><input type="checkbox" name="inventory8"> TV works</label>
+                <label><input type="checkbox" name="inventory9"> Minibar clean</label>
+                <label><input type="checkbox" name="inventory10"> Minibar functional</label>
+                <label><input type="checkbox" name="inventory11"> Trash bin clean</label>
+                <label><input type="checkbox" name="inventory12"> All flooring/carpet clean</label>
+                <label><input type="checkbox" name="inventory13"> Hangers are available or not</label>
+                <label><input type="checkbox" name="inventory14"> The toilet flushes properly.</label>
+                <label><input type="checkbox" name="inventory15"> The tiles are free of water spots..</label>
+                <label><input type="checkbox" name="inventory16"> The shower and/or tub is free of grout</label>
+                <label><input type="checkbox" name="inventory17"> All lights are in good working order.</label>
+                <label><input type="checkbox" name="inventory18"> Restock coffee, tea other.</label>
+                <label><input type="checkbox" name="inventory19"> Lamp shades should be straight</label>
+                <label><input type="checkbox" name="inventory20"> Carpets and rugs should be vacuumed.</label>
+                <label><input type="checkbox" name="inventory20"> Mirrors and windows should be cleaned.</label>
+            </div>
+        </div>
+		
+		<h5 style=" text-align: right; margin:5px;color:red;font-size: 16px;"><a href="HK_chemicals_list.html"> Knowledge of Chemicals</a></h5>
+		
+        <!-- Extra Notes -->
+        <div class="section">
+            <label for="extraNotes">Extra Notes:</label>
+            <textarea id="extraNotes" name="extraNotes"></textarea>
+        </div>
+    </form>
+</div>
+
+				
+	<div class="container-fluid bg-dark text-white-50 footer pt-1 mt-1 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-4">
+                <div class="row g-4">
+					<div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Udaipur Hotelier</h5>
+                        <a class="btn btn-link text-white-50" href="about.html">About Us</a>
+                        <a class="btn btn-link text-white-50" href="contact.html">Contact Us</a>
+                    </div>
+					<div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Contact</h5>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91- 9079268663</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>Udaipurhotelier@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">Udaipur Hotelier</a>, All Right Reserved.			
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script type="module">
+        import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+    
+        const firebaseConfig = {
+            apiKey: "AIzaSyBdGShEAg6teoVgXVfsbzUJO1sIY3bZPH4",
+  authDomain: "udaipur-hotelier-4b582.firebaseapp.com",
+  projectId: "udaipur-hotelier-4b582",
+  storageBucket: "udaipur-hotelier-4b582.firebasestorage.app",
+  messagingSenderId: "843875126311",
+  appId: "1:843875126311:web:2c76e6e8b79d4223439202",
+  measurementId: "G-M93ZN7YSNB"
+        };
+        
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth();
+        
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                let email = user.email;
+                let username = email.substring(0, email.indexOf("@"));
+                document.getElementById("username").textContent = username;
+            } else {
+                window.location.href = "login.html";
+            }
+        });
+        
+        window.logout = function() {
+            signOut(auth).then(() => {
+                window.location.href = "login.html";
+            }).catch((error) => {
+                console.error("Logout Error: ", error);
+            });
+        }
+    </script>
+</body>
+
+</html>

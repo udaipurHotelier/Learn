@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Udaipur Hotelier</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+	<link href="css/style.css" rel="stylesheet">
+    <link href="css/hkchecklist.css" rel="stylesheet">
+	<link href="css/foskillscss.css" rel="stylesheet">
+	
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+		<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+            <a href="LearnPage.html" class="navbar-brand d-flex align-items-center text-center py-0 px-4 px-lg-5">
+                <h4 class="m-0 text-primary">Udaipur Hotelier</h4>
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+           <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a href="LearnPage.html" onclick="showAdThenRedirect('LearnPage.html')" class="nav-item nav-link ">Home</a>
+				    <a href="about.html" class="nav-item nav-link">About</a>
+					<a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" id="userDropdown" class="nav-link dropdown-toggle d-flex align-items-center" data-bs-toggle="dropdown">
+                            <img id="profileImage" src="imge/profile.png" alt="Profile" class="rounded-circle" width="30" height="30" style="margin-right: 8px;">
+                            <span id="username">User</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <a href="Profile.html" class="dropdown-item">Profile</a>
+                            <a href="#" class="dropdown-item">Settings</a>
+                            <a href="#" class="dropdown-item" onclick="logout()">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    <!-- Header End -->
+        <div class="containeer-xxl py-5 bg-dark page-header mb-5">
+            <div class="container my-5 pt-5 pb-4">
+                <h1 class="display-3 text-white mb-3 animated slideInDown">Front office </h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb text-uppercase">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item text-white active" aria-current="page">FO</li>
+                    </ol>
+                </nav>
+            </div>
+		</div>
+		
+		
+    
+		<!-- Header End -->
+		<div class="containeer">
+			
+			<h2>Front office Advance</h2>
+			<div class="section">
+			<h6>Registration and Handling Check Ins in hotel front office.</h6>
+			<p>Guest Registration or making booking for hotel rooms are sole responsibility of hotel front office. During room booking front office collect guest information and at the time of check in the guest those reordered guest information’s are used.</p>
+			</div>
+			<div class="section">
+            <h6>REGISTRATION</h6>
+			<p><b>Registration begins when the front desk agent extends a sincere welcome to the guest. A warm greeting sets the tone for everything. The front desk agent moves into the registration process after determining the guest reservation status.</b></p>
+			<div class="checkbox-group">
+                <label><input type="checkbox" name="cleaning1" onclick="toggleParagraph(1)"> Pre registration process</label>
+                <label><input type="checkbox" name="cleaning1" onclick="toggleParagraph(2)"> Creating the registration record</label>
+                <label><input type="checkbox" name="cleaning1" onclick="toggleParagraph(3)"> Assigning the method of payment</label>
+                <label><input type="checkbox" name="cleaning1" onclick="toggleParagraph(4)"> Establishing the method of payment</label>
+                <label><input type="checkbox" name="cleaning1" onclick="toggleParagraph(5)"> Verifying the Guest Identity</label>
+                <label><input type="checkbox" name="cleaning1" onclick="toggleParagraph(6)"> Issuing the room key</label>
+                <label><input type="checkbox" name="cleaning1" onclick="toggleParagraph(7)"> Filling special requests</label>
+                
+
+			</div>
+		</div>
+		<div id="paragraphs">
+			<p id="para-1" class="paragraph"><b>Pre registration activities –</b> Pre registration activities helps to accelerate the registration process. Guest can be pre registered using the information collected during the reservation process. Pre registration normally involves producing registration documents in advance of guest arrival. Room and room rate assignment, creation of guest folio are part of the pre registration process.</p>
+			<p id="para-2" class="paragraph"><b>Creating the registration record – </b> After the guest arrives at the hotel; the front desk agent creates a registration record which is a collection of important guest information. The registration record requires the guest to write down his or her name, address and other information.</p>
+			<p id="para-3" class="paragraph"><b>Assigning the room and rate – </b> Room assignment is an important part of the registration process. Room assignment involves identifying and allocating available rooms in a specific room category to a guest. Room and room rates may be pre assigned on the basis of reservation information. Room assignments are finalized during registration.</p>
+			<p id="para-4" class="paragraph"><b>Establishing the method of payment – </b>Some guests prefer to pay room charges during registration, in advance of occupancy. There are various modes which a guest may choose while making a payment.</p>
+			<p id="para-5" class="paragraph"><b>Verifying the Guest’s Identity – </b>It is mandatory nowadays for the guests to provide photo identification in the form of a passport or a citizen card to ensure positive identification of the guest’s name, address, signature and photograph. Verifying the guest’s identity is complusory in all the hotels since the various terrorist attacks. The type of identification and identification number on the card or passport should be recorded in the guest’s record. As an additional security measure, if the guest does not speak the local language, it should also be noted in the guest’s record. This information helps the hotel staff to identify guests requiring foreign language translation and is also helpful in emergency situations.</p>
+			<p id="para-6" class="paragraph"><b>Issuing the room key – </b>By issuing a room key the front office agent completes the registration process. For the security of both the guest and the property, room keys must be very carefully controlled. For security reasons, the front desk agent should never announce the room number when handing a guestroom key to a guest. If the hotel provides bell service, the front desk agent should introduce the bell attendant to the guest, hand the guestroom key to the bell attendant and ask him or her to show the guest to the room. On the way to the room, the bell attendant should familiarize the guest with hotel information such as special feature, locations of emergency exits, emergency procedures, restaurant locations, retail outlets and their hours of operations, and other appropriate information. Once inside the guestroom, the bell attendant should explain the features of the room, answer any questions and hand the room key to the guest. If the guest is displeased with the room, the bell attendant should listen attentively and bring the matter to the attention of the front desk agent for immediate action.</p>
+			<p id="para-7" class="paragraph"><b>Filling Special Request– During registration, the front office agent must make sure that the special requests made by the guest during the reservations process are acted upon.</b></p>
+			</div>
+		<br>
+		<!-- welcome Message -->
+		<div class="section">
+            <h6>Creating the registration record</h6>
+			<p><b>After the guest arrives at the hotel; the front desk agent creates a registration record which is a collection of important guest information. The registration record requires the guest to write down his or her name, address and other information.</b> </p>
+				<div class="checkbox-group">
+                <label><input type="checkbox" name="cleaning1" onclick="welParagraph(1)"> Guest Registration Card (GRC)</label>
+                <label><input type="checkbox" name="cleaning1" onclick="welParagraph(2)"> C Form</label>
+                <label><input type="checkbox" name="cleaning1" onclick="welParagraph(3)"> Arrival and Departure Register </label>
+                </div>
+		</div>
+			<div id="paragraphs">
+			<p id="welpara-1" class="paragraph"> <b>Guest Registration Card (GRC) – </b>Registration card is filled by the guest during check-in. It is a very important document from where a front desk agent gets all the information about the guest. A registration card consists of name of the guest, address, organization name and address, nationality, arrival time and date, expected date of departure, purpose of visit, room number, number of person, room rate etc.</p>
+			<p id="welpara-2" class="paragraph"> C Form is a legal document which has to be filled by all foreign nationals except those from Nepal. NRI’s with green cards do not have to fill this card. Children up to 16 years and diplomats from other countries are also exempted from filling C form. Three copies of C form are made, 1st copy is sent to the FRRO, 2nd copy is sent to the local police station, and the 3rd copy is kept as office copy with the hotel. F.R.R.O.s are mostly located only in metropolitan cities. In smaller cities or towns, the C form has to be sent to the local police station. Pakistani forms are directly sent to special branch of FRRO called Pakistan Cell. A Pakistani after reaching India has to report in person to the office within 24 hours.</p>
+			<p id="welpara-3" class="paragraph"> Arrival and Departure Register – It is a register maintained by the front desk agent which monitors all the arrivals and departures on a particular day. It monitors the rooms allocated and those just vacated for helping the Housekeeping department for making rooms ready again for guests. It also helps to find out the number of people checked in so as to calculate the house count.</p>
+			</div>
+			<br>
+			<!-- welcome Message format -->
+		<div class="section">
+            <h6>Assigning the room and rate</h6>
+			<p>Assigning the room and rate– Room assignment is an important part of the registration process. Room assignment involves identifying and allocating available rooms in a specific room category to a guest. Room and room rates may be pre assigned on the basis of reservation information. Room assignments are finalized during registration.</p>
+				<h6>Tariff Fixation (Room Rate Fixation)</h6>
+				<div class="checkbox-group">
+				
+                <label><input type="checkbox" name="cleaning1" onclick="weltempParagraph(1)"> Check-in Check-out basis</label>
+                <label><input type="checkbox" name="cleaning1" onclick="weltempParagraph(2)"> 24 hours basis</label>
+                <label><input type="checkbox" name="cleaning1" onclick="weltempParagraph(3)"> Night basis</label>
+                <label><input type="checkbox" name="cleaning1" onclick="weltempParagraph(4)"> Day rate</label> </div>
+				<div class="checkbox-group">
+                <label><input type="checkbox" name="cleaning1" onclick="weltempParagraph(5)"> European Plan (EP)</label>
+                <label><input type="checkbox" name="cleaning1" onclick="weltempParagraph(6)"> Continental Plan (CP)</label>
+                <label><input type="checkbox" name="cleaning1" onclick="weltempParagraph(7)"> American Plan (AP)</label>
+                <label><input type="checkbox" name="cleaning1" onclick="weltempParagraph(8)"> Modified American Plan (MAP)</label>
+                <label><input type="checkbox" name="cleaning1" onclick="weltempParagraph(9)"> Bermuda Plan</label>
+                <label><input type="checkbox" name="cleaning1" onclick="weltempParagraph(10)"> All Suite Plan</label>
+                <label><input type="checkbox" name="cleaning1" onclick="weltempParagraph(11)"> N.B </label>
+                
+			</div>
+			<div id="paragraphs">
+			<p id="weltepara-1" class="paragraph">Check-in Check-out basis – It is the most common way of charging room rates. The hotel fixes a specific check-out time usually 12 noon which means the guest charging cycle starts from 12 noon and finishes at 12 noon next day.</p>
+			<p id="weltepara-2" class="paragraph">24 hours basis – In this type of fixation, the guest has to pay for 1 day up to 24 hours from the time of arrival.</p>
+			<p id="weltepara-3" class="paragraph">Night basis – The guest is charged on the basis on the number of nights spent in the hotel irrespective of the time of arrival and departure.</p>
+			<p id="weltepara-4" class="paragraph">Day rate – The guest is charged on an hourly basis.</p>
+			<p id="weltepara-5" class="paragraph">European Plan (EP) – EP includes only the room rate and is usually found in city and transit hotels.</p>
+			<p id="weltepara-6" class="paragraph">Continental Plan (CP) – CP includes room rate with continental breakfast. It is also called B&B plan and is usually found in motels.</p>
+			<p id="weltepara-7" class="paragraph">American Plan (AP) – AP includes room rate with English breakfast, table d’hote lunch and dinner. It is also known as full board plan and is usually found in resorts.</p>
+			<p id="weltepara-8" class="paragraph">Modified American Plan (MAP) – It includes room rate with English breakfast and table d’hote lunch or dinner. It is also known as half board plan and is usually found in resorts.</p>
+			<p id="weltepara-9" class="paragraph">Bermuda Plan – It includes room rate with American breakfast.</p>
+			<p id="weltepara-10" class="paragraph">All Suite Plan – It includes room rate with breakfast and cocktails in the evening. This rate is the standard plan for suite hotels.</p>
+			<p id="weltepara-11" class="paragraph">N.B – Early morning tea or coffee is complimentary with all the plans.</p>
+			</div>
+		</div>
+		<div class="section">
+            <h6>Establishing the method of payment</h6>
+			<p>Establishing the method of payment– Some guests prefer to pay room charges during registration, in advance of occupancy. There are various modes which a guest may choose while making a payment.</p>
+				<div class="checkbox-group">
+                <label><input type="checkbox" name="cleaning1" onclick="WeddingParagraph(1)"> Cash</label>	
+                <label><input type="checkbox" name="cleaning1" onclick="WeddingParagraph(2)"> Credit Cards</label>
+                <label><input type="checkbox" name="cleaning1" onclick="WeddingParagraph(3)"> Debit Cards</label>
+                <label><input type="checkbox" name="cleaning1" onclick="WeddingParagraph(4)"> Miscellaneous charge orders / voucher</label>
+                <label><input type="checkbox" name="cleaning1" onclick="WeddingParagraph(5)"> Special Promotions Payment Methods</label>
+                <label><input type="checkbox" name="cleaning1" onclick="WeddingParagraph(6)"> Direct Billing</label>
+                <label><input type="checkbox" name="cleaning1" onclick="WeddingParagraph(7)"> Personal Checks </label>
+                </div>
+		<div id="paragraphs">
+			<p id="wedpara-1" class="paragraph">Cash- Cash is the best method of payment especially for the scanty baggage or no baggage guest. These guests are required to make cash deposits at least for the first night. Guest can pay their entire room rate and other expenses by cash. Guests who pay cash for their accommodation at the time of registration are not extended in-house credit.</p>
+			<p id="wedpara-1" class="paragraph">Credit Cards– Now days most of the guest pay their room revenue through their credit cards. The front office agent must verify some credit card details such as expiry date, credit card number and should also check whether the card is accepted by the hotel.</p>
+			<p id="wedpara-1" class="paragraph">Debit Cards- This is another type of card used by the guest. In this method the amount is directly deducted from the guest account.</p>
+			<p id="wedpara-4" class="paragraph">Miscellaneous charge orders / voucher– These are payments made in advance to Airline Reporting Corporations (ARC) or travel agents for the hotel services. The ARC or travel agent issues an MCO or voucher respectively which is presented to the hotel to adjust charges. The MCO/voucher will be redeemed later by the hotel from the ARC/travel agent.</p>
+			<p id="wedpara-5" class="paragraph">Special Promotions Payment Methods – Some guests may present vouchers, coupons, gift certificates, or special incentive awards received from businesses, airlines or other authorized agencies. The front desk agents must be aware of hotel agreements to honor such vouchers and take care because such documents may differ in value, conditions or terms.</p>
+			<p id="wedpara-6" class="paragraph">Direct Billing – For this type of payment, the company should negotiate a credit line with the hotel. Some corporate discounts are given by the hotel to the company against a guaranteed volume business. The guest just has to sign the folio. Later the bill is sent to the company by the hotel for the payments.</p>
+			<p id="wedpara-7" class="paragraph">Personal Checks – Most hotels have a strict policy against accepting personal checks, though some may accept them. Hotels may accept checks only during standard banking hours to allow the front office staff to obtain bank verification of the check if necessary.</p>
+		</div>
+		</div>
+		<div class="section">
+		<h6>Filling Special Request</h6>
+		<p>Filling Special Request– During registration, the front office agent must make sure that the special requests made by the guest during the reservations process are acted upon. Some requests may be:</p>
+			<div class="checkbox-group">
+			<label><input type="checkbox" name="cleaning1" checked disabled value="1">Location</label>	
+			<label><input type="checkbox" name="cleaning1" checked disabled value="1">View</label>	
+			<label><input type="checkbox" name="cleaning1" checked disabled value="1">Bed Type</label>	
+			<label><input type="checkbox" name="cleaning1" checked disabled value="1">Smoking / no-smoking status</label>	
+			<label><input type="checkbox" name="cleaning1" checked disabled value="1">Amenities</label>	
+			<label><input type="checkbox" name="cleaning1" checked disabled value="1">High-speed Internet access</label>	
+			<label><input type="checkbox" name="cleaning1" checked disabled value="1">Entertainment systems</label>	
+			<label><input type="checkbox" name="cleaning1" checked disabled value="1">Fruit baskets</label>	
+			<label><input type="checkbox" name="cleaning1" checked disabled value="1">flowers</label>	
+			<label><input type="checkbox" name="cleaning1" checked disabled value="1">champagne</label>	
+			<label><input type="checkbox" name="cleaning1" checked disabled value="1">Check-in Procedure</label>	
+			<label><input type="checkbox" name="cleaning1" checked disabled value="1">Special furnishings for disabled guests.</label>	
+			</div>
+		</div>
+		
+		<div class="section">
+		<h6>Check-in Procedure Of A Group</h6>
+		<p>Group arrival procedures must be handled with care as they involve a volume of guests checking in at the same time. At the time of the arrival, the following procedures need to be taken;</p>
+		<p><input type="checkbox"  checked disabled value="1"> 1] Confirm the rooming list with the leader. Get him or her to get the group members to confirm the information already filled in registration cards by the staff and to sign them.</p>
+		<p><input type="checkbox"  checked disabled value="1"> 2] Collect all registration cards and confirm that they have all been signed. Hand over the key tray with pre assigned envelopes with keys to the group leader who will distribute the keys to each group member.</p>
+		<p><input type="checkbox"  checked disabled value="1"> 3] Authorize the bell boys to move the guest baggage into their respective rooms by signing a common errand card for the group.</p>
+		</div>
+		
+		<div class="section">
+		<h6>DENYING ACCOMMODATIONS</h6>
+		<p>Sometimes a hotel may be short of available rooms and may not be able to accommodate guests. It is important that the hotel set policies and procedures for handling these situations.</p>
+		</div>
+		
+		<div class="section">
+            <h6>Walk-In Guests</h6>
+			<p>Hotels have no obligation to accommodate guests who arrive without a reservation when no rooms are available. If a walk-in guest cannot be accommodated, front desk agents can assist the guest by providing directions to nearby hotels. The front desk agent might also offer to contact another hotel for the guest. Most of the time, guests who cannot be accommodated at the hotel would prefer to stay at a similar property. Front desk agents should keep a list with phone numbers of the comparable properties in the area. Hotels can benefit through mutual guest referrals in this way.
+			<br>The situation may be difficult when a walk-in guest believes he or she has a reservation. The hotel might take the following steps to clarify the situation: <br>
+			If the guest presents a letter of confirmation, verify the date and the name of the hotel; the guest may have arrived on a different date or at a wrong property. <br> Double check the reservations file for another spelling of the guest’s name. <br> If the reservation was made through a travel agency or representative, allow the guest to call the originating source for clarification.<br> Verify no-show registration information from the previous day, just in case the guest is a no-show who has arrived a day late.
+		</p>
+		</div>
+		
+		<div class="section">
+		<h6>Guests with Non-Guaranteed Reservations</h6>
+		<p>A number of circumstances can delay a guest’s scheduled arrival. Guests might not have the chance to change a non-guaranteed reservation to a guaranteed reservation by the time they realize they will arrive later than the hotel’s reservation cancellation hour. If the hotel cannot provide a guestroom to such a guest, front office management must be extremely tactful when informing the guest.</p>
+		</div>
+		
+		<div class="section">
+		<h6>Guests with Guaranteed Reservations</h6>
+		<p>If reservations are carefully handled and proper forecasting measures are followed, the property will not have to deny rooms to a guest with a guaranteed reservation. It is a serious matter to turn away such a guest; penalties may be imposed upon the hotel by the law at the guest’s request.<br>
+		The front office manager should take charge and make necessary decisions if however a guest with guaranteed reservation has to be denied a room. The manager may do the following:<br>
+		<br>Review all front desk transactions to ensure full occupancy.<br> Re-take an accurate count of rooms occupied using all relevant data. <br>
+		Compare information in the rooms availability file, the housekeeper’s report, and guest folios for discrepancies in occupancy status. <br> Contact in-house due-outs (guests expected to check out that day) who have not yet checked out to confirm their departure time.
+		<br>
+		Verify guestrooms with a status of “out-of-order” to ensure accuracy. An out-of-order room might be readied for sale, if the room problems are minor. If a guest is willing to occupy an out-of-order room, its rate should be appropriately adjusted. An out-of-order room should never be offered if the room has some serious deficiencies like no running water or telephone services. Also an out-of-order room should never be offered unless it is inspected first and the department placing the room on out-of-order status is notified that it will be sold. The front office manager should check the out-of-order report daily to ensure that all rooms are available as quickly as possible.
+		</p>
+		</div>
+		<div class="section">
+            <h6>Front desk staff may follow these suggestions:</h6>
+			<p>Guests should be encouraged to return to the hotel at the earliest date of availability. Upon their return, they may be placed on a VIP list, provided a complimentary room upgrade, or presented with a small gift as compensation for the inconvenience of having been turned away on their last visit.
+			<br> Management should prepare a follow-up letter to be sent to guests who arrived with a reservation but could not be accommodated, apologizing again for the inconvenience and encouraging the guests to consider returning to the hotel (with appropriate incentives)
+			<br>The hotel may pay the transportation expenses associated with having the guest travel to an alternative property.</p>
+			</div>
+			<br>
+			<div style="text-align:center">
+			<h6>If you want to give something suggestive or find something wrong, you can tell us.</h6>
+			<a href="contact.html">Contact us</a>
+			</div>
+			<br>
+			<div style="text-align:Right">
+			<h6>Special Thanks To You,</h6>
+			<a href="https://in.linkedin.com/in/sonu-gupta-mba">MR. Sonu Gupta</a>
+			</div>
+	</form>
+	</div>
+		<!-- Footer Start -->
+       
+		<!-- Footer Start -->
+        <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="row g-5">
+					<div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Udaipur Hotelier</h5>
+                        <a class="btn btn-link text-white-50" href="index.html">Home</a>
+                        <a class="btn btn-link text-white-50" href="contact.html">Contact Us</a>
+                    </div>
+					<div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Contact</h5>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Udaipur</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>Udaipurhotelier@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">Udaipur Hotelier</a>, All Right Reserved.			
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+		<!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script type="module">
+        import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+    
+        const firebaseConfig = {
+            apiKey: "AIzaSyBdGShEAg6teoVgXVfsbzUJO1sIY3bZPH4",
+  authDomain: "udaipur-hotelier-4b582.firebaseapp.com",
+  projectId: "udaipur-hotelier-4b582",
+  storageBucket: "udaipur-hotelier-4b582.firebasestorage.app",
+  messagingSenderId: "843875126311",
+  appId: "1:843875126311:web:2c76e6e8b79d4223439202",
+  measurementId: "G-M93ZN7YSNB"
+        };
+        
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth();
+        
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                let email = user.email;
+                let username = email.substring(0, email.indexOf("@"));
+                document.getElementById("username").textContent = username;
+            } else {
+                window.location.href = "login.html";
+            }
+        });
+        
+        window.logout = function() {
+            signOut(auth).then(() => {
+                window.location.href = "login.html";
+            }).catch((error) => {
+                console.error("Logout Error: ", error);
+            });
+        }
+    </script>
+<script>
+    function toggleParagraph(index) {
+      const paragraph = document.getElementById(`para-${index}`);
+      const checkbox = event.target;
+
+      if (checkbox.checked) {
+        paragraph.style.display = 'block';
+      } else {
+        paragraph.style.display = 'none';
+      }
+    }
+	// welcome message
+	function WeddingParagraph(index) {
+      const paragraph = document.getElementById(`wedpara-${index}`);
+      const checkbox = event.target;
+
+      if (checkbox.checked) {
+        paragraph.style.display = 'block';
+      } else {
+        paragraph.style.display = 'none';
+      }
+    }
+	function welParagraph(index) {
+      const paragraph = document.getElementById(`welpara-${index}`);
+      const checkbox = event.target;
+
+      if (checkbox.checked) {
+        paragraph.style.display = 'block';
+      } else {
+        paragraph.style.display = 'none';
+      }
+    }
+	// welcome message
+	function weltempParagraph(index) {
+      const paragraph = document.getElementById(`weltepara-${index}`);
+      const checkbox = event.target;
+
+      if (checkbox.checked) {
+        paragraph.style.display = 'block';
+      } else {
+        paragraph.style.display = 'none';
+      }
+    }
+	// Conference message
+	function confParagraph(index) {
+      const paragraph = document.getElementById(`confpara-${index}`);
+      const checkbox = event.target;
+
+      if (checkbox.checked) {
+        paragraph.style.display = 'block';
+      } else {
+        paragraph.style.display = 'none';
+      }
+    }
+	// Conference message
+	function excelParagraph(index) {
+      const paragraph = document.getElementById(`excelpara-${index}`);
+      const checkbox = event.target;
+
+      if (checkbox.checked) {
+        paragraph.style.display = 'block';
+      } else {
+        paragraph.style.display = 'none';
+      }
+    }
+</script>
+</body>
+
+</html>

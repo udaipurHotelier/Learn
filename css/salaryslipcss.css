@@ -1,0 +1,137 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        .salarycontainer {
+            max-width: 1400px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .form-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .input-section {
+            padding: 20px;
+            background: #f5f5f5;
+            border-radius: 8px;
+        }
+
+        .preview-section {
+            padding: 20px;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .section-title {
+            margin: 20px 0 10px;
+            font-weight: bold;
+        }
+
+        button {
+            background: #00B074;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        /* Salary Slip Styles */
+        .salary-slip {
+            border: 1px solid #000;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .employer-details {
+            text-align: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #000;
+        }
+
+        .employer-logo {
+            max-width: 150px;
+            margin-bottom: 10px;
+        }
+
+        .employee-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .detail-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border: 1px solid #000;
+            padding: 5px;
+        }
+
+        .earnings-deductions {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .totals {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+			
+        }
+
+        .signatures {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .signature-line {
+            border-top: 1px solid #000;
+            padding-top: 5px;
+            margin-top: 40px;
+        }
+
+        .net-salary-words {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+		.watermark{
+			text-align:center;
+			margin-top:10px;
+			font-weight: bold;
+		}

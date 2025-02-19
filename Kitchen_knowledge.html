@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Udaipur Hotelier</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+	<link href="css/style.css" rel="stylesheet">
+    <link href="css/hkchecklist.css" rel="stylesheet">
+	<style>
+	h1,h2,h3,h4,h5,h6{
+	color:#00B074;
+	}
+    .skills_container {
+      display: flex;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .heading {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .heading input {
+      margin-top: 10px;
+    }
+
+    .paragraph {
+      display: none;
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+	 .hierarchy {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 600px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			align:left;
+        }
+		.role {
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin: 5px 0;
+            border-radius: 5px;
+            background-color: #f4f4f4;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .role:hover {
+            background-color: #00B074;
+			font-weight: bold;
+			
+        }
+
+        .details {
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fafafa;
+            display: none;
+        }
+
+        .details h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .details p {
+            margin: 5px 0;
+        }
+  </style>
+</head>
+
+<body>
+    <div class="containeer-xxl bg-white p-0">
+        <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+            <a href="LearnPage.html" class="navbar-brand d-flex align-items-center text-center py-0 px-4 px-lg-5">
+                <h4 class="m-0 text-primary">Udaipur Hotelier</h4>
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+           <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a href="LearnPage.html" class="nav-item nav-link">Home</a>
+				    <a href="about.html" class="nav-item nav-link">About</a>
+					<a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" id="userDropdown" class="nav-link dropdown-toggle d-flex align-items-center" data-bs-toggle="dropdown">
+                            <img id="profileImage" src="imge/profile.png" alt="Profile" class="rounded-circle" width="30" height="30" style="margin-right: 8px;">
+                            <span id="username">User</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <a href="Profile.html" class="dropdown-item">Profile</a>
+                            <a href="#" class="dropdown-item">Settings</a>
+                            <a href="#" class="dropdown-item" onclick="logout()">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar End -->
+
+
+        <!-- Header End -->
+        <div class="containeer-xxl py-5 bg-dark page-header mb-5">
+            <div class="container my-5 pt-5 pb-4">
+                <h1 class="display-3 text-white mb-3 animated slideInDown">Kitchen </h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb text-uppercase">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item text-white active" aria-current="page">Kitchen</li>
+                    </ol>
+                </nav>
+            </div>
+			
+        </div>
+        <!-- Header End -->
+		<div class="containeer">
+			<h2>Kitchen</h2>
+			<div class="section">
+            <h6>Sub departments of Food Production</h6>
+			<div class="checkbox-group">
+                <label><input type="checkbox" name="kdepart1" onclick="kitchendepParagraph(1)"> Main Kitchen</label>
+                <label><input type="checkbox" name="kdepart2" onclick="kitchendepParagraph(2)"> Pantry</label>
+                <label><input type="checkbox" name="kdepart3" onclick="kitchendepParagraph(3)"> Bakery & Confectionery</label>
+                <label><input type="checkbox" name="kdepart4" onclick="kitchendepParagraph(4)"> Butchery</label>
+                <label><input type="checkbox" name="kdepart5" onclick="kitchendepParagraph(5)"> Banquet Kitchen</label>
+                <label><input type="checkbox" name="kdepart6" onclick="kitchendepParagraph(6)"> Chefs area</label>
+                <label><input type="checkbox" name="kdepart7" onclick="kitchendepParagraph(7)"> Garde Manager</label>
+                <label><input type="checkbox" name="kdepart8" onclick="kitchendepParagraph(8)"> Commissary</label>
+                <label><input type="checkbox" name="kdepart9" onclick="kitchendepParagraph(9)"> Walkins</label>
+            </div>
+			</div>
+			<div id="paragraphs">
+			<p id="kipara-1" class="paragraph"><b>Main Kitchen: This is the large kitchen area where food is prepared for different restaurants or F&B service outlets. The food here is prepared for Coffee Shop, Room Service, & Snacks for Bar. The main kitchen has further sub-sections such as <br> Indian,<br> Continental,<br> South Indian,<br> Tandoor.</b></p>
+			<p id="kipara-2" class="paragraph"><b>Pantry – Most of the orders from the pantry section, such as tea/coffee, sandwiches, salads, raitas, etc. are serviced. The pantry operates 24*7*365 days.</b></p>
+			<p id="kipara-3" class="paragraph"><b>Bakery & Confectionery- All bakery items like cakes, pastries, chocolates, Muffins are made in this section.</b></p>
+			<p id="kipara-4" class="paragraph"><b>Butchery – It is a section where all the raw meat supplies such as chicken, mutton, fish, prawns, lobsters, etc are received and cleaned, properly wrapped for further storage.</b></p>
+			<p id="kipara-5" class="paragraph"><b>Banquet Kitchen– Bulk cooking for function happens at this section</b></p>
+			<p id="kipara-6" class="paragraph"><b>Chefs area – Executive chef sits here and a lot of planning takes place inside this area</b></p>
+			<p id="kipara-7" class="paragraph"><b>Garde Manager: It is also known as salad house our Factory outlet for salad preparation in bulk. Here cold salads are prepared for Banquet parties and coffee shop buffet.</b></p>
+			<p id="kipara-8" class="paragraph"><b>Commissary: It is a place or section where we store all the green vegetables in bulk.</b></p>
+			<p id="kipara-9" class="paragraph"><b>Walkins : Depending upon the size of the hotel there is a minimum of 2/3 walk-in refrigerators. One is kept especially at -18 to store meat.</b></p>
+		</div>
+			<br>
+			<!-- welcome Message -->
+			<div class="section">
+            <h6>Some knowledge that is important in the kitchen of a hotel includes:</h6>
+				<div class="checkbox-group">
+                <label><input type="checkbox" name="cleaning1" onclick="impParagraph(1)"> Food safety and hygiene</label>
+                <label><input type="checkbox" name="cleaning1" onclick="impParagraph(2)"> Inventory management</label>
+                <label><input type="checkbox" name="cleaning1" onclick="impParagraph(3)"> Cost control</label>
+                <label><input type="checkbox" name="cleaning1" onclick="impParagraph(4)"> Menu planning</label>
+                <label><input type="checkbox" name="cleaning1" onclick="impParagraph(5)"> Staff training</label>
+                <label><input type="checkbox" name="cleaning1" onclick="impParagraph(6)"> Culinary skills</label>
+                <label><input type="checkbox" name="cleaning1" onclick="impParagraph(7)"> Protective clothing</label>
+                <label><input type="checkbox" name="cleaning1" onclick="impParagraph(8)"> Hand washing</label>
+                <label><input type="checkbox" name="cleaning1" onclick="impParagraph(9)"> Tasting food</label>
+                <label><input type="checkbox" name="cleaning1" onclick="impParagraph(10)">Food handler practices</label>
+				</div>
+		</div>
+			<div id="paragraphs">
+			<p id="imppara-1" class="paragraph">Food safety and hygiene: Adhering to strict food safety and hygiene standards is essential</p>
+			<p id="imppara-2" class="paragraph">Inventory management: Efficiently managing food and supplies is important.</p>
+			<p id="imppara-3" class="paragraph">Cost control: Carefully monitoring food costs is essential for profitability.</p>
+			<p id="imppara-4" class="paragraph">Menu planning: Collaborating with the F&B department to develop appealing and profitable menus</p>
+			<p id="imppara-5" class="paragraph">Staff training: Ongoing training and development to enhance skills and knowledge.</p>
+			<p id="imppara-6" class="paragraph">Culinary skills: The ability to prepare and cook food, along with all the associated tasks vital for operating efficiently in a kitchen environment. Some basic culinary skills include knife skills, sauteing, roasting, blanching, and emulsification.</p>
+			<p id="imppara-7" class="paragraph">Protective clothing: Wearing clean and sanitized protective clothing like a chef coat, hat, apron, and trousers while working in the kitchen</p>
+			<p id="imppara-8" class="paragraph">Hand washing: Washing hands in between jobs with lukewarm water and detergent and patting dry</p>
+			<p id="imppara-9" class="paragraph">Tasting food: Using disposable spoons for tasting food and never tasting food using fingers.</p>
+			<p id="imppara-10" class="paragraph">Food handler practices: Food handlers should never chew gum, eat sweets, or touch their mouth and nose while cooking.</p>
+			</div>
+				
+		<!-- hierarchy -->
+		<div class="section">
+            <h6>Kitchen Hierarchy</h6>
+		</div>
+		<div class="hierarchy">
+        <div class="role" onclick="toggleDetails('chef')">Chef</div>
+        <div id="chef-details" class="details">
+            <h2>Chef</h2>
+            <p>The head of the kitchen, responsible for overall management and food preparation.</p>
+            <p><strong>Responsibilities:</strong> Oversee kitchen staff, menu planning, and food quality.</p>
+        </div>
+
+        <div class="role" onclick="toggleDetails('executive-chef')">Executive Chef</div>
+        <div id="executive-chef-details" class="details">
+            <h2>Executive Chef</h2>
+            <p>The top-level chef who manages the entire kitchen hierarchy and ensures smooth operations.</p>
+            <p><strong>Responsibilities:</strong> Supervising kitchen staff, budgeting, and inventory control.</p>
+        </div>
+		
+		<div class="role" onclick="toggleDetails('chef-de-cuisine')">Chef de Cuisine</div>
+        <div id="chef-de-cuisine-details" class="details">
+            <h2>Chef de Cuisine</h2>
+            <p>The master chef responsible for overseeing all aspects of the kitchen.</p>
+            <p><strong>Responsibilities:</strong> Managing sous chefs and ensuring food quality.</p>
+        </div>
+
+        <div class="role" onclick="toggleDetails('sous-chef')">Sous Chef</div>
+        <div id="sous-chef-details" class="details">
+            <h2>Sous Chef</h2>
+            <p>The second-in-command who assists the head chef in managing the kitchen.</p>
+            <p><strong>Responsibilities:</strong> Supervising staff and ensuring daily operations run smoothly.</p>
+        </div>
+
+		<div class="role" onclick="toggleDetails('chef-de-cuisine')">Demi Chef de Partie</div>
+        <div id="chef-de-cuisine-details" class="details">
+            <h2>Demi Chef de Partie</h2>
+            <p>Chefs may move into the role of Demi Chef de Partie after working as a commis chef, but before moving into a chef de partie position.</p>
+            <p><strong>Responsibilities:</strong>Prepares, cooks, and serves food, and ensures high-quality food preparation. They also assist the chef de partie, and cook in a specific section of the kitchen. .</p>
+        </div>
+		
+        <div class="role" onclick="toggleDetails('chef-de-partie')">Chef de Partie</div>
+        <div id="chef-de-partie-details" class="details">
+            <h2>Chef de Partie</h2>
+            <p>A section chef responsible for a specific area of the kitchen.</p>
+            <p><strong>Responsibilities:</strong> Preparing dishes in their area and maintaining standards.</p>
+        </div>
+
+        <div class="role" onclick="toggleDetails('commis-chef')">Commis Chef</div>
+        <div id="commis-chef-details" class="details">
+            <h2>Commis Chef</h2>
+            <p>An entry-level chef learning the basics of kitchen operations.</p>
+            <p><strong>Responsibilities:</strong> Assisting chefs and gaining experience in food preparation.</p>
+        </div>
+
+        <div class="role" onclick="toggleDetails('apprentices')">Apprentices</div>
+        <div id="apprentices-details" class="details">
+            <h2>Apprentices</h2>
+            <p>Individuals in training to become professional chefs.</p>
+            <p><strong>Responsibilities:</strong> Observing and assisting in basic kitchen tasks.</p>
+        </div>
+
+        <div class="role" onclick="toggleDetails('kst')">Kitchen Support Team (KST)</div>
+        <div id="kst-details" class="details">
+            <h2>Kitchen Support Team (KST)</h2>
+            <p>Support staff responsible for maintaining cleanliness and organization in the kitchen.</p>
+            <p><strong>Responsibilities:</strong> Cleaning, organizing, and assisting chefs as needed.</p>
+        </div>
+    </div>
+		</div>
+	</form>
+</div>
+
+	        	<div class="container-fluid bg-dark text-white-50 footer pt-1 mt-1 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-4">
+                <div class="row g-4">
+					<div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Udaipur Hotelier</h5>
+                        <a class="btn btn-link text-white-50" href="about.html">About Us</a>
+                        <a class="btn btn-link text-white-50" href="contact.html">Contact Us</a>
+                    </div>
+					<div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Contact</h5>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91- 9079268663</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>Udaipurhotelier@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">Udaipur Hotelier</a>, All Right Reserved.			
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+	<script type="module">
+        import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+    
+        const firebaseConfig = {
+            apiKey: "AIzaSyBdGShEAg6teoVgXVfsbzUJO1sIY3bZPH4",
+  authDomain: "udaipur-hotelier-4b582.firebaseapp.com",
+  projectId: "udaipur-hotelier-4b582",
+  storageBucket: "udaipur-hotelier-4b582.firebasestorage.app",
+  messagingSenderId: "843875126311",
+  appId: "1:843875126311:web:2c76e6e8b79d4223439202",
+  measurementId: "G-M93ZN7YSNB"
+        };
+        
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth();
+        
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                let email = user.email;
+                let username = email.substring(0, email.indexOf("@"));
+                document.getElementById("username").textContent = username;
+            } else {
+                window.location.href = "login.html";
+            }
+        });
+        
+        window.logout = function() {
+            signOut(auth).then(() => {
+                window.location.href = "login.html";
+            }).catch((error) => {
+                console.error("Logout Error: ", error);
+            });
+        }
+    </script>
+<script>
+    function kitchendepParagraph(index) {
+      const paragraph = document.getElementById(`kipara-${index}`);
+      const checkbox = event.target;
+
+      if (checkbox.checked) {
+        paragraph.style.display = 'block';
+      } else {
+        paragraph.style.display = 'none';
+      }
+    }
+	// welcome message
+	function impParagraph(index) {
+      const paragraph = document.getElementById(`imppara-${index}`);
+      const checkbox = event.target;
+
+      if (checkbox.checked) {
+        paragraph.style.display = 'block';
+      } else {
+        paragraph.style.display = 'none';
+      }
+    }
+	function toggleDetails(roleId) {
+            const details = document.getElementById(`${roleId}-details`);
+            const allDetails = document.querySelectorAll('.details');
+            
+            allDetails.forEach(detail => {
+                if (detail !== details) detail.style.display = 'none';
+            });
+
+            details.style.display = details.style.display === 'block' ? 'none' : 'block';
+        }
+</script>
+</body>
+
+</html>
