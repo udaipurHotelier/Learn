@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Public Holidays Calendar (India) 2025 - 2030</title>
-		<meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Udaipur Hotelier-Learning</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
 
@@ -29,7 +29,8 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-	<style>
+    <link href="css/learnpagecss.css" rel="stylesheet">
+    <style>
 	.loading-dots::after {
   content: ".";
   animation: dots 1.5s steps(3, end) infinite;
@@ -210,26 +211,7 @@
 }
 
 	</style>
-    <style>
-        body { font-family: Arial, sans-serif; background-color: #f4f4f9; margin: 0; padding: 0; color: #333; }
-        header { background-color: #007bff; color: white; text-align: center; padding: 1rem 0; }
-        main { padding: 20px; }
-        .card { background: white; padding: 15px; margin: 10px 0; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); }
-        #today-info { display: flex; flex-wrap: wrap; gap: 10px; }
-        #today-info .card { flex: 1; min-width: 150px; }
-        #year-buttons button { margin: 5px; padding: 10px 15px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; }
-        #year-buttons button:hover { background-color: #0056b3; }
-        #calendar { margin-top: 20px; }
-        .month { margin-bottom: 10px; }
-        .month-name { font-size: 1em; font-weight: bold; margin-bottom: 5px; }
-        .calendar-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; }
-        .calendar-day { background-color: #fff; border: 1px solid #ddd; text-align: center; padding: 5px; position: relative; font-size: 12px; }
-        .holiday-day { background-color: #ffeb3b; cursor: pointer; }
-        .holiday-tooltip { display: none; position: absolute; top: -25px; left: 50%; transform: translateX(-50%); background-color: #333; color: white; padding: 3px; border-radius: 4px; white-space: nowrap; font-size: 10px; z-index: 10; }
-        .calendar-day:hover .holiday-tooltip { display: block; }
-        .calendar-day img { display: block; margin: 2px auto 0; width: 20px; height: 20px; }
-        #holiday-image { margin-left: 10px; width: 80px; height: 80px; display: none; }	
-    </style>
+	
 </head>
 <body>
 <div class="container-xxl bg-white p-0">
@@ -270,20 +252,94 @@
                 </div>
             </div>
         </nav>
+        <div id="maintenancePopup" class="popup">
+    <div class="popup-content">
+        <h3>Under Maintenance</h3>
+        <p>This Feature is currently under maintenance. Please check back later.</p>
+        <button onclick="closePopup()">OK</button>
+    </div>
+</div>
+
+        
+	<div class="page-container">
+        <h1 class="main-title">Learning Topic</h1>
+        <div class="heading-container">
+		<div class="heading-section">
+			<h2 class="heading-title">EXCEL</h2>
+                <ul class="subheading-list">
+                    <li><a href="BasicExcel.html" class="subheading-link" onclick="markAsVisited(this)">Basic Excel</a></li>
+                    <li><a href="AdvanceExcel.html" class="subheading-link" onclick="markAsVisited(this)">Advance Excel </a></li>
+                    <li><a href="FormulaExcel.html" class="subheading-link" onclick="markAsVisited(this)">Excel Formula</a></li>
+                    <li><a href="#" class="subheading-link" onclick="showMaintenancePopup()">Excel Videos</a></li>
+					<li><a href="Excel_Exercise.html" class="subheading-link" onclick="markAsVisited(this)">Quiz</a></li>
+                </ul>
+            </div>
+            <div class="heading-section">
+                <h2 class="heading-title">FRONT OFFICE</h2>
+                <ul class="subheading-list">
+                    <li><a href="fo_knowledge.html" class="subheading-link" onclick="markAsVisited(this)">Knowledge</a></li>
+                    <li><a href="fo_advacne.html" class="subheading-link" onclick="markAsVisited(this)">Advance</a></li>
+                    <li><a href="fo_Checklist_emp.html" class="subheading-link" onclick="markAsVisited(this)">Checklist </a></li>
+                    <li><a href="fo_skills.html" class="subheading-link" onclick="markAsVisited(this)">Skills</a></li>
+                    <li><a href="" class="subheading-link" onclick="markAsVisited(this)">Quiz</a></li>
+                </ul>
+            </div>
+            <div class="heading-section">
+                <h2 class="heading-title">HOUSE KEEPING</h2>
+                <ul class="subheading-list">
+                    <li><a href="hk_knowledge.html" class="subheading-link" onclick="markAsVisited(this)">Knowledge</a></li>
+                    <li><a href="clean_Checklist_emp.html" class="subheading-link" onclick="markAsVisited(this)">Checklist's</a></li>
+                    <li><a href="room_Checklist_sup.html" class="subheading-link" onclick="markAsVisited(this)">Supervisor</a></li>
+                    <li><a href="HK_chemicals_list.html" class="subheading-link" onclick="markAsVisited(this)">Chemicals</a></li>
+                    <li><a href="HK_Quiz.html" class="subheading-link" onclick="markAsVisited(this)">Quiz</a></li>
+                </ul>
+            </div>
+            <div class="heading-section">
+                <h2 class="heading-title">HUMAN RESOURCE</h2>
+                <ul class="subheading-list">
+                    <li><a href="HR_Leave_Policies.html" class="subheading-link" onclick="markAsVisited(this)">Leave Policies</a></li>
+                    <li><a href="HR_POSH_Act.html" class="subheading-link" onclick="markAsVisited(this)">POSH ACT</a></li>
+                    <li><a href="HR_Gratuity.html" class="subheading-link" onclick="markAsVisited(this)">Gratuity</a></li>
+                </ul>
+            </div>
+			<div class="heading-section">
+                <h2 class="heading-title">Kitchen</h2>
+                <ul class="subheading-list">
+                    <li><a href="Kitchen_knowledge.html" class="subheading-link" onclick="markAsVisited(this)">Knowledge</a></li>
+                    <li><a href="Kitchen_recipe.html" class="subheading-link" onclick="markAsVisited(this)">Recipe</a></li>
+                    <li><a href="Kitchen_words.html" class="subheading-link" onclick="markAsVisited(this)">Words</a></li>
+                    <li><a href="#" class="subheading-link" onclick="markAsVisited(this)"><span class="loading-dots">Loading...</span></a></li>
+                </ul>
+            </div>
+			<div class="heading-section">
+                <h2 class="heading-title">ACCOUNTS</h2>
+                <ul class="subheading-list">
+                    <li><a href="acc_knowledge.html" class="subheading-link" onclick="markAsVisited(this)">Knowledge</a></li>
+                    <li><a href="#" class="subheading-link" onclick="markAsVisited(this)"><i class="fas fa-tools"></i> Work in Progress</a></li>
+                </ul>
+            </div>
+			<div class="heading-section">
+                <h2 class="heading-title">FOOD & BEVERAGE</h2>
+                <ul class="subheading-list">
+                    <li><a href="#" class="subheading-link" onclick="markAsVisited(this)"><i class="fas fa-tools"></i> Work in Progress</a></li>
+				</ul>
+            </div>
+            <div class="heading-section">
+                <h2 class="heading-title">MAINTENANCE</h2>
+                <ul class="subheading-list">
+                    <li><a href="#" class="subheading-link" onclick="markAsVisited(this)">Request This Content</a></li>
+				</ul>
+            </div>
+			<div class="heading-section">
+                <h2 class="heading-title">Formate's</h2>
+                <ul class="subheading-list">
+				<li><a href="Downloadformate.html" class="subheading-link" onclick="markAsVisited(this)">List Of HR Policies</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
     
-    <main>
-        <section id="today-info">
-            <div class="card"><h2>Today's Date</h2><p id="current-date"></p></div>
-            <div class="card"><h2>Today's Day</h2><p id="current-day"></p></div>
-            <div class="card"><h2>Upcoming Holiday</h2><p id="next-holiday"></p><img id="holiday-image" src="" alt="Holiday Image"></div>
-        </section>
-        <section>
-            <h2>Select Year</h2>
-            <div id="year-buttons"></div>
-            <div id="calendar"></div>
-        </section>
-    </main>
-			<!-- Footer Start -->
+		<!-- Footer Start -->
         <div class="container-fluid bg-dark text-white-50 footer pt-1 mt-1 wow fadeIn" data-wow-delay="0.1s">
             <div class="container py-4">
                 <div class="row g-4">
@@ -354,115 +410,6 @@
             });
         }
     </script>
-    <script>
-        const holidays = {
-            2025: {
-				'2025-01-01': { name: 'New Year\'s Day' , image:'holidays/newyear.png'},
-				'2025-01-14': { name: 'Makar Sankranti / Pongal' , image:'' },
-                '2025-01-26': { name: 'Republic Day', image: 'holidays/republic_day.png' },
-				'2025-02-02': { name: 'Vasant panchami' , image:''},
-				'2025-02-19': { name: 'Chhatrapati Shivaji Maharaj Jayanti' , image:'holidays/shivaji.png'},
-                '2025-02-26': { name: 'Mahashivratri', image: 'holidays/mahashivratri.png' },
-				'2025-03-08': { name: 'International Womens Day' , Image:''},
-                '2025-03-13': { name: 'Holi', image: 'holidays/holi.png' },
-				'2025-03-20': { name: 'Parsi New Year'},
-				'2025-03-23': { name: 'Shaheed Diwas'},
-				'2025-03-29': { name: 'Good Friday' },
-				'2025-04-01': { name: 'Bank Holiday'},
-				'2025-04-06': { name: 'Rama Navami'},
-				'2025-04-10': { name: 'Mahavir Swami Jayanti'},
-				'2025-04-14': { name: 'Ambedkar Jayanti' },
-				'2025-04-14': { name: 'Baisakhi' },
-				'2025-04-20': { name: 'Easter'},
-				'2025-04-22': { name: 'Earth Day'},
-				'2025-05-01': { name: 'Labor Day' },
-				'2025-03-31': { name: 'Eid al-Fitr' },
-				'2025-06-07': { name: 'Eid al-Adha' },
-				'2025-08-05': { name: 'Muharram' },
-				'2025-08-15': { name: 'Independence Day' },
-				'2025-08-19': { name: 'Raksha Bandhan' },
-				'2025-08-25': { name: 'Janmashtami' },
-				'2025-10-02': { name: 'Gandhi Jayanti' },
-				'2025-10-20': { name: 'Dussehra' },
-                '2025-10-29': { name: 'Diwali', image: 'holidays/diwali.png' },
-				'2025-11-01': { name: 'Bhai Dooj' },
-				'2025-11-07': { name: 'Chhath Puja' },
-                '2025-12-25': { name: 'Christmas Day', image: 'holidays/christmas.png' }
-            },
-            2026: {}, 2027: {}, 2028: {}, 2029: {}, 2030: {}
-        };
-
-        function updateTodayInfo() {
-            const now = new Date();
-            document.getElementById('current-date').textContent = now.toDateString();
-            document.getElementById('current-day').textContent = now.toLocaleDateString('en-IN', { weekday: 'long' });
-
-            const todayStr = now.toISOString().split('T')[0];
-            let nextHoliday = null;
-
-            for (let year = now.getFullYear(); year <= 2030; year++) {
-                for (const date in holidays[year]) {
-                    if (date >= todayStr) {
-                        nextHoliday = holidays[year][date];
-                        break;
-                    }
-                }
-                if (nextHoliday) break;
-            }
-
-            if (nextHoliday) {
-                document.getElementById('next-holiday').textContent = nextHoliday.name;
-                const holidayImage = document.getElementById('holiday-image');
-                holidayImage.src = nextHoliday.image;
-                holidayImage.style.display = 'block';
-            }
-        }
-
-        function createYearButtons() {
-            const container = document.getElementById('year-buttons');
-            for (let year = 2025; year <= 2025; year++) {
-                const button = document.createElement('button');
-                button.textContent = year;
-                button.onclick = () => displayCalendar(year);
-                container.appendChild(button);
-            }
-        }
-
-        function displayCalendar(year) {
-            const calendar = document.getElementById('calendar');
-            calendar.innerHTML = '';
-
-            for (let month = 0; month < 12; month++) {
-                const monthDiv = document.createElement('div');
-                monthDiv.innerHTML = `<div class='month-name'>${new Date(year, month).toLocaleString('en', { month: 'long' })}</div>`;
-                const grid = document.createElement('div');
-                grid.classList.add('calendar-grid');
-
-                const daysInMonth = new Date(year, month + 1, 0).getDate();
-                for (let day = 1; day <= daysInMonth; day++) {
-                    const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
-                    const cell = document.createElement('div');
-                    cell.classList.add('calendar-day');
-                    cell.textContent = day;
-
-                    if (holidays[year][dateStr]) {
-                        cell.classList.add('holiday-day');
-                        const tooltip = document.createElement('div');
-                        tooltip.classList.add('holiday-tooltip');
-                        tooltip.textContent = holidays[year][dateStr].name;
-                        cell.appendChild(tooltip);
-                    }
-                    grid.appendChild(cell);
-                }
-                monthDiv.appendChild(grid);
-                calendar.appendChild(monthDiv);
-            }
-        }
-
-        window.onload = function () {
-            updateTodayInfo();
-            createYearButtons();
-        };
-    </script>
+    
 </body>
 </html>
